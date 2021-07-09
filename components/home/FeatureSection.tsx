@@ -14,7 +14,7 @@ const FeatureSecitom = ({t}:any) =>{
             <div className="row">
                 <div className="col">
                     <div className="single_feature_item">
-                        img1
+                        img Feature1
                         <div className="single_feature_text">
                             <h3>No.1 SMS Platform</h3>
                             <p>Thailand’s no. 1 SMS service provider</p>
@@ -23,7 +23,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col">
                     <div className="single_feature_item">
-                        img2
+                        img Feature2
                         <div className="single_feature_text">
                             <h3>Fast and Reliable</h3>
                             <p>Send SMS via the fastest channel automatically with reliable and stable</p>
@@ -32,7 +32,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col">
                     <div className="single_feature_item">
-                        img3
+                        img Feature3
                         <div className="single_feature_text">
                             <h3>Smart Console</h3>
                             <p>Easy to measure sending SMS with smart reports</p>
@@ -41,7 +41,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col">
                     <div className="single_feature_item">
-                        img4
+                        img  Feature4
                         <div className="single_feature_text">
                             <h3>Easily Integrated API</h3>
                             <p>Easy to connect SMS API with multiple programing languages</p>

@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import HeroSection from '../components/home/HeroSection';
 import PartnerSection from '../components/home/PartnerSection';
 import FeatureSection from '../components/home/FeatureSection';
+import ServiceSection from '../components/home/ServiceSection';
 
 const Homepage = ({t}:any) => {
   return(
@@ -13,6 +14,7 @@ const Homepage = ({t}:any) => {
           <HeroSection/>
           <PartnerSection/>
           <FeatureSection/>
+          <ServiceSection/>
         </div>
       </Layout>
     </React.Fragment>
