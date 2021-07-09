@@ -1,11 +1,13 @@
 import React from 'react';
 import Head from 'next/head'
-//import { withTranslation } from '../i18n';
+import Layout from '../components/Layout';
 
 const Homepage = ({t}:any) => {
   return(
     <React.Fragment>
-      <h1>Hi</h1>
+      <Layout>
+        <h1>Hi</h1>
+      </Layout>
     </React.Fragment>
   )
 }
