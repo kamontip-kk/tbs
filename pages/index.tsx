@@ -1,12 +1,15 @@
 import React from 'react';
 import Head from 'next/head'
 import Layout from '../components/Layout';
+import HeroSection from '../components/home/HeroSection';
 
 const Homepage = ({t}:any) => {
   return(
     <React.Fragment>
       <Layout>
-        <h1>Hi</h1>
+        <div className="page_wrapper">
+          <HeroSection/>
+        </div>
       </Layout>
     </React.Fragment>
   )

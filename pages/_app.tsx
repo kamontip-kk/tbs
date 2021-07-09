@@ -5,7 +5,9 @@ import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: any) {
 
-  return <Component {...pageProps} />
+  return (
+    <Component {...pageProps} />
+  )
 }
 
 // MyApp.getInitialProps = async (appContext: any) => {
