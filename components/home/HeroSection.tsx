@@ -9,7 +9,9 @@ const HeroSectionV2 = ({ t }: any) => {
                 <p>Send advertising SMS via SMS Gateway, Fast, Stable, Ready to give consultation at every step.</p>        
                 <ul className="cta-btn">
                     <li>
-                        <a href="">Try for free</a>
+                        <Link href="">
+                            <a>Try for free</a>
+                        </Link>
                     </li>
                     <li>
                         <Link href="">
