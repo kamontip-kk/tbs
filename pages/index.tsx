@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '../components/Layout';
 import HeroSection from '../components/home/HeroSection';
 import PartnerSection from '../components/home/PartnerSection';
+import FeatureSection from '../components/home/FeatureSection';
 
 const Homepage = ({t}:any) => {
   return(
@@ -11,6 +12,7 @@ const Homepage = ({t}:any) => {
         <div className="page_wrapper">
           <HeroSection/>
           <PartnerSection/>
+          <FeatureSection/>
         </div>
       </Layout>
     </React.Fragment>
