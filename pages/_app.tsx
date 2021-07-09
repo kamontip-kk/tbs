@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import React, { useEffect } from 'react';
+import Router, { useRouter } from 'next/router';
+
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: any) {
+
   return <Component {...pageProps} />
 }
+
+// MyApp.getInitialProps = async (appContext: any) => {
+//   const appProps = await App.getInitialProps(appContext);
+//   return { ...appProps };
+// }
+
 export default MyApp
