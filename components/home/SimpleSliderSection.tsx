@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import dynamic from 'next/dynamic';
 import Link from "next/dist/client/link";
 // const OwlCarousel = dynamic(import('react-owl-carousel'), {
 //     ssr: false,
