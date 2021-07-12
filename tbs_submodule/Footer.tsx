@@ -142,24 +142,24 @@ const Footer = ({ t }: any) => {
           <div className="col-12 md-none">
             <div className="footer_contact">
               <a href="tel:027986000">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                   width="30"
                   height="30"
-                />
+                /> */}
                 02-798-6000
               </a>
               <a href="mailto:contact@thaibulksms.com">
-                <img
+                {/* <img
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   alt="Image"
                   width="30"
                   height="30"
-                />{" "}
+                />{" "} */}
                 <span
                   dangerouslySetInnerHTML={{
                     __html:
@@ -172,14 +172,14 @@ const Footer = ({ t }: any) => {
                 target="_blank"
                 rel="noopener"
               >
-                <img
+                {/* <img
                   className="lazyload"
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                   alt=""
                   width="30"
                   height="30"
-                />
+                /> */}
                 Follow Us
               </a>
             </div>
@@ -191,37 +191,37 @@ const Footer = ({ t }: any) => {
               <div className="row align-items-end">
                 <div className="col-xl-6 col-lg-5 col-md-5">
                   <div className="footer_logo">
-                    <img
+                    {/* <img
                       className="lazyload"
                       data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_2.png`}
                       alt="Image"
                       width="253"
                       height="34"
-                    />
+                    /> */}
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
                   <div className="footer_contact">
                     <a href="tel:027986000">
-                      <img
+                      {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         alt="Image"
                         width="30"
                         height="30"
-                      />
+                      /> */}
                       02-798-6000
                     </a>
                     <a href="mailto:contact@thaibulksms.com">
-                      <img
+                      {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         alt=""
                         width="30"
                         height="30"
-                      />
+                      /> */}
                       <span
                         dangerouslySetInnerHTML={{
                           __html:
@@ -234,14 +234,14 @@ const Footer = ({ t }: any) => {
                       target="_blank"
                       rel="noopener"
                     >
-                      <img
+                      {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                         alt=""
                         width="30"
                         height="30"
-                      />
+                      /> */}
                       Follow Us
                     </a>
                   </div>

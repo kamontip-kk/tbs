@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-// import partnerlogo1 from '../public/assets/tbs_frontend_assets/partner_logo_1.png';
+// import partnerlogo1 from '../public/assets/img/partner_logo_1.png';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -61,19 +61,21 @@ const PartnerSection = ({t}:any) =>{
                         <div className="item">
                             <div className="partner_item">
                                 img PartnerLogo2
-                                <Image loader={myLoader} src="partner_logo_2.png" alt="partnerlogo2" layout="fill"/>
+                                {/* <Image loader={myLoader} src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`} alt="partnerlogo2" layout="fill"/> */}
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`}
                                     alt="Image"
                                     width="159"
                                     height="120"
-                                /> */}
+                                />
+                                <img src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`} alt="gg" /> */}
                             </div>
                         </div>
                         <div className="item">
                             <div className="partner_item">
                                 img PartnerLogo3
+                                {/* <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`} alt="PartnerLogo3" layout="fill"/> */}
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`}
