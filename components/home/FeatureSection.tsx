@@ -1,4 +1,9 @@
 import React from "react";
+import Image from "next/dist/client/image";
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const FeatureSecitom = ({t}:any) =>{
     return(
@@ -14,7 +19,7 @@ const FeatureSecitom = ({t}:any) =>{
             <div className="row mt-5">
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        img Feature1
+                        <Image loader={myLoader} src="icon_1.png" alt="icon1" width={100} height={100}/>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
@@ -32,7 +37,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        img Feature2
+                        <Image loader={myLoader} src="icon_2.png" alt="icon2" width={100} height={100}/>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
@@ -50,7 +55,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        img Feature3
+                        <Image loader={myLoader} src="icon_3.png" alt="icon3" width={100} height={100}/>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
@@ -68,7 +73,7 @@ const FeatureSecitom = ({t}:any) =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        img Feature4
+                        <Image loader={myLoader} src="icon_4.png" alt="icon4" width={100} height={100}/>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`}
