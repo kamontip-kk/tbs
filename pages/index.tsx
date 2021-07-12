@@ -9,7 +9,7 @@ import ServiceSection from '../components/home/ServiceSection';
 import GlobeSection from '../components/home/GlobeSection';
 import SmsSection from '../components/home/SmsSection';
 import TestimonialSection from '../components/home/TestimonialSection';
-// import EduSection from '../components/home/EduSection';
+import EduSection from '../components/home/EduSection';
 // import CtaSection from '../components/home/CtaSection';
 // import BacktoTop from '../components/BacktoTop';
 
@@ -26,7 +26,7 @@ const Homepage = ({t}:any) => {
           <GlobeSection/>
           <SmsSection/>
           <TestimonialSection/>
-          {/* <EduSection/> */}
+          <EduSection/>
           {/* <CtaSection/> */}
         </div>
         {/* <BacktoTop/> */}
