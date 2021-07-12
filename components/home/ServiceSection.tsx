@@ -1,5 +1,10 @@
 import React from "react";
 import Link from 'next/link';
+import Image from "next/dist/client/image";
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const ServiceSection = ({t}:any) =>{
     return(
@@ -11,7 +16,7 @@ const ServiceSection = ({t}:any) =>{
                         <h2>homeserviceheader</h2>
                         <div className="serviceTBS">
                             <div className="serviceDetail">
-                                img Service1
+                                <Image loader={myLoader} src="icn-Hservice01.svg" alt="service1" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice01.svg`}
@@ -26,7 +31,7 @@ const ServiceSection = ({t}:any) =>{
                                 </Link>
                             </div>
                             <div className="serviceDetail">
-                            img Service2
+                                <Image loader={myLoader} src="icn-Hservice02.svg" alt="service2" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice02.svg`}
@@ -41,7 +46,7 @@ const ServiceSection = ({t}:any) =>{
                                 </Link>
                             </div>
                             <div className="serviceDetail">
-                            img Service3
+                                <Image loader={myLoader} src="icn-Hservice03.svg" alt="service3" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice03.svg`}
@@ -56,7 +61,7 @@ const ServiceSection = ({t}:any) =>{
                                 </Link>
                             </div>
                             <div className="serviceDetail">
-                            img Service4
+                                <Image loader={myLoader} src="icn-Hservice04.svg" alt="service4" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice04.svg`}
@@ -71,7 +76,7 @@ const ServiceSection = ({t}:any) =>{
                                 </Link>
                             </div>
                             <div className="serviceDetail">
-                            img Service5
+                                <Image loader={myLoader} src="icn-Hservice05.svg" alt="service5" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice05.svg`}
@@ -86,7 +91,7 @@ const ServiceSection = ({t}:any) =>{
                                 </Link>
                             </div>
                             <div className="serviceDetail">
-                            img Service6
+                                <Image loader={myLoader} src="icn-Hservice06.svg" alt="service6" width={320} height={320}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice06.svg`}
@@ -105,7 +110,7 @@ const ServiceSection = ({t}:any) =>{
                 </div>
                 <div className="col-lg-5 col-md-12 col-12 order-lg-2 order-md-1 order-1">
                     <div className="service_img">
-                        img serviceDecore
+                        <Image loader={myLoader} src="img-Hservice.svg" alt="img-Hservice" width={480} height={480}/>
                         {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-Hservice.svg`}
