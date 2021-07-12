@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Link from "next/dist/client/link";
 // const OwlCarousel = dynamic(import('react-owl-carousel'), {
 //     ssr: false,
 // });
@@ -101,12 +102,11 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                                     </p>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v9"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>                                   
+                                    <a className="btn v9">
                                         Try SMS sending for free
                                     </a>
+                                    </Link>
                                     <span
                                         className="linking"
                                         style={{ display: 'none' }}
@@ -137,12 +137,11 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                                     </p>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v9"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>                        
+                                    <a className="btn v9">
                                         Try SMS sending for free
                                     </a>
+                                    </Link>
                                     <span
                                         className="linking"
                                         style={{ display: 'none' }}
@@ -168,12 +167,12 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <p>
                                         Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes
                                     </p>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v9"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                    
+                                    <a className="btn v9">
                                         Try SMS sending for free
                                     </a>
+                                    </Link>
                                     <span
                                         className="linking"
                                         style={{ display: 'none' }}
@@ -204,12 +203,11 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                                     </p>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v9"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                    <a className="btn v9">
                                         Try SMS sending for free
                                     </a>
+                                    </Link>
                                     <span
                                         className="linking"
                                         style={{ display: 'none' }}
@@ -240,12 +238,11 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                                     </p>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v9"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>  
+                                    <a className="btn v9">
                                         Try SMS sending for free
                                     </a>
+                                    </Link>
                                     <span
                                         className="linking"
                                         style={{ display: 'none' }}
