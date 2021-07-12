@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
+import { seo } from '../components/seo/home';
 import Layout from '../components/Layout';
 import HeroSection from '../components/home/HeroSection';
 import PartnerSection from '../components/home/PartnerSection';
@@ -17,6 +19,14 @@ const Homepage = ({t}:any) => {
   return(
     <React.Fragment>
       <Layout>
+        <Head>
+          {/* <meta name="keywords" content={t('keywords')} /> */}
+          <meta name="author" content="" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </Head>
         <div className="page_wrapper">
           <HeroSection/>
           <PartnerSection/>
