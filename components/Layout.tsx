@@ -5,9 +5,9 @@ import HeroSection from '../components/home/HeroSection'
 const Layout = (props:any) => {
     return(
         <div>
-            <Header/>
+            {/* <Header/> */}
             {props.children}
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }

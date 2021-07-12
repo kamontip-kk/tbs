@@ -1,7 +1,7 @@
 
 module.exports = {
   reactStrictMode: true,
-  exportTrailingSlash: true,
+  trailingSlash: true,
   compress: true,
   plugins: [],
 }
