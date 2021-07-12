@@ -4,59 +4,121 @@ import Link from 'next/link';
 const ServiceSection = ({t}:any) =>{
     return(
         <div className="service_section">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <div className="service_text">
-                            <h2>ThaiBulkSMS Service</h2>
-                            <div className="serviceTBS">
-                                <div className="serviceDetail">
-                                    img Secvice1
-                                    <h3>Smart SMS Console</h3>
-                                    <p>Send SMS messages through website by yourself, fast, easy, measurable</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
-                                <div className="serviceDetail">
-                                    img Secvice2
-                                    <h3>SMS API</h3>
-                                    <p>SMS API Service for developers, connecting with your chosen programing language</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
-                                <div className="serviceDetail">
-                                    img Secvice3
-                                    <h3>OTP Service</h3>
-                                    <p>Ready-to-use OTP service to increase safety, no programming skill required</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
-                                <div className="serviceDetail">
-                                    img Secvice4
-                                    <h3>SMS Tracking</h3>
-                                    <p>Measure SMS campaign results accurately, do not waste your marketing budget</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
-                                <div className="serviceDetail">
-                                    img Secvice5
-                                    <h3>Global SMS</h3>
-                                    <p>Send SMS and OTP messages globally at valuable prices, fast, trackable</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
-                                <div className="serviceDetail">
-                                    img Secvice6
-                                    <h3>Location Based SMS</h3>
-                                    <p>Reach your target group within specific areas, send messages immediately without phone numbers</p>
-                                    <Link href="">learnmore</Link>
-                                </div>
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-lg-7 col-md-12 col-12 order-lg-1 order-md-2 order-2">
+                    <div className="service_text">
+                        <h2>homeserviceheader</h2>
+                        <div className="serviceTBS">
+                            <div className="serviceDetail">
+                                img Service1
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice01.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>Smart SMS Console</h3>
+                                <p>homeservice1</p>
+                                <Link href="/product/smart-sms-console">
+                                    learnmore
+                                </Link>
+                            </div>
+                            <div className="serviceDetail">
+                            img Service2
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice02.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>SMS API</h3>
+                                <p>homeservice2</p>
+                                <Link href="/product/sms-api">
+                                    learnmore
+                                </Link>
+                            </div>
+                            <div className="serviceDetail">
+                            img Service3
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice03.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>OTP Service</h3>
+                                <p>homeservice3</p>
+                                <Link href="/product/otp">
+                                    learnmore
+                                </Link>
+                            </div>
+                            <div className="serviceDetail">
+                            img Service4
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice04.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>SMS Tracking</h3>
+                                <p>homeservice4</p>
+                                <Link href="/product/sms-tracking">
+                                    learnmore
+                                </Link>
+                            </div>
+                            <div className="serviceDetail">
+                            img Service5
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice05.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>Global SMS</h3>
+                                <p>homeservice5</p>
+                                <Link href="/product/global-sms/">
+                                    learnmore
+                                </Link>
+                            </div>
+                            <div className="serviceDetail">
+                            img Service6
+                                {/* <img
+                                    className="lazyload size-img"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice06.svg`}
+                                    alt="Image"
+                                    width="80"
+                                    height="80"
+                                /> */}
+                                <h3>Location Based SMS</h3>
+                                <p>homeservice6</p>
+                                <Link href="/product/location-based-sms">
+                                    learnmore
+                                </Link>
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="service_img">
-                            img ServiceDecore
-                        </div>
+                </div>
+                <div className="col-lg-5 col-md-12 col-12 order-lg-2 order-md-1 order-1">
+                    <div className="service_img">
+                        img serviceDecore
+                        {/* <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-Hservice.svg`}
+                            style={{width:'100%'}}
+                            alt="Image"
+                            width="80"
+                            height="80"
+                        /> */}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     )
 }
 

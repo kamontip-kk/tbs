@@ -5,7 +5,7 @@ import HeroSection from '../components/home/HeroSection';
 import PartnerSection from '../components/home/PartnerSection';
 import FeatureSection from '../components/home/FeatureSection';
 import ServiceSection from '../components/home/ServiceSection';
-// import SimpleSliderSection from '../components/home/SimpleSliderSection';
+import SimpleSliderSection from '../components/home/SimpleSliderSection';
 import GlobeSection from '../components/home/GlobeSection';
 import SmsSection from '../components/home/SmsSection';
 import TestimonialSection from '../components/home/TestimonialSection';
@@ -22,7 +22,7 @@ const Homepage = ({t}:any) => {
           <PartnerSection/>
           <FeatureSection/>
           <ServiceSection/>
-          {/* <SimpleSliderSection/> */}
+          <SimpleSliderSection/>
           <GlobeSection/>
           <SmsSection/>
           <TestimonialSection/>
