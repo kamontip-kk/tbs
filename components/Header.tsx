@@ -128,7 +128,7 @@ const Header = ({t}:any) => {
                     <div className="row">
                         <ul>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Ordering</h6>
                                         <p>Ordering process for each payment channel</p>
@@ -136,7 +136,7 @@ const Header = ({t}:any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>FAQ</h6>
                                         <p>About ordering, general and technical problem</p>
@@ -144,7 +144,7 @@ const Header = ({t}:any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Contact us</h6>
                                         <p>Contact to ThaiBulkSMS</p>
@@ -157,21 +157,21 @@ const Header = ({t}:any) => {
                         <ul>
                             <h6>Contact</h6>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>02-798-6000</span>
                                     </h6>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>contact@thaibulksms.com</span>
                                     </h6>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>ThaiBulkSMS</span>
                                     </h6>
@@ -185,7 +185,7 @@ const Header = ({t}:any) => {
                 <span>Devlopers</span>
                 <ul className="dropdown">
                     <li>
-                        <Link href="">
+                        <Link href="" passHref>
                             <span>
                                 <h6>Download Guide</h6>
                                 <p>Manual for SMS API and OTP Service with example</p>
@@ -193,7 +193,7 @@ const Header = ({t}:any) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="">
+                        <Link href="" passHref>
                             <span>
                                 <h6>Download Example SDK</h6>
                                 <p>Choose the programing language as you want</p>
@@ -201,7 +201,7 @@ const Header = ({t}:any) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="">
+                        <Link href="" passHref>
                             <span>
                                 <h6>API References</h6>
                                 <p>Include SMS API and OTP API</p>
@@ -216,7 +216,7 @@ const Header = ({t}:any) => {
                     <div className="row">
                         <ul>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Why ThaiBulkSMS?</h6>
                                         <p>How is sending SMS with ThaiBulkSMS better than others?</p>
@@ -224,7 +224,7 @@ const Header = ({t}:any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Contact us</h6>
                                         <p>Contact us</p>
@@ -232,7 +232,7 @@ const Header = ({t}:any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Reseller Program</h6>
                                         <p>Special reseller program from ThaiBulkSMS</p>
@@ -240,7 +240,7 @@ const Header = ({t}:any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <span>
                                         <h6>Member</h6>
                                         <p>Member Register Or Login</p>
@@ -253,21 +253,21 @@ const Header = ({t}:any) => {
                         <ul>
                             <h6>Contact</h6>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>02-798-6000</span>
                                     </h6>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>contact@thaibulksms.com</span>
                                     </h6>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="" passHref>
                                     <h6>
                                         <span>ThaiBulkSMS</span>
                                     </h6>

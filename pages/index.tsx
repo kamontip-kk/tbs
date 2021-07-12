@@ -11,7 +11,7 @@ import SmsSection from '../components/home/SmsSection';
 import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
-// import BacktoTop from '../components/BacktoTop';
+import BacktoTop from '../components/BacktoTop';
 
 const Homepage = ({t}:any) => {
   return(
@@ -29,7 +29,7 @@ const Homepage = ({t}:any) => {
           <EduSection/>
           <CtaSection/>
         </div>
-        {/* <BacktoTop/> */}
+        <BacktoTop/>
       </Layout>
     </React.Fragment>
   )
