@@ -19,12 +19,11 @@ const CtaSection = ({ t }: any) =>{
                 <div className="col-xl-6 col-lg-12">
                     <ul className="cta-btn before-footer">
                         <li>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v3"
-                            >
-                                Try SMS sending for free
-                            </a>
+                            <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                <a className="btn v3">
+                                    Try SMS sending for free
+                                </a>
+                            </Link>
                         </li>
                         <li>
                             <Link href="/pricing">
