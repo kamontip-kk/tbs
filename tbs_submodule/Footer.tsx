@@ -1,43 +1,51 @@
 import React, { useEffect } from "react";
-// import appConfig from "../appConfig";
+import appConfig from "../appConfig";
+
+  
 
 const Footer = ({ t }: any) => {
-    useEffect(() => {}, []);
+  const makeHomePageLink = (path: string): string => {
+    const url = ''
+    return url+"/" + path + (path ? "/" : "");
+  };
+  
+  useEffect(() => {}, []);
+
   return (
     <div className="footer_section">
       <div className="container" id="footer">
         <div className="row">
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              {/* <a href={makeHomePageLink("product")}> */}
+              <a href={makeHomePageLink("product")}>
                 <h4>Services</h4>
-              {/* </a> */}
+              </a>
               <ul>
                 <li>
-                  {/* <a href={makeHomePageLink("product/smart-sms-console")}> */}
+                  <a href={makeHomePageLink("product/smart-sms-console")}>
                     Smart SMS Console
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("product/sms-api")}>SMS API</a> */}
+                  <a href={makeHomePageLink("product/sms-api")}>SMS API</a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("product/otp")}>OTP Service</a> */}
+                  <a href={makeHomePageLink("product/otp")}>OTP Service</a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("product/sms-tracking")}> */}
+                  <a href={makeHomePageLink("product/sms-tracking")}>
                     SMS Tracking
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("product/global-sms")}> */}
+                  <a href={makeHomePageLink("product/global-sms")}>
                     Global SMS
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("product/location-based-sms")}> */}
+                  <a href={makeHomePageLink("product/location-based-sms")}>
                     Location Based SMS
-                  {/* </a> */}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -47,19 +55,19 @@ const Footer = ({ t }: any) => {
               <h4>Support</h4>
               <ul>
                 <li>
-                  {/* <a href={makeHomePageLink("support/how-to-order")}> */}
+                  <a href={makeHomePageLink("support/how-to-order")}>
                     Ordering Methods
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("support/faq")}> */}
+                  <a href={makeHomePageLink("support/faq")}>
                     Frequently Asked Questions
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("developer")}> */}
+                  <a href={makeHomePageLink("developer")}>
                     For Developers
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
                   <a
@@ -79,14 +87,14 @@ const Footer = ({ t }: any) => {
               <h4>Use Cases</h4>
               <ul>
                 <li>
-                  {/* <a href={makeHomePageLink("sms-marketing")}> */}
+                  <a href={makeHomePageLink("sms-marketing")}>
                     SMS Marketing
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("sms-alert")}> */}
+                  <a href={makeHomePageLink("sms-alert")}>
                     SMS Alert
-                  {/* </a> */}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -97,17 +105,17 @@ const Footer = ({ t }: any) => {
               <h4>About Us</h4>
               <ul>
                 <li>
-                  {/* <a href={makeHomePageLink("why-thaibulksms")}> */}
+                  <a href={makeHomePageLink("why-thaibulksms")}>
                     Why use ThaiBulkSMS
-                  {/* </a> */}
+                  </a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("reseller")}>SMS Reseller</a> */}
+                  <a href={makeHomePageLink("reseller")}>SMS Reseller</a>
                 </li>
                 <li>
-                  {/* <a href={makeHomePageLink("contact")}> */}
+                  <a href={makeHomePageLink("contact")}>
                     Contact us
-                  {/* </a> */}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -229,12 +237,12 @@ const Footer = ({ t }: any) => {
                 <div className="col-xl-6 col-lg-12 col-md-12">
                   <ul className="footer_menu">
                     <li>
-                      {/* <a href={makeHomePageLink("condition")}> */}
+                      <a href={makeHomePageLink("condition")}>
                         Terms and Conditions
-                      {/* </a> */}
+                      </a>
                     </li>
                     <li>
-                      {/* <a href={makeHomePageLink("policy")}>Privacy Policy</a> */}
+                      <a href={makeHomePageLink("policy")}>Privacy Policy</a>
                     </li>
                   </ul>
                 </div>

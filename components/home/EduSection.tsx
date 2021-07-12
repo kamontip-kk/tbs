@@ -1,5 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/dist/client/image";
+
+// const myLoader = ({src}:any) => {
+//     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+// }
 
 const EduSection = ({ t }: any) => {
     return(
@@ -27,7 +32,7 @@ const EduSection = ({ t }: any) => {
                                     // target="_blank"
                                     // rel="noopener"
                                 >
-                                    img Edu1
+                                    {/* <Image loader={myLoader} src="img_7.png" alt="edu1" width={100} height={100}/> */}
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_7.png`}
