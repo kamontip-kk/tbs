@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import Link from "next/dist/client/link";
-import appConfig from "../appConfig";
+import Image from "next/dist/client/image";
+// import appConfig from "../appConfig";
 
-  
+const myLoader = ({ src }: any) => {
+  return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`;
+};
 
 const Footer = ({ t }: any) => {
   const makeHomePageLink = (path: string): string => {
-    const url = ''
-    return url+"/" + path + (path ? "/" : "");
+    const url = "";
+    return url + "/" + path + (path ? "/" : "");
   };
-  
+
   useEffect(() => {}, []);
 
   return (
@@ -18,48 +21,40 @@ const Footer = ({ t }: any) => {
         <div className="row">
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <Link  href={makeHomePageLink("product")}>
-              <a>
-                <h4>Services</h4>
-              </a>
+              <Link href={makeHomePageLink("product")}>
+                <a>
+                  <h4>Services</h4>
+                </a>
               </Link>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("product/smart-sms-console")}>
-                  <a>
-                    Smart SMS Console
-                  </a>
+                    <a>Smart SMS Console</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("product/sms-api")}>
-                  <a>SMS API</a>
-                  </Link>    
+                    <a>SMS API</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("product/otp")}>
-                  <a>OTP Service</a>
-                  </Link>   
+                    <a>OTP Service</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("product/sms-tracking")}>
-                  <a>
-                    SMS Tracking
-                  </a>
+                    <a>SMS Tracking</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("product/global-sms")}>
-                  <a>
-                    Global SMS
-                  </a>
+                    <a>Global SMS</a>
                   </Link>
                 </li>
                 <li>
-                  <Link  href={makeHomePageLink("product/location-based-sms")}>
-                  <a>
-                    Location Based SMS
-                  </a>
+                  <Link href={makeHomePageLink("product/location-based-sms")}>
+                    <a>Location Based SMS</a>
                   </Link>
                 </li>
               </ul>
@@ -71,30 +66,24 @@ const Footer = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href={makeHomePageLink("support/how-to-order")}>
-                  <a>
-                    Ordering Methods
-                  </a>
+                    <a>Ordering Methods</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("support/faq")}>
-                  <a>
-                    Frequently Asked Questions
-                  </a>
+                    <a>Frequently Asked Questions</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("developer")}>
-                  <a>
-                    For Developers
-                  </a>
+                    <a>For Developers</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://developer.thaibulksms.com">
-                  <a target="_blank" rel="noopener">
-                    API References
-                  </a>
+                    <a target="_blank" rel="noopener">
+                      API References
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -107,16 +96,12 @@ const Footer = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href={makeHomePageLink("sms-marketing")}>
-                  <a>
-                    SMS Marketing
-                  </a>
+                    <a>SMS Marketing</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("sms-alert")}>
-                  <a>
-                    SMS Alert
-                  </a>
+                    <a>SMS Alert</a>
                   </Link>
                 </li>
               </ul>
@@ -129,21 +114,17 @@ const Footer = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href={makeHomePageLink("why-thaibulksms")}>
-                  <a>
-                    Why use ThaiBulkSMS
-                  </a>
+                    <a>Why use ThaiBulkSMS</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("reseller")}>
-                  <a>SMS Reseller</a>
-                  </Link>        
+                    <a>SMS Reseller</a>
+                  </Link>
                 </li>
                 <li>
-                  <Link  href={makeHomePageLink("contact")}>
-                  <a>
-                    Contact us
-                  </a>
+                  <Link href={makeHomePageLink("contact")}>
+                    <a>Contact us</a>
                   </Link>
                 </li>
               </ul>
@@ -152,39 +133,45 @@ const Footer = ({ t }: any) => {
 
           <div className="col-12 md-none">
             <div className="footer_contact">
-              <Link  href="tel:027986000">
-              <a>
-                {/* <img
+              <Link href="tel:027986000">
+                <a>
+                  <div className="lazyload">
+                    <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
+                  </div>     
+                  <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                   width="30"
                   height="30"
-                /> */}
-                02-798-6000
-              </a>
+                  />
+                  02-798-6000
+                </a>
               </Link>
               <Link href="mailto:contact@thaibulksms.com">
-              <a>
-                {/* <img
+                <a>
+                  <div className="lazyload">
+                    <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
+                  </div>
+                  {/* <img
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   alt="Image"
                   width="30"
                   height="30"
                 />{" "} */}
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      "<!--email_off-->contact@thaibulksms.com<!--/email_off-->",
-                  }}
-                ></span>
-              </a>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        "<!--email_off-->contact@thaibulksms.com<!--/email_off-->",
+                    }}
+                  ></span>
+                </a>
               </Link>
               <Link href="https://www.facebook.com/ThaiBulkSMS">
-              <a target="_blank" rel="noopener">
-                {/* <img
+                <a target="_blank" rel="noopener">
+                  {/* <img
                   className="lazyload"
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -192,10 +179,9 @@ const Footer = ({ t }: any) => {
                   width="30"
                   height="30"
                 /> */}
-                Follow Us
-              </a>
+                  Follow Us
+                </a>
               </Link>
-
             </div>
           </div>
         </div>
@@ -217,8 +203,8 @@ const Footer = ({ t }: any) => {
                 <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
                   <div className="footer_contact">
                     <Link href="tel:027986000">
-                    <a>
-                      {/* <img
+                      <a>
+                        {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
@@ -226,12 +212,12 @@ const Footer = ({ t }: any) => {
                         width="30"
                         height="30"
                       /> */}
-                      02-798-6000
-                    </a>
+                        02-798-6000
+                      </a>
                     </Link>
                     <Link href="mailto:contact@thaibulksms.com">
-                    <a>
-                      {/* <img
+                      <a>
+                        {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
@@ -239,17 +225,17 @@ const Footer = ({ t }: any) => {
                         width="30"
                         height="30"
                       /> */}
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html:
-                            "<!--email_off-->contact@thaibulksms.com<!--/email_off-->",
-                        }}
-                      ></span>
-                    </a>
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              "<!--email_off-->contact@thaibulksms.com<!--/email_off-->",
+                          }}
+                        ></span>
+                      </a>
                     </Link>
                     <Link href="https://www.facebook.com/ThaiBulkSMS">
-                    <a target="_blank" rel="noopener">
-                      {/* <img
+                      <a target="_blank" rel="noopener">
+                        {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -257,10 +243,9 @@ const Footer = ({ t }: any) => {
                         width="30"
                         height="30"
                       /> */}
-                      Follow Us
-                    </a>
+                        Follow Us
+                      </a>
                     </Link>
-
                   </div>
                 </div>
               </div>
@@ -273,15 +258,13 @@ const Footer = ({ t }: any) => {
                   <ul className="footer_menu">
                     <li>
                       <Link href={makeHomePageLink("condition")}>
-                      <a>
-                        Terms and Conditions
-                      </a>
+                        <a>Terms and Conditions</a>
                       </Link>
                     </li>
                     <li>
                       <Link href={makeHomePageLink("policy")}>
-                      <a>Privacy Policy</a>
-                      </Link>                  
+                        <a>Privacy Policy</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
