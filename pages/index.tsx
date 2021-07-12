@@ -10,7 +10,7 @@ import GlobeSection from '../components/home/GlobeSection';
 import SmsSection from '../components/home/SmsSection';
 import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
-// import CtaSection from '../components/home/CtaSection';
+import CtaSection from '../components/home/CtaSection';
 // import BacktoTop from '../components/BacktoTop';
 
 const Homepage = ({t}:any) => {
@@ -27,7 +27,7 @@ const Homepage = ({t}:any) => {
           <SmsSection/>
           <TestimonialSection/>
           <EduSection/>
-          {/* <CtaSection/> */}
+          <CtaSection/>
         </div>
         {/* <BacktoTop/> */}
       </Layout>
