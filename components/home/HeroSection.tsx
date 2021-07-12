@@ -8,7 +8,7 @@ const HeroSectionV2 = ({ t }: any) => {
             <div className="row align-item-center hero_top_one">
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="hero_text_one">
-                        <h1>
+                        <h1 >
                             Meeting every one of your SMS sending needs
                         </h1>
                         <p>
@@ -37,5 +37,13 @@ const HeroSectionV2 = ({ t }: any) => {
     </div>
     )  
 }
+
+// HeroSectionV2.getInitialProps = async () => ({
+//     namespacesRequired: ['Home'],
+// });
+
+// HeroSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
 
 export default HeroSectionV2;

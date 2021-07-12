@@ -111,7 +111,7 @@ const Footer = ({ t }: any) => {
                 </li>
                 <li>
                   {/* <a href={makeHomePageLink("sms-alert")}> */}
-                    footer::SMS Alert
+                    SMS Alert
                   {/* </a> */}
                 </li>
               </ul>
@@ -120,7 +120,7 @@ const Footer = ({ t }: any) => {
 
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>footer::About Us</h4>
+              <h4>About Us</h4>
               <ul>
                 <li>
                   {/* <a href={makeHomePageLink("why-thaibulksms")}> */}

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Link from "next/link";
 
 const CtaSection = ({ t }: any) =>{
@@ -40,4 +41,11 @@ const CtaSection = ({ t }: any) =>{
     )
 }
 
+// CtaSection.getInitialProps = async () => ({
+//     namespacesRequired: ['Home'],
+// });
+
+// CtaSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
 export default CtaSection;

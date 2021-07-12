@@ -27,6 +27,11 @@ const Homepage = ({t}:any) => {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
+        {/* <NextSeo
+                openGraph={seo.openGraph}
+                title={t('meta::title')}
+                description={t('meta::description')}
+            /> */}
         <div className="page_wrapper">
           <HeroSection/>
           <PartnerSection/>
@@ -53,5 +58,4 @@ const Homepage = ({t}:any) => {
 //         },
 //     };
 // };
-
 export default Homepage;
