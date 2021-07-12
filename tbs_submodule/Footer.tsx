@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+// import appConfig from "../appConfig";
 
 const Footer = ({ t }: any) => {
     useEffect(() => {}, []);
@@ -41,33 +42,6 @@ const Footer = ({ t }: any) => {
               </ul>
             </div>
           </div>
-          {/* <div className="col-md-3 col-6">
-          <div className="footer_widget">
-            <h4>{t('footer.database')}</h4>
-            <ul>
-              <li>
-                <Link href="/KnowledgeListing">
-                  <a>{t('footer.knowledge')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/UseCasesListing">
-                  <a>{t('footer.example')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/SuccessStoriesListing">
-                  <a>{t('footer.successstories')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <a>{t('footer.smsbasic')}</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div> */}
           <div className="col-md-3 col-6">
             <div className="footer_widget">
               <h4>Support</h4>
