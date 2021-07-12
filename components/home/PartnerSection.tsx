@@ -1,7 +1,10 @@
+import dynamic from 'next/dynamic';
 import React from "react";
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-// import partnerlogo1 from '../public/assets/img/partner_logo_1.png';
+const OwlCarousel = dynamic(import('react-owl-carousel'), {
+    ssr: false,
+});
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -21,7 +24,7 @@ const PartnerSection = ({t}:any) =>{
                     </h6>
                 </div>
                 <div className="col-md-12">
-                    {/* <OwlCarousel
+                    <OwlCarousel
                         className="partner_wrap"
                         items={5}
                         nav={false}
@@ -44,7 +47,7 @@ const PartnerSection = ({t}:any) =>{
                                 items: 5,
                             },
                         }}
-                    > */}
+                    >
                         <div className="item">
                             <div className="partner_item">
                                 <Image loader={myLoader} src="partner_logo_1.png" alt="partnerlogo1" width={159} height={120}/>
@@ -105,7 +108,7 @@ const PartnerSection = ({t}:any) =>{
                                 /> */}
                             </div>
                         </div>
-                    {/* </OwlCarousel> */}
+                    </OwlCarousel>
                 </div>
             </div>
         </div>
