@@ -47,8 +47,7 @@ const PartnerSection = ({t}:any) =>{
                     > */}
                         <div className="item">
                             <div className="partner_item">
-                                img PartnerLogo1
-                                {/* <Image src={partnerlogo1} alt="partnerlogo1" /> */}
+                                <Image loader={myLoader} src="partner_logo_1.png" alt="partnerlogo1" width={159} height={120}/>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_1.png`}
@@ -60,22 +59,19 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                img PartnerLogo2
-                                {/* <Image loader={myLoader} src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`} alt="partnerlogo2" layout="fill"/> */}
+                                <Image loader={myLoader} src="partner_logo_2.png" alt="partnerlogo2" width={159} height={120}/>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`}
                                     alt="Image"
                                     width="159"
                                     height="120"
-                                />
-                                <img src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`} alt="gg" /> */}
+                                /> */}
                             </div>
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                img PartnerLogo3
-                                {/* <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`} alt="PartnerLogo3" layout="fill"/> */}
+                                <Image loader={myLoader} src="partner_logo_3.png" alt="partnerLogo3" width={159} height={120}/>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`}
@@ -87,7 +83,7 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                img PartnerLogo4
+                                <Image loader={myLoader} src="partner_logo_4.png" alt="partnerLogo4" width={159} height={120}/>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_4.png`}
@@ -99,7 +95,7 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                img PartnerLogo5
+                                <Image loader={myLoader} src="partner_logo_5.png" alt="partnerLogo5" width={159} height={120}/>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_5.png`}
