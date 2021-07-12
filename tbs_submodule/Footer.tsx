@@ -138,14 +138,14 @@ const Footer = ({ t }: any) => {
                   <div className="lazyload">
                     <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
                   </div>     
-                  <img
+                  {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                   width="30"
                   height="30"
-                  />
+                  /> */}
                   02-798-6000
                 </a>
               </Link>
@@ -171,6 +171,9 @@ const Footer = ({ t }: any) => {
               </Link>
               <Link href="https://www.facebook.com/ThaiBulkSMS">
                 <a target="_blank" rel="noopener">
+                  <div className="lazyload">
+                    <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
+                  </div>
                   {/* <img
                   className="lazyload"
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -191,6 +194,9 @@ const Footer = ({ t }: any) => {
               <div className="row align-items-end">
                 <div className="col-xl-6 col-lg-5 col-md-5">
                   <div className="footer_logo">
+                    <div className="lazyload">
+                      <Image loader={myLoader} src="logo_2.png" alt="logo2" width={253} height={34}/>
+                    </div>
                     {/* <img
                       className="lazyload"
                       data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_2.png`}
@@ -204,9 +210,12 @@ const Footer = ({ t }: any) => {
                   <div className="footer_contact">
                     <Link href="tel:027986000">
                       <a>
+                        <div className="lazyload">
+                          <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
+                        </div>
                         {/* <img
                         className="lazyload"
-                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         alt="Image"
                         width="30"
@@ -217,6 +226,9 @@ const Footer = ({ t }: any) => {
                     </Link>
                     <Link href="mailto:contact@thaibulksms.com">
                       <a>
+                        <div className="lazyload">
+                          <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
+                        </div>
                         {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
@@ -235,6 +247,9 @@ const Footer = ({ t }: any) => {
                     </Link>
                     <Link href="https://www.facebook.com/ThaiBulkSMS">
                       <a target="_blank" rel="noopener">
+                        <div className="lazyload">
+                          <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
+                        </div>
                         {/* <img
                         className="lazyload"
                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
