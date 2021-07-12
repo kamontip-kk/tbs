@@ -21,8 +21,9 @@ const EduSection = ({ t }: any) => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                             <div className="edu_box">
+                                <Link href="https://bit.ly/3hEL9ac">
                                 <a
-                                    href="https://bit.ly/3hEL9ac"
+                                    // href="https://bit.ly/3hEL9ac"
                                     // target="_blank"
                                     // rel="noopener"
                                 >
@@ -40,14 +41,16 @@ const EduSection = ({ t }: any) => {
                                         </p>
                                     </div>
                                 </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <div className="row">
                                 <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                                     <div className="edu_box">
+                                        <Link href="https://bit.ly/2RDqTuQ">
                                         <a
-                                            href="https://bit.ly/2RDqTuQ"
+                                            // href="https://bit.ly/2RDqTuQ"
                                             // target="_blank"
                                             // rel="noopener"
                                         >
@@ -64,13 +67,15 @@ const EduSection = ({ t }: any) => {
                                                     4 ways to communicate with customers most effectively Conclude your sale with testimonials
                                                 </p>
                                             </div>
-                                        </a>
+                                        </a>                              
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                                     <div className="edu_box">
+                                        <Link href="https://bit.ly/32L9VRT">
                                         <a
-                                            href="https://bit.ly/32L9VRT"
+                                            // href="https://bit.ly/32L9VRT"
                                             // target="_blank"
                                             // rel="noopener"
                                         >
@@ -87,7 +92,8 @@ const EduSection = ({ t }: any) => {
                                                     EduSection::Simple to do but the results will exceed expectations
                                                 </p>
                                             </div>
-                                        </a>
+                                        </a>                            
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
