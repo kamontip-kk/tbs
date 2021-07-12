@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/dist/client/image";
 
-// const myLoader = ({src}:any) => {
-//     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
-// }
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const EduSection = ({ t }: any) => {
     return(
@@ -27,12 +27,10 @@ const EduSection = ({ t }: any) => {
                         <div className="col-lg-6 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                             <div className="edu_box">
                                 <Link href="https://bit.ly/3hEL9ac">
-                                <a
-                                    // href="https://bit.ly/3hEL9ac"
-                                    // target="_blank"
-                                    // rel="noopener"
-                                >
-                                    {/* <Image loader={myLoader} src="img_7.png" alt="edu1" width={100} height={100}/> */}
+                                <a target="_blank" rel="noopener">
+                                    <div className="lazyload">
+                                        <Image loader={myLoader} src="img_7.png" alt="edu1" width={280} height={245}/>
+                                    </div>             
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_7.png`}
@@ -54,12 +52,10 @@ const EduSection = ({ t }: any) => {
                                 <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                                     <div className="edu_box">
                                         <Link href="https://bit.ly/2RDqTuQ">
-                                        <a
-                                            // href="https://bit.ly/2RDqTuQ"
-                                            // target="_blank"
-                                            // rel="noopener"
-                                        >
-                                            img Edu2
+                                        <a target="_blank" rel="noopener">
+                                            <div className="lazyload">
+                                                <Image loader={myLoader} src="img_8.png" alt="edu8" width={280} height={245}/>
+                                            </div>  
                                             {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_8.png`}
@@ -79,12 +75,10 @@ const EduSection = ({ t }: any) => {
                                 <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                                     <div className="edu_box">
                                         <Link href="https://bit.ly/32L9VRT">
-                                        <a
-                                            // href="https://bit.ly/32L9VRT"
-                                            // target="_blank"
-                                            // rel="noopener"
-                                        >
-                                            img Edu3
+                                        <a target="_blank" rel="noopener">
+                                            <div className="lazyload">
+                                                <Image loader={myLoader} src="img_9.png" alt="edu9" width={280} height={245}/>
+                                            </div>  
                                             {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_9.png`}
