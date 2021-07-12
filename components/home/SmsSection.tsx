@@ -12,9 +12,7 @@ const SmsSectionV2 = ({ t }: any) => {
                     <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
                         <div className="sms_text">
                             <h2>
-                                {t(
-                                    'SmsSection::Be confident in every instance of SMS sending'
-                                )}
+                                Be confident in every instance of SMS sending
                             </h2>
                         </div>
                     </div>
@@ -24,9 +22,7 @@ const SmsSectionV2 = ({ t }: any) => {
                                 <div className="col-md-12">
                                     <div className="sms_feature_item">
                                         <p>
-                                            {t(
-                                                'SmsSection::The number of SMS sent by us up to now'
-                                            )}
+                                            The number of SMS sent by us up to now
                                         </p>
                                         {/* {duration !== 0 && (
                                             <div>
@@ -79,3 +75,5 @@ const SmsSectionV2 = ({ t }: any) => {
         </div>
     )
 }
+
+export default SmsSectionV2;
