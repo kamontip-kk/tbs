@@ -50,7 +50,9 @@ const PartnerSection = ({t}:any) =>{
                     >
                         <div className="item">
                             <div className="partner_item">
-                                <Image loader={myLoader} src="partner_logo_1.png" alt="partnerlogo1" width={159} height={120}/>
+                                <div className="lazyload size-img">
+                                    <Image loader={myLoader} src="partner_logo_1.png" alt="partnerlogo1" width={190} height={170}/>
+                                </div>
                                 {/* <img
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_1.png`}
@@ -62,7 +64,10 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                <Image loader={myLoader} src="partner_logo_2.png" alt="partnerlogo2" width={159} height={120}/>
+                                <div className="lazyload">
+                                    <Image loader={myLoader} src="partner_logo_2.png" alt="partnerlogo2" width={190} height={170}/>
+                                </div>
+                                
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`}
@@ -74,7 +79,9 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                <Image loader={myLoader} src="partner_logo_3.png" alt="partnerLogo3" width={159} height={120}/>
+                                <div className="lazyload">
+                                    <Image loader={myLoader} src="partner_logo_3.png" alt="partnerlogo3" width={190} height={170}/>
+                                </div>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`}
@@ -86,7 +93,9 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                <Image loader={myLoader} src="partner_logo_4.png" alt="partnerLogo4" width={159} height={120}/>
+                                <div className="lazyload">
+                                    <Image loader={myLoader} src="partner_logo_4.png" alt="partnerlogo4" width={190} height={170}/>
+                                </div>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_4.png`}
@@ -98,7 +107,9 @@ const PartnerSection = ({t}:any) =>{
                         </div>
                         <div className="item">
                             <div className="partner_item">
-                                <Image loader={myLoader} src="partner_logo_5.png" alt="partnerLogo5" width={159} height={120}/>
+                                <div className="lazyload">
+                                    <Image loader={myLoader} src="partner_logo_5.png" alt="partnerlogo5" width={190} height={170}/>
+                                </div>
                                 {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_5.png`}

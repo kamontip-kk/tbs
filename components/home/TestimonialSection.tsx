@@ -1,4 +1,14 @@
 import React from "react";
+import Image from "next/dist/client/image";
+import dynamic from 'next/dynamic';
+
+const OwlCarousel = dynamic(import('react-owl-carousel'), {
+    ssr: false,
+});
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const TestimonialSection = ({ t }: any) => {
     return(
@@ -15,7 +25,7 @@ const TestimonialSection = ({ t }: any) => {
             </div>
             <div className="row">
                 <div className="col-lg-10 offset-lg-1">
-                    {/* <OwlCarousel
+                    <OwlCarousel
                         className="testimonial_slider"
                         items={1}
                         nav={true}
@@ -40,7 +50,7 @@ const TestimonialSection = ({ t }: any) => {
                                 items: 1,
                             },
                         }}
-                    > */}
+                    >
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
@@ -127,7 +137,7 @@ const TestimonialSection = ({ t }: any) => {
                 </div>
               </div>
             </div> */}
-                    {/* </OwlCarousel> */}
+                    </OwlCarousel>
                 </div>
             </div>
             <div className="row">
