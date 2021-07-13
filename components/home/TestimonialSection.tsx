@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/dist/client/image";
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
 
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
@@ -10,14 +11,15 @@ const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
-const TestimonialSection = ({ t }: any) => {
+const TestimonialSection = () => {
+    const {t}:any  = useTranslation('Home')
     return(
         <div className="testimonial_section">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <h2 className="section_title">
-                        Customers who trust ThaiBulk SMS
+                        {t('TestimonialSection::Customers who trust ThaiBulk SMS')}
                         {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
                         <span className="col_two">SMS</span> */}
                     </h2>
@@ -54,7 +56,9 @@ const TestimonialSection = ({ t }: any) => {
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    ThaiBulkSMS is an SMS-sending service provider which makes sure that sending text messages to customers is very easy and convenient because the service allows us to send the messages by ourselves without having to go through an intermediary. Plus, reports on message sending are provided, enabling more accurate assessment of the results
+                                    {t(
+                                        'TestimonialSection::ThaiBulkSMS is an SMS-sending service provider which makes sure that sending text messages to customers is very easy and convenient because the service allows us to send the messages by ourselves without having to go through an intermediary. Plus, reports on message sending are provided, enabling more accurate assessment of the results.'
+                                    )}
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -66,7 +70,9 @@ const TestimonialSection = ({ t }: any) => {
                   </div> */}
                                     <div className="client_name">
                                         <h6>
-                                            Syn Mun Kong Insurance PLC
+                                            {t(
+                                                'TestimonialSection::Syn Mun Kong Insurance PLC'
+                                            )}
                                         </h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
@@ -76,7 +82,9 @@ const TestimonialSection = ({ t }: any) => {
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    The prices represent an excellent value considering the quality of the service. The service meets all our expectations including measurement of results, viewing of reports and controlling budgets which are adjustable in each month or until the credits run out
+                                    {t(
+                                        'TestimonialSection::The prices represent an excellent value considering the quality of the service. The service meets all our expectations including measurement of results, viewing of reports and controlling budgets which are adjustable in each month or until the credits run out.'
+                                    )}
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -88,7 +96,9 @@ const TestimonialSection = ({ t }: any) => {
                   </div> */}
                                     <div className="client_name">
                                         <h6>
-                                            Smart One Logistics Co., Ltd.
+                                            {t(
+                                                'TestimonialSection::Smart One Logistics Co., Ltd.'
+                                            )}
                                         </h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
@@ -98,7 +108,9 @@ const TestimonialSection = ({ t }: any) => {
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    The service ensures that marketing by SMS can be executed easily and speedily. The staff are also available to provide helpful advice and rapid solutions to various problems
+                                    {t(
+                                        'TestimonialSection::The service ensures that marketing by SMS can be executed easily and speedily. The staff are also available to provide helpful advice and rapid solutions to various problems.'
+                                    )}
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -110,7 +122,9 @@ const TestimonialSection = ({ t }: any) => {
                   </div> */}
                                     <div className="client_name">
                                         <h6>
-                                            National Housing Authority of Thailand
+                                            {t(
+                                                'TestimonialSection::National Housing Authority of Thailand'
+                                            )}
                                         </h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
@@ -151,5 +165,9 @@ const TestimonialSection = ({ t }: any) => {
     </div>
     )
 }
+
+TestimonialSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
 export default TestimonialSection;
