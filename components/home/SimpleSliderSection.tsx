@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
 import Link from "next/dist/client/link";
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -9,7 +10,8 @@ const myLoader = ({src}:any) => {
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
 });
-const SimpleSliderSection = ({ t }: any) => {
+const SimpleSliderSection = () => {
+    const {t}:any  = useTranslation('Home')
     const mainImage: any = useRef(null);
     function onInitialized(e: any) {
         let count = 0;
@@ -68,7 +70,7 @@ const SimpleSliderSection = ({ t }: any) => {
                         <div className="simple_slider_heading_wrap">
                             <div className="simple_slider_heading">
                                 <h2>
-                                    Covering every purpose of SMS sending
+                                    {t('SimpleSliderSection::Covering every purpose of SMS sending')}
                                 </h2>
                             </div>
                             <div className="simple_slider_heading_img">
@@ -139,7 +141,7 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
-                                        Promoting marketing activities
+                                        {t('SimpleSliderSection::Promoting marketing activities')}
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User01.png" alt="user01" width={88} height={88}/>
@@ -152,7 +154,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                         height="88"
                                     /> */}
                                     <p>
-                                        On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code
+                                        {t(
+                                            'SimpleSliderSection::On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code.'
+                                        )}
                                         {/* <Link href="/">
                       <a >
                         <span>{t('SimpleSliderSection.item.1.link')}</span>
@@ -161,7 +165,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>                                   
                                     <a className="btn v9">
-                                        Try SMS sending for free
+                                        {t(
+                                            'SimpleSliderSection::Try SMS sending for free'
+                                        )}
                                     </a>
                                     </Link>
                                     <span
@@ -176,7 +182,9 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
-                                        Notification of expiry date
+                                        {t(
+                                            'SimpleSliderSection::Notification of expiry date'
+                                        )}
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User02.png" alt="user02" width={88} height={88}/>
@@ -189,7 +197,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                         height="88"
                                     /> */}
                                     <p>
-                                        Your car insurance is expiring in July 2020. Click here to extend your insurance
+                                        {t(
+                                            'SimpleSliderSection::Your car insurance is expiring in July 2020. Click here to extend your insurance.'
+                                        )}
                                         {/* <Link href="/">
                       <a >
                         <span>{t('SimpleSliderSection.item.2.link')}</span>
@@ -198,7 +208,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>                        
                                     <a className="btn v9">
-                                        Try SMS sending for free
+                                        {t(
+                                            'SimpleSliderSection::Try SMS sending for free'
+                                        )}
                                     </a>
                                     </Link>
                                     <span
@@ -213,7 +225,9 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
-                                        OTP for identity verification
+                                        {t(
+                                            'SimpleSliderSection::OTP for identity verification'
+                                        )}
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User03.png" alt="user03" width={88} height={88}/>
@@ -226,12 +240,16 @@ const SimpleSliderSection = ({ t }: any) => {
                                         height="88"
                                     /> */}
                                     <p>
-                                        Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes
+                                        {t(
+                                            'SimpleSliderSection::Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes'
+                                        )}
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                     
                                     <a className="btn v9">
-                                        Try SMS sending for free
+                                        {t(
+                                            'SimpleSliderSection::Try SMS sending for free'
+                                        )}
                                     </a>
                                     </Link>
                                     <span
@@ -246,7 +264,9 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
-                                        Notification of delivery status
+                                        {t(
+                                            'SimpleSliderSection::Notification of delivery status'
+                                        )}
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User04.png" alt="user04" width={88} height={88}/>
@@ -259,7 +279,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                         height="88"
                                     /> */}
                                     <p>
-                                        Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code
+                                        {t(
+                                            'SimpleSliderSection::Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code.'
+                                        )}
                                         {/* <Link href="/">
                       <a >
                         <span>{t('SimpleSliderSection.item.4.link')}</span>
@@ -268,7 +290,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                     <a className="btn v9">
-                                        Try SMS sending for free
+                                        {t(
+                                            'SimpleSliderSection::Try SMS sending for free'
+                                        )}
                                     </a>
                                     </Link>
                                     <span
@@ -283,7 +307,9 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item a">
                                     <h4>
-                                        Notification of special privilege for members
+                                        {t(
+                                            'SimpleSliderSection::Notification of special privilege for members'
+                                        )}
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User05.png" alt="user05" width={88} height={88}/>
@@ -296,7 +322,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                         height="88"
                                     /> */}
                                     <p>
-                                        Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code.
+                                        {t(
+                                            'SimpleSliderSection::Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code.'
+                                        )}
                                         {/* <Link href="/">
                       <a >
                         <span>{t('SimpleSliderSection.item.5.link')}</span>
@@ -305,7 +333,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>  
                                     <a className="btn v9">
-                                        Try SMS sending for free
+                                        {t(
+                                            'SimpleSliderSection::Try SMS sending for free'
+                                        )}
                                     </a>
                                     </Link>
                                     <span
@@ -332,5 +362,7 @@ const SimpleSliderSection = ({ t }: any) => {
         </div>
     );
 };
-
+SimpleSliderSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 export default SimpleSliderSection;
