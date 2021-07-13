@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
 import Link from "next/dist/client/link";
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 // const OwlCarousel = dynamic(import('react-owl-carousel'), {
 //     ssr: false,
 // });
@@ -87,7 +92,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <h4>
                                         Promoting marketing activities
                                     </h4>
-                                    img Slide1
+                                    <div className="lazyload">
+                                    <Image loader={myLoader} src="User01.png" alt="user01" width={88} height={88}/>
+                                    </div>
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User01.png`}
@@ -122,7 +129,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <h4>
                                         SimpleSliderSection::Notification of expiry date
                                     </h4>
-                                    img Slide2
+                                    <div className="lazyload">
+                                    <Image loader={myLoader} src="User02.png" alt="user02" width={88} height={88}/>
+                                    </div>
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User02.png`}
@@ -157,7 +166,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <h4>
                                         OTP for identity verification
                                     </h4>
-                                    img Slide3
+                                    <div className="lazyload">
+                                    <Image loader={myLoader} src="User03.png" alt="user03" width={88} height={88}/>
+                                    </div>
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User03.png`}
@@ -188,7 +199,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <h4>
                                         Notification of delivery status
                                     </h4>
-                                    img Slide4
+                                    <div className="lazyload">
+                                    <Image loader={myLoader} src="User04.png" alt="user04" width={88} height={88}/>
+                                    </div>
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User04.png`}
@@ -223,7 +236,9 @@ const SimpleSliderSection = ({ t }: any) => {
                                     <h4>
                                         Notification of special privilege for members
                                     </h4>
-                                    img Slide5
+                                    <div className="lazyload">
+                                    <Image loader={myLoader} src="User05.png" alt="user05" width={88} height={88}/>
+                                    </div>
                                     {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User05.png`}
