@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
+// import CountUp from 'react-countup';
 
 const SmsSectionV2 = () => {
     const {t}:any  = useTranslation('Home')
+    const [numStart, setnumStart] = useState(4662190879);
+    const [numEnd, setnumEnd] = useState(0);
+    const [duration, setDuration] = useState(0);
     return(
         <div
             className="sms_section lazyload"
             // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
-            // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mobile/promo_bg.jpg [(max-width:767px)] | ${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
+            data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mobile/promo_bg.jpg [(max-width:767px)] | ${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
         >
             <div className="container">
                 <div className="row">
