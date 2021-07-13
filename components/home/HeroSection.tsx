@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
-const HeroSectionV2 = ({ t }: any) => {
+const HeroSectionV2 = () => {
+    const {t}:any  = useTranslation('Home')
     return(
         <div className="hero_section v2">
         <div className="container">
@@ -10,23 +11,25 @@ const HeroSectionV2 = ({ t }: any) => {
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="hero_text_one">
                         <h1>
-                            Meeting every one of your SMS sending needs
+                            {t('HeroSection::Meeting every one of your SMS sending needs.')}
                         </h1>
                         <p>
-                            SMS sending service capable of quick sending with reliable stability. Consultation is available at every step
+                            {t(
+                                'HeroSection::SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.'
+                            )}
                         </p>
                         <ul className="cta-btn">
                             <li>
                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}> 
                                 <a className="btn v3">
-                                    Try SMS sending for free
+                                    {t('HeroSection::Try SMS sending for free')}
                                 </a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/pricing">
                                     <a className="btn v5">
-                                        View package prices
+                                        {t('HeroSection::View package prices')}
                                     </a>
                                 </Link>
                             </li>
@@ -39,9 +42,9 @@ const HeroSectionV2 = ({ t }: any) => {
     )  
 }
 
-// HeroSectionV2.getInitialProps = async () => ({
-//     namespacesRequired: ['Home'],
-// });
+HeroSectionV2.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
 // HeroSectionV2.propTypes = {
 //     t: PropTypes.func.isRequired,
