@@ -107,7 +107,7 @@ const FeatureSection = () =>{
     )
 }
 
-// FeatureSection.getInitialProps = async () => ({
-//     namespacesRequired: ['Home'],
-// });
+FeatureSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 export default FeatureSection;
