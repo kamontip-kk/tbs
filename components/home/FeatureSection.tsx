@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/dist/client/image";
-import { useTranslation } from 'next-i18next';
+// import { useTranslation } from 'next-i18next';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
 const FeatureSection = () =>{
-    const {t}:any  = useTranslation('Home')
+    // const {t}:any  = useTranslation('Home')
     return(
         <div className="feature_section">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <h2 className="section_title">
-                        {t('FeatureSection::Why ThaiBulk SMS')}
+                        Why ThaiBulk SMS
                     </h2>
                 </div>
             </div>
@@ -32,9 +32,9 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::No.1 SMS Platform')}</h3>
+                            <h3>No.1 SMS Platform</h3>
                             <p>
-                                {t('FeatureSection::Thailand’s no. 1 SMS service provider')}
+                                Thailand’s no. 1 SMS service provider
                             </p>
                         </div>
                     </div>
@@ -52,9 +52,9 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Fast & Reliable')}</h3>
+                            <h3>Fast and Reliable</h3>
                             <p>
-                                {t('FeatureSection::The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability.')}
+                                The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability
                             </p>
                         </div>
                     </div>
@@ -72,9 +72,9 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Smart Console')}</h3>
+                            <h3>Smart Console</h3>
                             <p>
-                                {t('FeatureSection::The results of sending can be measured easily with smart reports.')}
+                                The results of sending can be measured easily with smart reports
                             </p>
                         </div>
                     </div>
@@ -93,10 +93,10 @@ const FeatureSection = () =>{
                         /> */}
                         <div className="single_feature_text">
                             <h3>
-                                {t('FeatureSection::Easily Integrated API')}
+                                Easily Integrated API
                             </h3>
                             <p>
-                                {t('FeatureSection::Easy to connect and support multiple languages.')}
+                            Easy to connect and support multiple languages
                             </p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ const FeatureSection = () =>{
     )
 }
 
-FeatureSection.getInitialProps = async () => ({
-    namespacesRequired: ['Home'],
-});
+// FeatureSection.getInitialProps = async () => ({
+//     namespacesRequired: ['Home'],
+// });
 export default FeatureSection;

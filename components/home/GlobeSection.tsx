@@ -1,32 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/dist/client/image";
-import { useTranslation } from 'next-i18next';
+
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
-const GlobeSection = () => {
-  const {t}:any  = useTranslation('Home')
+const GlobeSection = ({ t }: any) => {
   return (
     <div className="globe_section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
             <div className="globe_text">
-              <h2>{t('GlobeSection::Free SMS and OTP sending worldwide at a great value price.')}</h2>
-              <p>
-                {t(
-                  'GlobeSection::Covering more than 200 countries worldwide.'
-                )}
-              </p>
+              <h2>Free SMS and OTP sending worldwide at a great value price</h2>
+              <p>Covering more than 200 countries worldwide</p>
               <Link href="/contact">
-                <a className="btn v3">
-                  {t(
-                    'GlobeSection::Contact us for more information'
-                  )}
-                </a>
+                <a className="btn v3">Contact us for more information</a>
               </Link>
             </div>
           </div>
@@ -48,8 +39,8 @@ const GlobeSection = () => {
   );
 };
 
-GlobeSection.getInitialProps = async () => ({
-  namespacesRequired: ['Home'],
-});
+// GlobeSection.getInitialProps = async () => ({
+//   namespacesRequired: ['Home'],
+// });
 
 export default GlobeSection;

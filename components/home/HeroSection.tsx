@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const HeroSectionV2 = ({ t }: any) => {
     return(
