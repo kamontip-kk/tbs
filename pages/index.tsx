@@ -17,7 +17,7 @@ import BacktoTop from '../components/BacktoTop';
 import { useTranslation } from 'next-i18next';
 
 const Homepage = () => {
-  const {t}:any = useTranslation('Home')
+  const {t}:any  = useTranslation('Home')
   return(
     <React.Fragment>
       <Layout>

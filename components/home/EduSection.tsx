@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/dist/client/image";
-// import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
-const EduSection = ({ t }: any) => {
+const EduSection = () => {
+    const { t }:any = useTranslation('Home');
     return(
         <div className="edu_section">
         <div className="container">
@@ -15,11 +16,13 @@ const EduSection = ({ t }: any) => {
                 <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
                     <div className="edu_text">
                         <h2>
-                            Interesting tips and knowledge regarding SMS and marketing
+                            {t(
+                                'EduSection::Interesting tips and knowledge regarding SMS and marketing'
+                            )}
                         </h2>
                         {/* <a href="http://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
                         <Link href="/resource">
-                            View all contents
+                            {t('EduSection::View all contents')}
                         </Link>
                     </div>
                 </div>
@@ -41,7 +44,9 @@ const EduSection = ({ t }: any) => {
                                     /> */}
                                     <div className="edu_box_text">
                                         <p>
-                                           Don’t miss!! Marketing trends in 2020
+                                            {t(
+                                                'EduSection::Don’t miss!! Marketing trends in 2020.'
+                                            )}
                                         </p>
                                     </div>
                                 </a>
@@ -66,7 +71,9 @@ const EduSection = ({ t }: any) => {
                                             /> */}
                                             <div className="edu_box_text">
                                                 <p>
-                                                    4 ways to communicate with customers most effectively Conclude your sale with testimonials
+                                                    {t(
+                                                        'EduSection::4 ways to communicate with customers most effectively Conclude your sale with testimonials.'
+                                                    )}
                                                 </p>
                                             </div>
                                         </a>                              
@@ -89,7 +96,9 @@ const EduSection = ({ t }: any) => {
                                             /> */}
                                             <div className="edu_box_text">
                                                 <p>
-                                                    EduSection::Simple to do but the results will exceed expectations
+                                                    {t(
+                                                        'EduSection::Simple to do but the results will exceed expectations.'
+                                                    )}
                                                 </p>
                                             </div>
                                         </a>                            
@@ -105,5 +114,9 @@ const EduSection = ({ t }: any) => {
     </div>
     )
 }
+
+EduSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
 export default EduSection;
