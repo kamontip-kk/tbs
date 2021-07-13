@@ -1,19 +1,21 @@
 import React from "react";
 import Link from 'next/link';
 import Image from "next/dist/client/image";
+import { useTranslation } from 'next-i18next';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
-const ServiceSection = ({t}:any) =>{
+const ServiceSection = () =>{
+    const {t}:any  = useTranslation('Home')
     return(
         <div className="service_section">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-7 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="service_text">
-                        <h2>homeserviceheader</h2>
+                        <h2>{t('ServiceSection::homeserviceheader')}</h2>
                         <div className="serviceTBS">
                             <div className="serviceDetail">
                                 <div className="lazyload size-img">
@@ -28,9 +30,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>Smart SMS Console</h3>
-                                <p>homeservice1</p>
+                                <p>{t('ServiceSection::homeservice1')}</p>
                                 <Link href="/product/smart-sms-console">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                             <div className="serviceDetail">
@@ -46,9 +48,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>SMS API</h3>
-                                <p>homeservice2</p>
+                                <p>{t('ServiceSection::homeservice2')}</p>
                                 <Link href="/product/sms-api">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                             <div className="serviceDetail">
@@ -63,9 +65,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>OTP Service</h3>
-                                <p>homeservice3</p>
+                                <p>{t('ServiceSection::homeservice3')}</p>
                                 <Link href="/product/otp">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                             <div className="serviceDetail">
@@ -80,9 +82,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>SMS Tracking</h3>
-                                <p>homeservice4</p>
+                                <p>{t('ServiceSection::homeservice4')}</p>
                                 <Link href="/product/sms-tracking">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                             <div className="serviceDetail">
@@ -97,9 +99,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>Global SMS</h3>
-                                <p>homeservice5</p>
+                                <p>{t('ServiceSection::homeservice5')}</p>
                                 <Link href="/product/global-sms/">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                             <div className="serviceDetail">
@@ -114,9 +116,9 @@ const ServiceSection = ({t}:any) =>{
                                     height="80"
                                 /> */}
                                 <h3>Location Based SMS</h3>
-                                <p>homeservice6</p>
+                                <p>{t('ServiceSection::homeservice6')}</p>
                                 <Link href="/product/location-based-sms">
-                                    learnmore
+                                    {t('ServiceSection::learnmore')}
                                 </Link>
                             </div>
                         </div>
@@ -143,4 +145,7 @@ const ServiceSection = ({t}:any) =>{
     )
 }
 
+ServiceSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 export default ServiceSection;
