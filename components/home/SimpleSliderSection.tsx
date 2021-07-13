@@ -10,7 +10,7 @@ const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
 });
 const SimpleSliderSection = ({ t }: any) => {
-    
+    const mainImage: any = useRef(null);
     return (
         <div className="simple_slider_section">
             <div className="container-fluid">
@@ -23,12 +23,11 @@ const SimpleSliderSection = ({ t }: any) => {
                                 </h2>
                             </div>
                             <div className="simple_slider_heading_img">
-                                object mainImage
-                                {/* <object
+                                <object
                                     ref={mainImage}
                                     type="image/svg+xml"
                                     data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/TBS-home-feature01.svg`}
-                                ></object> */}
+                                ></object>
                                 <style jsx>{`
                                     .fade-enter {
                                         opacity: 0;
