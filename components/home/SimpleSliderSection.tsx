@@ -6,10 +6,11 @@ import Image from 'next/image';
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
-// const OwlCarousel = dynamic(import('react-owl-carousel'), {
-//     ssr: false,
-// });
+const OwlCarousel = dynamic(import('react-owl-carousel'), {
+    ssr: false,
+});
 const SimpleSliderSection = ({ t }: any) => {
+    
     return (
         <div className="simple_slider_section">
             <div className="container-fluid">
@@ -52,15 +53,15 @@ const SimpleSliderSection = ({ t }: any) => {
                         </div>
                     </div>
                     <div className="col-lg-7 col-md-6">
-                        {/* <OwlCarousel
+                        <OwlCarousel
                             className="simple_slider_wrapper"
                             items={2}
                             nav
                             dots={false}
                             loop
-                            onTranslated={(e) => handleSelect(e)}
-                            onTranslate={() => handlefade()}
-                            onInitialized={(e) => onInitialized(e)}
+                            // onTranslated={(e) => handleSelect(e)}
+                            // onTranslate={() => handlefade()}
+                            // onInitialized={(e) => onInitialized(e)}
                             navText={[
                                 '<i class="ion-ios-arrow-back"></i>',
                                 '<i class="ion-ios-arrow-forward"></i>',
@@ -86,7 +87,7 @@ const SimpleSliderSection = ({ t }: any) => {
                                     items: 2,
                                 },
                             }}
-                        > */}
+                        >
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
@@ -268,7 +269,7 @@ const SimpleSliderSection = ({ t }: any) => {
                                     </span>
                                 </div>
                             </div>
-                        {/* </OwlCarousel> */}
+                        </OwlCarousel>
                         {/* <a  className="lang_link text-right pr-4">
               {t('SimpleSliderSection::Try SMS sending for free')}
               <img
