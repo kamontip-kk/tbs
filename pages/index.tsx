@@ -14,8 +14,10 @@ import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
+// import { useTranslation } from 'next-i18next';
 
-const Homepage = ({t}:any) => {
+const Homepage = () => {
+  // const {t}:any = useTranslation()
   return(
     <React.Fragment>
       <Layout>
@@ -50,7 +52,7 @@ const Homepage = ({t}:any) => {
   )
 }
 
-//export default withTranslation('Home')(Homepage);
+// export default withTranslation('Home')(Homepage);
 // export const getStaticProps = async () => {
 //     return {
 //         props: {
