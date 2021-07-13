@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/dist/client/image";
+// import { useTranslation } from 'next-i18next';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`

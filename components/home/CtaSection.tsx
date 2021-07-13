@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
-const CtaSection = ({ t }: any) =>{
+const CtaSection = () =>{
+    const {t}:any = useTranslation('Home')
     return(
         <div className="cta_section">
         <div className="container">
@@ -12,8 +14,11 @@ const CtaSection = ({ t }: any) =>{
             <div className="row align-items-center">
                 <div className="col-xl-6 col-lg-12">
                     <div className="cta-text">
-                        <h3>
-                            Improve the effectiveness of<br/>your business With SMS from ThaiBulkSMS
+                        <h3 dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'Improve Your Business<br/>Effectiveness with SMS from ThaiBulkSMS'
+                                ),
+                            }}>
                         </h3>
                     </div>
                 </div>
@@ -22,14 +27,14 @@ const CtaSection = ({ t }: any) =>{
                         <li>
                             <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                 <a className="btn v3">
-                                    Try SMS sending for free
+                                {t('Try for free')}
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/pricing">
                                 <a className="btn v5">
-                                    View package prices
+                                {t('Check prices')}
                                 </a>
                             </Link>
                         </li>
@@ -41,11 +46,8 @@ const CtaSection = ({ t }: any) =>{
     )
 }
 
-// CtaSection.getInitialProps = async () => ({
-//     namespacesRequired: ['Home'],
-// });
+CtaSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
-// CtaSection.propTypes = {
-//     t: PropTypes.func.isRequired,
-// };
 export default CtaSection;

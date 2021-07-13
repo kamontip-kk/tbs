@@ -14,15 +14,15 @@ import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
-// import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 
 const Homepage = () => {
-  // const {t}:any = useTranslation()
+  const {t}:any = useTranslation('Home')
   return(
     <React.Fragment>
       <Layout>
         <Head>
-          {/* <meta name="keywords" content={t('keywords')} /> */}
+          <meta name="keywords" content={t('keywords')} />
           <meta name="author" content="" />
           <meta
             name="viewport"
@@ -53,11 +53,11 @@ const Homepage = () => {
 }
 
 // export default withTranslation('Home')(Homepage);
-// export const getStaticProps = async () => {
-//     return {
-//         props: {
-//             namespacesRequired: ['Home'],
-//         },
-//     };
-// };
+export const getStaticProps = async () => {
+    return {
+        props: {
+            namespacesRequired: ['Home'],
+        },
+    };
+};
 export default Homepage;
