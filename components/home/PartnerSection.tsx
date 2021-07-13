@@ -2,6 +2,8 @@ import dynamic from 'next/dynamic';
 import React from "react";
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
 });
@@ -10,7 +12,8 @@ const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
-const PartnerSection = ({t}:any) =>{
+const PartnerSection = () =>{
+    const {t}:any  = useTranslation('Home')
     return(
         <div className="partner_section">
         <div className="container">
@@ -20,7 +23,9 @@ const PartnerSection = ({t}:any) =>{
                         className="partner_title"
                         style={{ textTransform: 'none' }}
                     >
-                        Leading brands that trust ThaiBulkSMS
+                        {t(
+                            'PartnerSection::Leading brands that trust ThaiBulkSMS'
+                        )}
                     </h6>
                 </div>
                 <div className="col-md-12">
@@ -127,9 +132,9 @@ const PartnerSection = ({t}:any) =>{
     )
 }
 
-// PartnerSection.getInitialProps = async () => ({
-//     namespacesRequired: ['Home'],
-// });
+PartnerSection.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
 // PartnerSection.propTypes = {
 //     t: PropTypes.func.isRequired,
