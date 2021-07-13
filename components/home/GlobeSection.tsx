@@ -48,8 +48,8 @@ const GlobeSection = () => {
   );
 };
 
-// GlobeSection.getInitialProps = async () => ({
-//   namespacesRequired: ['Home'],
-// });
+GlobeSection.getInitialProps = async () => ({
+  namespacesRequired: ['Home'],
+});
 
 export default GlobeSection;
