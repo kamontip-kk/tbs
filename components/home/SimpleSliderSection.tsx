@@ -11,6 +11,55 @@ const OwlCarousel = dynamic(import('react-owl-carousel'), {
 });
 const SimpleSliderSection = ({ t }: any) => {
     const mainImage: any = useRef(null);
+    function onInitialized(e: any) {
+        let count = 0;
+        e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
+            (val: any) => {
+                if (val.className === 'owl-item active') {
+                    val.style.opacity = 0.5;
+                    if (count === 0) {
+                        val.style.opacity = 1;
+                    }
+                    count++;
+                } else {
+                    val.style.opacity = 0.5;
+                }
+            }
+        );
+    }
+    function handlefade() {
+        mainImage.current.classList.add('fade-exit-active');
+    }
+    function handleSelect(e: any) {
+        mainImage.current.classList.remove('fade-exit-active');
+        mainImage.current.classList.add('fade-enter-active');
+        let count = 0;
+        e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
+            (val: any) => {
+                val.style.opacity = 0.5;
+            }
+        );
+        e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
+            (val: any) => {
+                if (val.className === 'owl-item active') {
+                    if (count === 0) {
+                        val.style.opacity = 1;
+                        val.children[0].children[0].childNodes.forEach(
+                            (childval: any) => {
+                                if (childval.className === 'linking') {
+                                    if (mainImage.current !== null) {
+                                        mainImage.current.data =
+                                            childval.innerText;
+                                    }
+                                }
+                            }
+                        );
+                        count++;
+                    }
+                }
+            }
+        );
+    }
     return (
         <div className="simple_slider_section">
             <div className="container-fluid">
@@ -58,9 +107,9 @@ const SimpleSliderSection = ({ t }: any) => {
                             nav
                             dots={false}
                             loop
-                            // onTranslated={(e) => handleSelect(e)}
-                            // onTranslate={() => handlefade()}
-                            // onInitialized={(e) => onInitialized(e)}
+                            onTranslated={(e) => handleSelect(e)}
+                            onTranslate={() => handlefade()}
+                            onInitialized={(e) => onInitialized(e)}
                             navText={[
                                 '<i class="ion-ios-arrow-back"></i>',
                                 '<i class="ion-ios-arrow-forward"></i>',
@@ -127,7 +176,7 @@ const SimpleSliderSection = ({ t }: any) => {
                             <div className="item">
                                 <div className="simple_slider_item">
                                     <h4>
-                                        SimpleSliderSection::Notification of expiry date
+                                        Notification of expiry date
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User02.png" alt="user02" width={88} height={88}/>
