@@ -1,12 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 
 const SmsSectionV2 = () => {
     const {t}:any  = useTranslation('Home')
     const [numStart, setnumStart] = useState(4662190879);
     const [numEnd, setnumEnd] = useState(0);
     const [duration, setDuration] = useState(0);
+
+    useEffect(() => {
+        let startDate = 1597104000;
+        let dayAt = 300000;
+
+        let curTime = Math.floor(Date.now() / 1000);
+        let remain =
+            (Math.ceil((curTime - startDate) / 86400) -
+                (curTime - startDate) / 86400) *
+            86400 *
+            7;
+        setnumStart(
+            numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400))
+        );
+        setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400));
+        setDuration(remain);
+    }, []);
+
     return(
         <div
             className="sms_section lazyload"
@@ -34,7 +52,7 @@ const SmsSectionV2 = () => {
                                                 'SmsSection::The number of SMS sent by us up to now'
                                             )}
                                         </p>
-                                        {/* {duration !== 0 && (
+                                        {duration !== 0 && (
                                             <div>
                                                 <CountUp
                                                     className="account-balance"
@@ -51,7 +69,7 @@ const SmsSectionV2 = () => {
                                                     }}
                                                 />
                                             </div>
-                                        )} */}
+                                        )}
                                         {/* <h2>4,662,190,879</h2> */}
                                     </div>
                                 </div>
