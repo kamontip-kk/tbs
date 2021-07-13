@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
 
-const SmsSectionV2 = ({ t }: any) => {
+const SmsSectionV2 = () => {
+    const {t}:any  = useTranslation('Home')
     return(
         <div
             className="sms_section lazyload"
@@ -12,7 +14,9 @@ const SmsSectionV2 = ({ t }: any) => {
                     <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
                         <div className="sms_text">
                             <h2>
-                                Be confident in every instance of SMS sending
+                                {t(
+                                    'SmsSection::Be confident in every instance of SMS sending'
+                                )}
                             </h2>
                         </div>
                     </div>
@@ -22,7 +26,9 @@ const SmsSectionV2 = ({ t }: any) => {
                                 <div className="col-md-12">
                                     <div className="sms_feature_item">
                                         <p>
-                                            The number of SMS sent by us up to now
+                                            {t(
+                                                'SmsSection::The number of SMS sent by us up to now'
+                                            )}
                                         </p>
                                         {/* {duration !== 0 && (
                                             <div>
@@ -48,7 +54,9 @@ const SmsSectionV2 = ({ t }: any) => {
                                 <div className="col-md-6">
                                     <div className="sms_feature_item">
                                         <p>
-                                            The number of SMS sending on average / day
+                                            {t(
+                                                'SmsSection::The number of SMS sending on average / day'
+                                            )}
                                         </p>
                                         <div>300,000+</div>
                                     </div>
@@ -56,12 +64,14 @@ const SmsSectionV2 = ({ t }: any) => {
                                 <div className="col-md-6">
                                     <div className="sms_feature_item">
                                         <p>
-                                            The average amount of time taken to send SMS Seconds
+                                            {t(
+                                                'SmsSection::The average amount of time taken to send SMS Seconds'
+                                            )}
                                         </p>
                                         <div>
                                             1.9{' '}
                                             <span>
-                                                Seconds
+                                                {t('SmsSection::Seconds')}
                                             </span>
                                         </div>
                                     </div>
@@ -75,5 +85,9 @@ const SmsSectionV2 = ({ t }: any) => {
         </div>
     )
 }
+
+SmsSectionV2.getInitialProps = async () => ({
+    namespacesRequired: ['Home'],
+});
 
 export default SmsSectionV2;
