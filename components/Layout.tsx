@@ -8,7 +8,7 @@ const Layout = (props:any) => {
             <Header/>
             {props.children}
             <Footer/>
-            <BannerCookie/>
+            {/* <BannerCookie/> */}
         </div>
     )
 }
