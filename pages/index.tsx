@@ -30,11 +30,11 @@ const Homepage = () => {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        {/* <NextSeo
+        <NextSeo
                 openGraph={seo.openGraph}
                 title={t('meta::title')}
                 description={t('meta::description')}
-            /> */}
+            />
         <div className="page_wrapper">
           <HeroSection/>
           <PartnerSection/>
