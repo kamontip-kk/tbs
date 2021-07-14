@@ -19,13 +19,9 @@ const HeaderTopMenuMobile = () => (
             >
                 <Link href="/">
                     <a className="navbar-brand p-0 m-0 img-logo-title-menu-mobile closemenu">
-                        <img
-                            className=""
-                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
-                            alt="Logo"
-                            width="216"
-                            height="28"
-                        />
+                        <div>
+                            <Image loader={myLoader} src="logo_1.png" alt="logo1" width={216} height={28}/>
+                        </div>        
                     </a>
                 </Link>
             </div>
