@@ -12,7 +12,9 @@ const Header = () => {
                     <div className="col-md-12 lg-none">
                         <div className="header_top">
                             <div className="header_contact_no">
-                                <a href="tel:027986000">02-798-6000</a>
+                                <Link href="tel:027986000">
+                                    <a>02-798-6000</a>
+                                </Link>
                             </div>
                             <div className="header_select">
                                 {/* <select
@@ -811,7 +813,7 @@ const Header = () => {
                                             </ul>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`} passHref={true}>
+                                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`}>
                                                         <a className="closemenu">
                                                             {/* <img
                                                                 className="icon-title-menu-mobile"
@@ -834,7 +836,6 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`}
-                                                        passHref={true}
                                                     >
                                                         <a className="closemenu">
                                                             {/* <img
@@ -851,7 +852,6 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tecth/`}
-                                                        passHref={true}
                                                     >
                                                         <a className="closemenu">
                                                             {/* <img
@@ -868,7 +868,6 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`}
-                                                        passHref={true}
                                                     >
                                                         <a className="closemenu">
                                                             {/* <img
@@ -886,7 +885,7 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`}
-                                                        passHref={true}
+                                                        
                                                     >
                                                         <a className="closemenu">
                                                             {/* <img
@@ -908,7 +907,7 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/success-stories/`}
-                                                        passHref={true}
+                                                        
                                                     >
                                                         <a className="closemenu">
                                                             {/* <img
@@ -1011,7 +1010,8 @@ const Header = () => {
                                             </h5>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <a href="tel:027986000">
+                                                    <Link href="tel:027986000">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
@@ -1021,9 +1021,11 @@ const Header = () => {
                                                         /> */}
                                                         02-798-6000
                                                     </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <a href="mailto:contact@thaibulksms.com">
+                                                    <Link href="mailto:contact@thaibulksms.com">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
@@ -1033,9 +1035,12 @@ const Header = () => {
                                                         /> */}
                                                         contact@thaibulksms.com
                                                     </a>
+                                                    </Link>
+                                                    
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <a href="https://www.facebook.com/ThaiBulkSMS">
+                                                    <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -1045,6 +1050,8 @@ const Header = () => {
                                                         /> */}
                                                         ThaiBulkSMS
                                                     </a>
+                                                    </Link>
+                                                    
                                                 </li>
                                             </ul>
                                         </div>
@@ -1212,7 +1219,8 @@ const Header = () => {
                                             </h5>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <a href="tel:027986000">
+                                                    <Link href="tel:027986000">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
@@ -1222,9 +1230,11 @@ const Header = () => {
                                                         /> */}
                                                         02-798-6000
                                                     </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <a href="mailto:contact@thaibulksms.com">
+                                                    <Link href="mailto:contact@thaibulksms.com">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
@@ -1234,9 +1244,12 @@ const Header = () => {
                                                         /> */}
                                                         contact@thaibulksms.com
                                                     </a>
+                                                    </Link>
+                                                    
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <a href="https://www.facebook.com/ThaiBulkSMS">
+                                                    <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                                    <a>
                                                         {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -1246,6 +1259,8 @@ const Header = () => {
                                                         /> */}
                                                         ThaiBulkSMS
                                                     </a>
+                                                    </Link>
+                                                    
                                                 </li>
                                             </ul>
                                         </div>
@@ -1263,10 +1278,8 @@ const Header = () => {
                         <div className="menu_btn">
                             <ul>
                                 <li>
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                                        className="loginLink"
-                                    >
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
+                                    <a className="loginLink">
                                         {/* {t(
                                             'header::' +
                                             (isLogin === true
@@ -1274,6 +1287,8 @@ const Header = () => {
                                                 : 'Login')
                                         )} */}
                                     </a>
+                                    </Link>
+
                                 </li>
                                 {/* <li>
                                     {isLogin === true ? (
@@ -1283,13 +1298,13 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     ) : (
-                                            <a
-                                                className="btn v1"
-                                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                            >
+                                            <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                                <a className="btn v1">
                                                 {t(`header::` + 'Free trial')}
-                                            </a>
-                                        )}
+                                                </a>
+                                            </Link>
+                                        )
+                                    }
                                 </li> */}
                             </ul>
                         </div>
