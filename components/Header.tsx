@@ -77,7 +77,7 @@ const MySelect = options.map((list) => {
 });
 
 const Header = () => {
-    const {t}:any  = useTranslation('Home')
+    const {t , i18n}:any  = useTranslation('Home')
     const headerBar: any = useRef(null);
     const [lang, setLang] = useState('TH');
     const [isLogin, setIsLogin] = useState(
