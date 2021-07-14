@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import Link from 'next/link'
-import { useTranslation , withTranslation,} from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
+import { useRouter } from 'next/router'
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -79,6 +80,8 @@ const MySelect = options.map((list) => {
 const Header = () => {
     const {t , i18n}:any  = useTranslation('Header')
 
+    const router = useRouter()
+
     const headerBar: any = useRef(null);
 
     const [lang, setLang] = useState('TH');
@@ -143,6 +146,11 @@ const Header = () => {
                                     <a>02-798-6000</a>
                                 </Link>
                             </div>
+                            <Link href='' locale={router.locale === 'th' ? 'en' : 'th'}>
+                                <button>
+                                    changeLanguage
+                                </button>
+                            </Link>
                             <div className="header_select">
                                 <select
                                     className="user_select"
