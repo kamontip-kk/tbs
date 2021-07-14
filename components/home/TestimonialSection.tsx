@@ -18,10 +18,12 @@ const TestimonialSection = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h2 className="section_title">
-                        {t('TestimonialSection::Customers who trust ThaiBulk SMS')}
-                        {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
-                        <span className="col_two">SMS</span> */}
+                    <h2 className="section_title" 
+                        dangerouslySetInnerHTML={{
+                            __html: t(
+                                'TestimonialSection::Customers who trust ThaiBulk SMS'
+                            ),
+                        }}>
                     </h2>
                 </div>
             </div>

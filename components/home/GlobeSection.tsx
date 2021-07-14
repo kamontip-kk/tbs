@@ -15,7 +15,13 @@ const GlobeSection = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
             <div className="globe_text">
-              <h2>{t('GlobeSection::Free SMS and OTP sending worldwide at a great value price.')}</h2>
+              <h2 
+              dangerouslySetInnerHTML={{
+                __html: t(
+                    'GlobeSection::Free SMS and OTP sending worldwide at a great value price.'
+                ),
+            }}
+              ></h2>
               <p>
                 {t(
                   'GlobeSection::Covering more than 200 countries worldwide.'

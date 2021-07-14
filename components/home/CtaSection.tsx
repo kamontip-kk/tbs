@@ -15,8 +15,11 @@ const CtaSection = () =>{
             <div className="row align-items-center">
                 <div className="col-xl-6 col-lg-12">
                     <div className="cta-text">
-                        <h3>
-                            {t('CtaSection::Improve the effectiveness of<br/>your business With SMS from ThaiBulkSMS')}
+                        <h3 dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'CtaSection::Improve the effectiveness of<br/>your business With SMS from ThaiBulkSMS'
+                                ),
+                            }}>
                         </h3>
                     </div>
                 </div>

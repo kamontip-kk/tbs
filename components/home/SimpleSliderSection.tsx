@@ -69,8 +69,11 @@ const SimpleSliderSection = () => {
                     <div className="col-lg-5 col-md-6">
                         <div className="simple_slider_heading_wrap">
                             <div className="simple_slider_heading">
-                                <h2>
-                                    {t('SimpleSliderSection::Covering every purpose of SMS sending')}
+                                <h2 dangerouslySetInnerHTML={{
+                                        __html: t(
+                                            'SimpleSliderSection::Covering every purpose of SMS sending'
+                                        ),
+                                    }}>
                                 </h2>
                             </div>
                             <div className="simple_slider_heading_img">
@@ -140,8 +143,11 @@ const SimpleSliderSection = () => {
                         >
                             <div className="item">
                                 <div className="simple_slider_item">
-                                    <h4>
-                                        {t('SimpleSliderSection::Promoting marketing activities')}
+                                    <h4 dangerouslySetInnerHTML={{
+                                            __html: t(
+                                                'SimpleSliderSection::Promoting marketing activities'
+                                            ),
+                                        }}>
                                     </h4>
                                     <div className="lazyload">
                                     <Image loader={myLoader} src="User01.png" alt="user01" width={88} height={88}/>
