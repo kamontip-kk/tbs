@@ -16,6 +16,7 @@ import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Footer from '../tbs_submodule/Footer';
 
 const Homepage = () => {
   const {t}:any  = useTranslation('Home')
@@ -56,7 +57,7 @@ const Homepage = () => {
 // export default withTranslation('Home')(Homepage);
 export const getStaticProps = async ({locale}:any) => ({
   props: {
-    ...await serverSideTranslations(locale,['Home']),
+    ...await serverSideTranslations(locale,['Home' , 'Header' , 'Footer']),
   },
     
 })

@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import Link from "next/dist/client/link";
 import Image from "next/dist/client/image";
+import { useTranslation } from 'next-i18next';
 // import appConfig from "../appConfig";
 
 const myLoader = ({ src }: any) => {
   return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`;
 };
 
-const Footer = ({ t }: any) => {
+const Footer = () => {
+  const {t}:any  = useTranslation('Footer')
   const makeHomePageLink = (path: string): string => {
     const url = "";
     return url + "/" + path + (path ? "/" : "");
@@ -23,7 +25,7 @@ const Footer = ({ t }: any) => {
             <div className="footer_widget">
               <Link href={makeHomePageLink("product")}>
                 <a>
-                  <h4>Services</h4>
+                  <h4>{t("footer::Services")}</h4>
                 </a>
               </Link>
               <ul>
@@ -62,21 +64,21 @@ const Footer = ({ t }: any) => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>Support</h4>
+              <h4>{t("footer::Support")}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("support/how-to-order")}>
-                    <a>Ordering Methods</a>
+                    <a>{t("footer::Ordering Methods")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("support/faq")}>
-                    <a>Frequently Asked Questions</a>
+                    <a>{t("footer::Frequently Asked Questions")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("developer")}>
-                    <a>For Developers</a>
+                    <a>{t("footer::For Developers")}</a>
                   </Link>
                 </li>
                 <li>
@@ -92,16 +94,16 @@ const Footer = ({ t }: any) => {
 
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>Use Cases</h4>
+              <h4>{t("footer::Use Cases")}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("sms-marketing")}>
-                    <a>SMS Marketing</a>
+                    <a>{t("footer::SMS Marketing")}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("sms-alert")}>
-                    <a>SMS Alert</a>
+                    <a>{t("footer::SMS Alert")}</a>
                   </Link>
                 </li>
               </ul>
@@ -110,11 +112,11 @@ const Footer = ({ t }: any) => {
 
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>About Us</h4>
+              <h4>{t("footer::About Us")}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("why-thaibulksms")}>
-                    <a>Why use ThaiBulkSMS</a>
+                    <a>{t("footer::Why use ThaiBulkSMS?")}</a>
                   </Link>
                 </li>
                 <li>
@@ -124,7 +126,7 @@ const Footer = ({ t }: any) => {
                 </li>
                 <li>
                   <Link href={makeHomePageLink("contact")}>
-                    <a>Contact us</a>
+                    <a>{t("footer::Contact us")}</a>
                   </Link>
                 </li>
               </ul>
@@ -296,5 +298,9 @@ const Footer = ({ t }: any) => {
     </div>
   );
 };
+
+Footer.getInitialProps = async () => ({
+  namespacesRequired: ["Footer"],
+});
 
 export default Footer;
