@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -80,7 +80,7 @@ const MySelect = options.map((list) => {
 const Header = () => {
     const {t , i18n}:any  = useTranslation('Header')
 
-    const router = useRouter()
+    // const router = useRouter()
 
     const headerBar: any = useRef(null);
 
@@ -146,11 +146,11 @@ const Header = () => {
                                     <a>02-798-6000</a>
                                 </Link>
                             </div>
-                            <Link href='' locale={router.locale === 'th' ? 'en' : 'th'}>
+                            {/* <Link href='' locale={router.locale === 'th' ? 'en' : 'th'}>
                                 <button>
                                     changeLanguage
                                 </button>
-                            </Link>
+                            </Link> */}
                             <div className="header_select">
                                 <select
                                     className="user_select"
