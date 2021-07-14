@@ -6,7 +6,37 @@ import Image from "next/image";
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
-
+const HeaderTopMenuMobile = () => (
+    <div className="site-mobile-menu-header">
+        <div className="row">
+            <div
+                className="col-8"
+                style={{
+                    marginTop: '0px',
+                    paddingLeft: '35px',
+                    paddingTop: '20px',
+                }}
+            >
+                <Link href="/">
+                    <a className="navbar-brand p-0 m-0 img-logo-title-menu-mobile closemenu">
+                        <img
+                            className=""
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
+                            alt="Logo"
+                            width="216"
+                            height="28"
+                        />
+                    </a>
+                </Link>
+            </div>
+            <div className="col-4" style={{ paddingRight: '35px' }}>
+                <div className="site-mobile-menu-close  js-menu-toggle">
+                    <span className="ion-ios-close-empty"></span>{' '}
+                </div>
+            </div>
+        </div>
+    </div>
+);
 const Header = () => {
     const {t}:any  = useTranslation('Home')
     const headerBar: any = useRef(null);
@@ -674,7 +704,7 @@ const Header = () => {
                             <div id="product">
                                 <div className="site-sub-menu">
                                     <div>
-                                        {/* <HeaderTopMenuMobile /> */}
+                                        <HeaderTopMenuMobile />
                                     </div>
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
@@ -786,7 +816,7 @@ const Header = () => {
                             </div>
                             <div id="resource">
                                 <div className="site-sub-menu">
-                                    {/* <HeaderTopMenuMobile /> */}
+                                    <HeaderTopMenuMobile />
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
@@ -900,7 +930,7 @@ const Header = () => {
                             </div>
                             <div id="support">
                                 <div className="site-sub-menu">
-                                    {/* <HeaderTopMenuMobile /> */}
+                                    <HeaderTopMenuMobile />
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
@@ -1002,7 +1032,7 @@ const Header = () => {
                             </div>
                             <div id="documentation">
                                 <div className="site-sub-menu">
-                                    {/* <HeaderTopMenuMobile /> */}
+                                    <HeaderTopMenuMobile />
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
@@ -1065,7 +1095,7 @@ const Header = () => {
                             </div>
                             <div id="aboutme">
                                 <div className="site-sub-menu">
-                                    {/* <HeaderTopMenuMobile /> */}
+                                    <HeaderTopMenuMobile />
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
