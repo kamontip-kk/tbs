@@ -122,7 +122,7 @@ const Header = () => {
             domain,
             expires: 7,
         });
-        // i18n.changeLanguage(value.toLowerCase());
+        i18n.changeLanguage(value.toLowerCase());
     };
 
     return(

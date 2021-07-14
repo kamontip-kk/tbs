@@ -15,6 +15,7 @@ import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Homepage = () => {
   const {t}:any  = useTranslation('Home')
@@ -53,11 +54,10 @@ const Homepage = () => {
 }
 
 // export default withTranslation('Home')(Homepage);
-export const getStaticProps = async () => {
-    return {
-        props: {
-            namespacesRequired: ['Home'],
-        },
-    };
-};
+export const getStaticProps = async ({locale}:any) => ({
+  props: {
+    ...await serverSideTranslations(locale,['Home']),
+  },
+    
+})
 export default Homepage;

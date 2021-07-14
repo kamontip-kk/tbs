@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from '../tbs_submodule/Footer';
-import HeroSection from '../components/home/HeroSection'
+import BannerCookie from '../tbs_submodule/BannerCookie';
 
 const Layout = (props:any) => {
     return(
@@ -8,6 +8,7 @@ const Layout = (props:any) => {
             <Header/>
             {props.children}
             <Footer/>
+            <BannerCookie/>
         </div>
     )
 }
