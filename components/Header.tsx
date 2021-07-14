@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 import Cookie from 'js-cookie';
+import appConfig from '../appConfig';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -65,10 +66,20 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
         </div>
     );
 };
+
+const options = [
+    { value: 'TH', text: 'TH' },
+    { value: 'EN', text: 'EN' },
+];
+
+const MySelect = options.map((list) => {
+    return <option key={list.value} value={list.value}>{list.text}</option>;
+});
+
 const Header = () => {
     const {t}:any  = useTranslation('Home')
     const headerBar: any = useRef(null);
-    // const [lang, setLang] = useState('TH');
+    const [lang, setLang] = useState('TH');
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
     );
@@ -83,13 +94,13 @@ const Header = () => {
         }
     }
     useEffect(() => {
-        // async function loadCookies() {
-        //     if (Cookie.get('LANG')) {
-        //         const textLang: any = Cookie.get('LANG');
-        //         setLang(textLang);
-        //     }
-        // }
-        // loadCookies();
+        async function loadCookies() {
+            if (Cookie.get('LANG')) {
+                const textLang: any = Cookie.get('LANG');
+                setLang(textLang);
+            }
+        }
+        loadCookies();
         // check Cookie Login
         if (Cookie.get('PASSCODE')) {
             setIsLogin(true);
@@ -98,7 +109,22 @@ const Header = () => {
         return () => {
             window.removeEventListener('scroll', sticky);
         };
-    }, []);
+    }, [setLang]);
+
+    const onSwitchLanguage = (value: string) => {
+        setLang(value);
+        let domain = 'localhost';
+        if (appConfig.APP_ENV === appConfig.production)
+            domain = '.thaibulksms.com';
+        else if (appConfig.APP_ENV === appConfig.internalTest)
+            domain = '.1mobyline.com';
+        Cookie.set('LANG', value, {
+            domain,
+            expires: 7,
+        });
+        // i18n.changeLanguage(value.toLowerCase());
+    };
+
     return(
         <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
             <div className="container">
@@ -111,7 +137,7 @@ const Header = () => {
                                 </Link>
                             </div>
                             <div className="header_select">
-                                {/* <select
+                                <select
                                     className="user_select"
                                     onChange={(e) =>
                                         onSwitchLanguage(e.currentTarget.value)
@@ -119,7 +145,7 @@ const Header = () => {
                                     value={lang}
                                 >
                                     {MySelect}
-                                </select> */}
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -627,7 +653,7 @@ const Header = () => {
                                 </ul>
                             </nav>
                             <div className="d-lg-none sm-right">
-                                {/* <select
+                                <select
                                     className="user_select"
                                     onChange={(e) =>
                                         onSwitchLanguage(e.currentTarget.value)
@@ -635,7 +661,7 @@ const Header = () => {
                                     value={lang}
                                 >
                                     {MySelect}
-                                </select> */}
+                                </select>
                                 <span className="mobile-bar js-menu-toggle">
                                     <span></span>
                                     <span></span>
