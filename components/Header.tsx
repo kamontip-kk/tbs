@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next';
+import Image from "next/image";
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const Header = () => {
     const {t}:any  = useTranslation('Home')
@@ -34,11 +39,9 @@ const Header = () => {
                     <div className="col-lg-3 col-md-6 col-9">
                         <Link href="/">
                             <a className="navbar-brand p-0 m-0">
-                                {/* <img
-                                    className=""
-                                    src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
-                                    alt="Logo"
-                                /> */}
+                                <div>
+                                    <Image loader={myLoader} src="logo_1.png" alt="logo1" width={270} height={34}/>
+                                </div>
                             </a>
                         </Link>
                     </div>
@@ -556,13 +559,9 @@ const Header = () => {
                                         <div className="col-8">
                                             <Link href="/" >
                                                 <a className="navbar-brand p-0 m-0 img-logo-title-menu-mobile closemenu">
-                                                    {/* <img
-                                                        className=""
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
-                                                        alt="Logo"
-                                                        width="216"
-                                                        height="28"
-                                                    /> */}
+                                                    <div>
+                                                        <Image loader={myLoader} src="logo_1.png" alt="logo1" width={216} height={28}/>
+                                                    </div>
                                                 </a>
                                             </Link>
                                         </div>
@@ -654,13 +653,9 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    {/* <img
-                                                        className="arrow-back-to-menu-mobile"
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                                                        alt="left-arrow.png"
-                                                        width="34"
-                                                        height="34"
-                                                    /> */}
+                                                    <div className="arrow-back-to-menu-mobile">
+                                                        <Image loader={myLoader} src="left-arrow.png" alt="leftarrow" width={34} height={34}/>
+                                                    </div>
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -672,13 +667,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
-                                                                alt="menu-icon_Product-icon01.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon01.svg" alt="menuicon_Product1" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Our Strength'
                                                             )}
@@ -693,13 +684,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/smart-sms-console">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon02.svg`}
-                                                                alt="menu-icon_Product-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon02.svg" alt="menuicon_Product2" width={50} height={50}/>
+                                                            </div>
                                                             Smart SMS Console
                                                         </a>
                                                     </Link>
@@ -707,13 +694,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-tracking">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon03.svg`}
-                                                                alt="menu-icon_Product-icon03.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon03.svg" alt="menuicon_Produc3" width={50} height={50}/>
+                                                            </div>
                                                             SMS Tracking
                                                         </a>
                                                     </Link>
@@ -721,13 +704,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/location-based-sms">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon04.svg`}
-                                                                alt="menu-icon_Product-icon04.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon04.svg" alt="menuicon_Product4" width={50} height={50}/>
+                                                            </div>
                                                             Location Based SMS
                                                         </a>
                                                     </Link>
@@ -735,13 +714,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/global-sms">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon05.svg`}
-                                                                alt="menu-icon_Product-icon05.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon05.svg" alt="menuicon_Product5" width={50} height={50}/>
+                                                            </div>
                                                             Global SMS
                                                         </a>
                                                     </Link>
@@ -754,13 +729,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-api">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon06.svg`}
-                                                                alt="menu-icon_Product-icon06.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon06.svg" alt="menuicon_Product6" width={50} height={50}/>
+                                                            </div>
                                                             SMS API
                                                         </a>
                                                     </Link>
@@ -768,13 +739,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/otp">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon07.svg`}
-                                                                alt="menu-icon_Product-icon07.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Product-icon07.svg" alt="menuicon_Product7" width={50} height={50}/>
+                                                            </div>
                                                             OTP Service
                                                         </a>
                                                     </Link>
@@ -797,13 +764,9 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    {/* <img
-                                                        className="arrow-back-to-menu-mobile"
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                                                        alt="left-arrow.png"
-                                                        width="34"
-                                                        height="34"
-                                                    /> */}
+                                                    <div className="arrow-back-to-menu-mobile">
+                                                        <Image loader={myLoader} src="left-arrow.png" alt="leftarrow" width={34} height={34}/>
+                                                    </div>
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -815,13 +778,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`}>
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
-                                                                alt="menu-icon_resource-icon01.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon01.svg" alt="menuicon_resource1" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Database'
                                                             )}
@@ -838,13 +797,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`}
                                                     >
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon05.svg`}
-                                                                alt="menu-icon_resource-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon05.svg" alt="menuicon_resource5" width={50} height={50}/>
+                                                            </div>
                                                               {t("header::Marketing")}
                                                         </a>
                                                     </Link>
@@ -854,13 +809,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tecth/`}
                                                     >
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon06.svg`}
-                                                                alt="menu-icon_resource-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon06.svg" alt="menuicon_resource6" width={50} height={50}/>
+                                                            </div>
                                                              {t("header::Tech")}
                                                         </a>
                                                     </Link>
@@ -870,13 +821,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`}
                                                     >
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon07.svg`}
-                                                                alt="menu-icon_resource-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon07.svg" alt="menuicon_resource7" width={50} height={50}/>
+                                                            </div>
                                                             {t("header::ThaiBulkSMS Features")}
                                                         </a>
                                                     </Link>
@@ -888,13 +835,9 @@ const Header = () => {
                                                         
                                                     >
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
-                                                                alt="menu-icon_resource-icon03.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon03.svg" alt="menuicon_resource3" width={50} height={50}/>
+                                                            </div>
                                                            {t("header::Example Operations")}
                                                         </a>
                                                     </Link>
@@ -910,13 +853,9 @@ const Header = () => {
                                                         
                                                     >
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
-                                                                alt="menu-icon_resource-icon04.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_resource-icon04.svg" alt="menuicon_resource4" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Success Stories'
                                                             )}
@@ -939,13 +878,9 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    {/* <img
-                                                        className="arrow-back-to-menu-mobile"
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                                                        alt="left-arrow.png"
-                                                        width="34"
-                                                        height="34"
-                                                    /> */}
+                                                    <div className="arrow-back-to-menu-mobile">
+                                                        <Image loader={myLoader} src="left-arrow.png" alt="leftarrow" width={34} height={34}/>
+                                                    </div>
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -957,13 +892,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/how-to-order">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
-                                                                alt="menu-icon_support-icon01.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_support-icon01.svg" alt="menuicon_support1" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Ordering Methods'
                                                             )}
@@ -973,13 +904,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/faq">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
-                                                                alt="menu-icon_support-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_support-icon02.svg" alt="menuicon_support2" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Frequently Asked Questions'
                                                             )}
@@ -989,13 +916,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
-                                                                alt="menu-icon_support-icon03.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_support-icon03.svg" alt="menuicon_support3" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Contact us'
                                                             )}
@@ -1012,13 +935,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="tel:027986000">
                                                     <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                                                            alt="phone.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
+                                                        <div className="icon-title-menu-mobile">
+                                                            <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
+                                                        </div>
                                                         02-798-6000
                                                     </a>
                                                     </Link>
@@ -1026,13 +945,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="mailto:contact@thaibulksms.com">
                                                     <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                                                            alt="mail.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
+                                                        <div className="icon-title-menu-mobile">
+                                                            <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
+                                                        </div>
                                                         contact@thaibulksms.com
                                                     </a>
                                                     </Link>
@@ -1041,13 +956,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://www.facebook.com/ThaiBulkSMS">
                                                     <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                                                            alt="fb.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
+                                                        <div className="icon-title-menu-mobile">
+                                                            <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
+                                                        </div>
                                                         ThaiBulkSMS
                                                     </a>
                                                     </Link>
@@ -1069,13 +980,9 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    {/* <img
-                                                        className="arrow-back-to-menu-mobile"
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                                                        alt="left-arrow.png"
-                                                        width="34"
-                                                        height="34"
-                                                    /> */}
+                                                    <div className="arrow-back-to-menu-mobile">
+                                                        <Image loader={myLoader} src="left-arrow.png" alt="leftarrow" width={34} height={34}/>
+                                                    </div>
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -1089,13 +996,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
-                                                                alt="menu-icon_Dev-icon01.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Dev-icon01.svg" alt="menuicon_Dev1" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Download Guide'
                                                             )}
@@ -1105,13 +1008,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer#ex_sdk">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
-                                                                alt="menu-icon_Dev-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Dev-icon02.svg" alt="menuicon_Dev2" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Download Example SDK'
                                                             )}
@@ -1121,13 +1020,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://developer.thaibulksms.com">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon03.svg`}
-                                                                alt="menu-icon_Dev-icon03.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_Dev-icon03.svg" alt="menuicon_Dev3" width={50} height={50}/>
+                                                            </div>
                                                             API References
                                                         </a>
                                                     </Link>
@@ -1148,13 +1043,9 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    {/* <img
-                                                        className="arrow-back-to-menu-mobile"
-                                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                                                        alt="left-arrow.png"
-                                                        width="34"
-                                                        height="34"
-                                                    /> */}
+                                                    <div className="arrow-back-to-menu-mobile">
+                                                        <Image loader={myLoader} src="left-arrow.png" alt="leftarrow" width={34} height={34}/>
+                                                    </div>
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -1168,13 +1059,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/why-thaibulksms">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
-                                                                alt="menu-icon_about-icon01.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_about-icon01.svg" alt="menuicon_about1" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Why use ThaiBulkSMS?'
                                                             )}
@@ -1184,13 +1071,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
-                                                                alt="menu-icon_about-icon02.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_about-icon02.svg" alt="menuicon_about2" width={50} height={50}/>
+                                                            </div>
                                                             {t(
                                                                 'header::Contact us'
                                                             )}
@@ -1200,13 +1083,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/reseller/">
                                                         <a className="closemenu">
-                                                            {/* <img
-                                                                className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon03.svg`}
-                                                                alt="menu-icon_about-icon03.svg"
-                                                                width="50"
-                                                                height="50"
-                                                            /> */}
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="menu-icon_about-icon03.svg" alt="menuicon_about3" width={50} height={50}/>
+                                                            </div>
                                                             Reseller Program
                                                         </a>
                                                     </Link>
@@ -1220,45 +1099,33 @@ const Header = () => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <Link href="tel:027986000">
-                                                    <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                                                            alt="phone.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
-                                                        02-798-6000
-                                                    </a>
+                                                        <a>
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
+                                                            </div>
+                                                            02-798-6000
+                                                        </a>
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link href="mailto:contact@thaibulksms.com">
-                                                    <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                                                            alt="mail.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
-                                                        contact@thaibulksms.com
-                                                    </a>
+                                                        <a>
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
+                                                            </div>
+                                                            contact@thaibulksms.com
+                                                        </a>
                                                     </Link>
                                                     
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link href="https://www.facebook.com/ThaiBulkSMS">
-                                                    <a>
-                                                        {/* <img
-                                                            className="icon-title-menu-mobile"
-                                                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                                                            alt="fb.png"
-                                                            width="30"
-                                                            height="30"
-                                                        /> */}
-                                                        ThaiBulkSMS
-                                                    </a>
+                                                        <a>
+                                                            <div className="icon-title-menu-mobile">
+                                                                <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
+                                                            </div>
+                                                            ThaiBulkSMS
+                                                        </a>
                                                     </Link>
                                                     
                                                 </li>
