@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next';
 import Image from "next/image";
@@ -10,6 +10,33 @@ const myLoader = ({src}:any) => {
 const Header = () => {
     const {t}:any  = useTranslation('Home')
     const headerBar: any = useRef(null);
+    function sticky() {
+        var scroll = window.pageYOffset;
+        if (headerBar.current !== null) {
+            if (scroll < 40) {
+                headerBar.current.classList.remove('sticky');
+            } else {
+                headerBar.current.classList.add('sticky');
+            }
+        }
+    }
+    useEffect(() => {
+        // async function loadCookies() {
+        //     if (Cookie.get('LANG')) {
+        //         const textLang: any = Cookie.get('LANG');
+        //         setLang(textLang);
+        //     }
+        // }
+        // loadCookies();
+        // // check Cookie Login
+        // if (Cookie.get('PASSCODE')) {
+        //     setIsLogin(true);
+        // }
+        window.addEventListener('scroll', sticky);
+        return () => {
+            window.removeEventListener('scroll', sticky);
+        };
+    }, []);
     return(
         <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
             <div className="container">
@@ -1182,8 +1209,8 @@ const Header = () => {
     )
 }
 
-// Header.getInitialProps = async () => ({
-//     namespacesRequired: ['Header'],
-// });
+Header.getInitialProps = async () => ({
+    namespacesRequired: ['Header'],
+});
 
 export default Header;
