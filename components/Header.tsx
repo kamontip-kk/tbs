@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next';
 
@@ -32,11 +32,11 @@ const Header = () => {
                     <div className="col-lg-3 col-md-6 col-9">
                         <Link href="/">
                             <a className="navbar-brand p-0 m-0">
-                                <img
+                                {/* <img
                                     className=""
                                     src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                                     alt="Logo"
-                                />
+                                /> */}
                             </a>
                         </Link>
                     </div>
@@ -270,7 +270,7 @@ const Header = () => {
                                                 <div className="col-7 menu_support_padding_20">
                                                     <ul>
                                                         <li className="title_menu_margin_top_20 title_menu_padding_bottom_30">
-                                                            <Link href="/support/how-to-order">
+                                                            <Link href="/support/how-to-order" passHref>
                                                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -286,7 +286,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
-                                                            <Link href="/support/faq">
+                                                            <Link href="/support/faq" passHref>
                                                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -302,7 +302,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
-                                                            <Link href="/contact">
+                                                            <Link href="/contact" passHref>
                                                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -327,7 +327,7 @@ const Header = () => {
                                                             )}
                                                         </h6>
                                                         <li>
-                                                            <Link href="tel:027986000">
+                                                            <Link href="tel:027986000" passHref>
                                                                 <h6 className="new_text_contact_phone">
                                                                     <span className="new_text_margin_left">
                                                                         02-798-6000
@@ -336,7 +336,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="mailto:contact@thaibulksms.com">
+                                                            <Link href="mailto:contact@thaibulksms.com" passHref>
                                                                 <h6 className="new_text_contact_mail">
                                                                     <span className="new_text_margin_left">
                                                                         contact@thaibulksms.com
@@ -345,7 +345,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                                            <Link href="https://www.facebook.com/ThaiBulkSMS" passHref>
                                                                 <h6 className="new_text_contact_fb">
                                                                     <span className="new_text_margin_left">
                                                                         ThaiBulkSMS
@@ -359,14 +359,14 @@ const Header = () => {
                                         </div>
                                     </li>
                                     <li className="has-children">
-                                        <Link href="">
+                                        <Link href="" passHref>
                                             <span className="active new_title_hover">
                                                 {t('header::For Developers')}
                                             </span>
                                         </Link>
                                         <ul className="dropdown box_menu_developer">
                                             <li className="menu_dev_padding_bottom_top_20">
-                                                <Link href="/developer">
+                                                <Link href="/developer" passHref>
                                                     <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
                                                             {t(
@@ -382,7 +382,7 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li className="menu_dev_padding_20">
-                                                <Link href="/developer/#ex_sdk">
+                                                <Link href="/developer/#ex_sdk" passHref>
                                                     <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
                                                             {t(
@@ -399,7 +399,7 @@ const Header = () => {
                                             </li>
                                             <li className="menu_dev_padding_20">
                                                 <Link
-                                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`} passHref
                                                 >
                                                     <span className="new_icon_title_menu_dev03 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
@@ -424,7 +424,7 @@ const Header = () => {
                                                 <div className="col-7 menu_support_padding_20">
                                                     <ul>
                                                         <li className="menu_dev_padding_bottom_top_20">
-                                                            <Link href="/why-thaibulksms">
+                                                            <Link href="/why-thaibulksms" passHref>
                                                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -440,7 +440,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                            <Link href="/contact">
+                                                            <Link href="/contact" passHref>
                                                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -456,7 +456,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                            <Link href="/reseller">
+                                                            <Link href="/reseller" passHref>
                                                                 <span className="new_icon_title_menu_about03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         Reseller
@@ -499,7 +499,7 @@ const Header = () => {
                                                             )}
                                                         </h6>
                                                         <li>
-                                                            <Link href="tel:027986000">
+                                                            <Link href="tel:027986000" passHref>
                                                                 <h6 className="new_text_contact_phone">
                                                                     <span className="new_text_margin_left">
                                                                         02-798-6000
@@ -508,7 +508,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="mailto:contact@thaibulksms.com">
+                                                            <Link href="mailto:contact@thaibulksms.com" passHref>
                                                                 <h6 className="new_text_contact_mail">
                                                                     <span className="new_text_margin_left">
                                                                         contact@thaibulksms.com
@@ -517,7 +517,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                                            <Link href="https://www.facebook.com/ThaiBulkSMS" passHref>
                                                                 <h6 className="new_text_contact_fb">
                                                                     <span className="new_text_margin_left">
                                                                         ThaiBulkSMS
@@ -552,15 +552,15 @@ const Header = () => {
                                 <div className="site-mobile-menu-header">
                                     <div className="row">
                                         <div className="col-8">
-                                            <Link href="/">
+                                            <Link href="/" >
                                                 <a className="navbar-brand p-0 m-0 img-logo-title-menu-mobile closemenu">
-                                                    <img
+                                                    {/* <img
                                                         className=""
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                                                         alt="Logo"
                                                         width="216"
                                                         height="28"
-                                                    />
+                                                    /> */}
                                                 </a>
                                             </Link>
                                         </div>
@@ -652,13 +652,13 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    <img
+                                                    {/* <img
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
                                                         width="34"
                                                         height="34"
-                                                    />
+                                                    /> */}
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -670,13 +670,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
                                                                 alt="menu-icon_Product-icon01.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Our Strength'
                                                             )}
@@ -691,13 +691,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/smart-sms-console">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon02.svg`}
                                                                 alt="menu-icon_Product-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             Smart SMS Console
                                                         </a>
                                                     </Link>
@@ -705,13 +705,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-tracking">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon03.svg`}
                                                                 alt="menu-icon_Product-icon03.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             SMS Tracking
                                                         </a>
                                                     </Link>
@@ -719,13 +719,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/location-based-sms">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon04.svg`}
                                                                 alt="menu-icon_Product-icon04.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             Location Based SMS
                                                         </a>
                                                     </Link>
@@ -733,13 +733,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/global-sms">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon05.svg`}
                                                                 alt="menu-icon_Product-icon05.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             Global SMS
                                                         </a>
                                                     </Link>
@@ -752,13 +752,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-api">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon06.svg`}
                                                                 alt="menu-icon_Product-icon06.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             SMS API
                                                         </a>
                                                     </Link>
@@ -766,13 +766,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/otp">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon07.svg`}
                                                                 alt="menu-icon_Product-icon07.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             OTP Service
                                                         </a>
                                                     </Link>
@@ -795,13 +795,13 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    <img
+                                                    {/* <img
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
                                                         width="34"
                                                         height="34"
-                                                    />
+                                                    /> */}
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -813,13 +813,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`} passHref={true}>
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
                                                                 alt="menu-icon_resource-icon01.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Database'
                                                             )}
@@ -837,13 +837,13 @@ const Header = () => {
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon05.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                               {t("header::Marketing")}
                                                         </a>
                                                     </Link>
@@ -854,13 +854,13 @@ const Header = () => {
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon06.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                              {t("header::Tech")}
                                                         </a>
                                                     </Link>
@@ -871,13 +871,13 @@ const Header = () => {
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon07.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t("header::ThaiBulkSMS Features")}
                                                         </a>
                                                     </Link>
@@ -889,13 +889,13 @@ const Header = () => {
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
                                                                 alt="menu-icon_resource-icon03.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                            {t("header::Example Operations")}
                                                         </a>
                                                     </Link>
@@ -911,13 +911,13 @@ const Header = () => {
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
                                                                 alt="menu-icon_resource-icon04.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Success Stories'
                                                             )}
@@ -940,13 +940,13 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    <img
+                                                    {/* <img
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
                                                         width="34"
                                                         height="34"
-                                                    />
+                                                    /> */}
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -958,13 +958,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/how-to-order">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
                                                                 alt="menu-icon_support-icon01.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Ordering Methods'
                                                             )}
@@ -974,13 +974,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/faq">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
                                                                 alt="menu-icon_support-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Frequently Asked Questions'
                                                             )}
@@ -990,13 +990,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
                                                                 alt="menu-icon_support-icon03.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Contact us'
                                                             )}
@@ -1012,37 +1012,37 @@ const Header = () => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <a href="tel:027986000">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                                                             alt="phone.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         02-798-6000
                                                     </a>
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <a href="mailto:contact@thaibulksms.com">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                                                             alt="mail.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         contact@thaibulksms.com
                                                     </a>
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <a href="https://www.facebook.com/ThaiBulkSMS">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                                                             alt="fb.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         ThaiBulkSMS
                                                     </a>
                                                 </li>
@@ -1062,13 +1062,13 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    <img
+                                                    {/* <img
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
                                                         width="34"
                                                         height="34"
-                                                    />
+                                                    /> */}
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -1082,13 +1082,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
                                                                 alt="menu-icon_Dev-icon01.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Download Guide'
                                                             )}
@@ -1098,13 +1098,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer#ex_sdk">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
                                                                 alt="menu-icon_Dev-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Download Example SDK'
                                                             )}
@@ -1114,13 +1114,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://developer.thaibulksms.com">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon03.svg`}
                                                                 alt="menu-icon_Dev-icon03.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             API References
                                                         </a>
                                                     </Link>
@@ -1141,13 +1141,13 @@ const Header = () => {
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
                                                 <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                                                    <img
+                                                    {/* <img
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
                                                         width="34"
                                                         height="34"
-                                                    />
+                                                    /> */}
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
@@ -1161,13 +1161,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/why-thaibulksms">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
                                                                 alt="menu-icon_about-icon01.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Why use ThaiBulkSMS?'
                                                             )}
@@ -1177,13 +1177,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
                                                                 alt="menu-icon_about-icon02.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             {t(
                                                                 'header::Contact us'
                                                             )}
@@ -1193,13 +1193,13 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/reseller/">
                                                         <a className="closemenu">
-                                                            <img
+                                                            {/* <img
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon03.svg`}
                                                                 alt="menu-icon_about-icon03.svg"
                                                                 width="50"
                                                                 height="50"
-                                                            />
+                                                            /> */}
                                                             Reseller Program
                                                         </a>
                                                     </Link>
@@ -1213,37 +1213,37 @@ const Header = () => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <a href="tel:027986000">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                                                             alt="phone.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         02-798-6000
                                                     </a>
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <a href="mailto:contact@thaibulksms.com">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                                                             alt="mail.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         contact@thaibulksms.com
                                                     </a>
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <a href="https://www.facebook.com/ThaiBulkSMS">
-                                                        <img
+                                                        {/* <img
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                                                             alt="fb.png"
                                                             width="30"
                                                             height="30"
-                                                        />
+                                                        /> */}
                                                         ThaiBulkSMS
                                                     </a>
                                                 </li>
