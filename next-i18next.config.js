@@ -3,8 +3,8 @@ module.exports = {
     react: { useSuspense: false },
     defaultLocale: 'th',
     locales: ['th', 'en'],
-    keySeparator: '::'
-    
+    keySeparator: '::',
+    nsSeparator: ':::',  
   },
   // localePath: path.resolve('./public/locales')
 };
