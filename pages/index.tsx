@@ -14,12 +14,11 @@ import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
-import { useTranslation } from 'next-i18next';
+import { useTranslation} from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Homepage = () => {
   const {t}:any  = useTranslation('Home')
-
   return(
     <React.Fragment>
       <Layout>

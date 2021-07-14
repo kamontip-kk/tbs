@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next';
+import { useTranslation , withTranslation,} from 'next-i18next';
 import Image from "next/image";
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';

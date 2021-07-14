@@ -4,7 +4,7 @@ module.exports = {
     browserLanguageDetection: false,
     serverLanguageDetection: false,
     defaultLocale: 'th',
-    locales: ['en', 'th'],
+    locales: ['th', 'en'],
     keySeparator: '::',
     nsSeparator: ':::',
   },
