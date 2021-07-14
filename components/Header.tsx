@@ -170,8 +170,8 @@ const Header = () => {
                                         <ul className="dropdown">
                                             <li className="listsub">
 
-                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
+                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`}>
+                                                    <a className="new_icon_title_menu_resource01 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             {t(
                                                                 'header::Resources'
@@ -189,8 +189,8 @@ const Header = () => {
                                                 {t("header::Tips and Knowledge")}
                                             </h6>
                                             <li className="listsub li_width_700">
-                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_resource05 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
+                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`}>
+                                                    <a className="new_icon_title_menu_resource02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
                                                             {t("header::Marketing")}
                                                         </h6>
@@ -202,7 +202,7 @@ const Header = () => {
                                                     </a>
                                                 </Link>
 
-                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tech/`} passHref={true}>
+                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tech/`}>
                                                     <a className="new_icon_title_menu_resource06 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
                                                             {t("header::Tech")}
@@ -216,7 +216,7 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li className="listsub li_width_700">
-                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`} passHref={true}>
+                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`}>
                                                     <a className="new_icon_title_menu_resource07 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
                                                             {t("header::ThaiBulkSMS Features")}
@@ -228,7 +228,7 @@ const Header = () => {
                                                         </p>
                                                     </a>
                                                 </Link>
-                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`} passHref={true}>
+                                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`}>
                                                     <a className="new_icon_title_menu_resource03 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             {t(
