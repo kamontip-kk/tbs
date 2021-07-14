@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next';
 import Image from "next/image";
+import Cookie from 'js-cookie';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -33,9 +34,44 @@ const HeaderTopMenuMobile = () => (
         </div>
     </div>
 );
+const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
+    return (
+        <div className="menu_btn">
+            <ul>
+                <li>
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                        className="btn v5 btn-sum-menu-mobile loginLink closemenu"
+                    >
+                        {t(
+                            'header::' +
+                            (isLogin === true
+                                ? 'Enter the system'
+                                : 'Login')
+                        )}
+                    </a>
+                </li>
+                <li>
+                    <Link href="/pricing">
+                        <a className="btn v3 btn-sum-menu-mobile closemenu">
+                            {t(
+                                `header::` +
+                                (isLogin === true ? 'Buy' : 'Free trial')
+                            )}
+                        </a>
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    );
+};
 const Header = () => {
     const {t}:any  = useTranslation('Home')
     const headerBar: any = useRef(null);
+    // const [lang, setLang] = useState('TH');
+    const [isLogin, setIsLogin] = useState(
+        Cookie.get('PASSCODE') ? true : false
+    );
     function sticky() {
         var scroll = window.pageYOffset;
         if (headerBar.current !== null) {
@@ -54,10 +90,10 @@ const Header = () => {
         //     }
         // }
         // loadCookies();
-        // // check Cookie Login
-        // if (Cookie.get('PASSCODE')) {
-        //     setIsLogin(true);
-        // }
+        // check Cookie Login
+        if (Cookie.get('PASSCODE')) {
+            setIsLogin(true);
+        }
         window.addEventListener('scroll', sticky);
         return () => {
             window.removeEventListener('scroll', sticky);
@@ -690,10 +726,10 @@ const Header = () => {
                                             </span>
                                         </li>
                                     </ul>
-                                    {/* <HeaderLoginMenuMobile
+                                    <HeaderLoginMenuMobile
                                         t={t}
                                         isLogin={isLogin}
-                                    /> */}
+                                    />
                                 </div>
                             </div>
                             {/* new sub menu mobile */}
@@ -802,10 +838,10 @@ const Header = () => {
                                             </ul>
                                         </div>
                                         <div className="menu_btn_margin_bottom">
-                                            {/* <HeaderLoginMenuMobile
+                                            <HeaderLoginMenuMobile
                                                 t={t}
                                                 isLogin={isLogin}
-                                            /> */}
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -917,10 +953,10 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                         </div>
-                                        {/* <HeaderLoginMenuMobile
+                                        <HeaderLoginMenuMobile
                                             t={t}
                                             isLogin={isLogin}
-                                        /> */}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -1019,10 +1055,10 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                         </div>
-                                        {/* <HeaderLoginMenuMobile
+                                        <HeaderLoginMenuMobile
                                             t={t}
                                             isLogin={isLogin}
-                                        /> */}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -1082,10 +1118,10 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                         </div>
-                                        {/* <HeaderLoginMenuMobile
+                                        <HeaderLoginMenuMobile
                                             t={t}
                                             isLogin={isLogin}
-                                        /> */}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -1184,10 +1220,10 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                         </div>
-                                        {/* <HeaderLoginMenuMobile
+                                        <HeaderLoginMenuMobile
                                             t={t}
                                             isLogin={isLogin}
-                                        /> */}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -1200,17 +1236,17 @@ const Header = () => {
                                 <li>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                                     <a className="loginLink">
-                                        {/* {t(
+                                        {t(
                                             'header::' +
                                             (isLogin === true
                                                 ? 'Enter the system'
                                                 : 'Login')
-                                        )} */}
+                                        )}
                                     </a>
                                     </Link>
 
                                 </li>
-                                {/* <li>
+                                <li>
                                     {isLogin === true ? (
                                         <Link href="/pricing">
                                             <a className="btn v1">
@@ -1220,12 +1256,12 @@ const Header = () => {
                                     ) : (
                                             <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                                 <a className="btn v1">
-                                                {t(`header::` + 'Free trial')}
+                                                    {t(`header::` + 'Free trial')}
                                                 </a>
                                             </Link>
                                         )
                                     }
-                                </li> */}
+                                </li>
                             </ul>
                         </div>
                     </div>
