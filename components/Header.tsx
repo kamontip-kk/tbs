@@ -78,11 +78,15 @@ const MySelect = options.map((list) => {
 
 const Header = () => {
     const {t , i18n}:any  = useTranslation('Header')
+
     const headerBar: any = useRef(null);
+
     const [lang, setLang] = useState('TH');
+    
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
     );
+
     function sticky() {
         var scroll = window.pageYOffset;
         if (headerBar.current !== null) {
@@ -93,6 +97,7 @@ const Header = () => {
             }
         }
     }
+
     useEffect(() => {
         async function loadCookies() {
             if (Cookie.get('LANG')) {
@@ -101,6 +106,7 @@ const Header = () => {
             }
         }
         loadCookies();
+
         // check Cookie Login
         if (Cookie.get('PASSCODE')) {
             setIsLogin(true);
@@ -109,6 +115,7 @@ const Header = () => {
         return () => {
             window.removeEventListener('scroll', sticky);
         };
+        
     }, [setLang]);
 
     const onSwitchLanguage = (value: string) => {

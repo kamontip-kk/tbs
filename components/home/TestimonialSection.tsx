@@ -63,13 +63,6 @@ const TestimonialSection = () => {
                                     )}
                                 </p>
                                 <div className="client_info">
-                                    {/* <div className="client_img">
-                    <img
-                      className="lazyload"
-                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
-                      alt="Image"
-                    />
-                  </div> */}
                                     <div className="client_name">
                                         <h6>
                                             {t(
@@ -89,13 +82,6 @@ const TestimonialSection = () => {
                                     )}
                                 </p>
                                 <div className="client_info">
-                                    {/* <div className="client_img">
-                    <img
-                      className="lazyload"
-                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
-                      alt="Image"
-                    />
-                  </div> */}
                                     <div className="client_name">
                                         <h6>
                                             {t(
@@ -115,44 +101,17 @@ const TestimonialSection = () => {
                                     )}
                                 </p>
                                 <div className="client_info">
-                                    {/* <div className="client_img">
-                    <img
-                      className="lazyload"
-                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
-                      alt="Image"
-                    />
-                  </div> */}
                                     <div className="client_name">
                                         <h6>
                                             {t(
                                                 'TestimonialSection::National Housing Authority of Thailand'
                                             )}
                                         </h6>
-                                        {/* <p>{t('p2')}</p> */}
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="item">
-              <div className="testimonial_item">
-                <p className="client_quote">
-                  {t('TestimonialSection::item.1.content')}
-                </p>
-                <div className="client_info">
-                  <div className="client_img">
-                    <img
-                      className="lazyload"
-                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
-                      alt="Image"
-                    />
-                  </div>
-                  <div className="client_name">
-                    <h6>{t('TestimonialSection::item.1.credit')}</h6>
-                    <p>{t('p2')}</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
                     </OwlCarousel>
                 </div>
             </div>

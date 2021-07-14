@@ -1,10 +1,10 @@
 module.exports = {
   i18n: {
-    react: { useSuspense: false },
+    // react: { useSuspense: false },
     browserLanguageDetection: false,
     serverLanguageDetection: false,
     defaultLocale: 'th',
-    locales: ['th', 'en'],
+    locales: ['en', 'th'],
     keySeparator: '::',
     nsSeparator: ':::',
   },
