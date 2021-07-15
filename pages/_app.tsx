@@ -6,17 +6,17 @@ import { DefaultSeo } from 'next-seo';
 import { seo } from '../components/seo/defaultseo';
 
 function MyApp({ Component, pageProps }: any) {
-  // let lang = Cookie.get('LANG');
-  // const {i18n} = useTranslation();
+  let lang = Cookie.get('LANG');
+  const {i18n} = useTranslation();
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   if (lang === undefined) {
-  //       i18n.changeLanguage('th');
-  //   } else {
-  //       i18n.changeLanguage(lang.toLowerCase());
-  //   }
-  // },[lang]);
+    if (lang === undefined) {
+        i18n.changeLanguage('th');
+    } else {
+        i18n.changeLanguage(lang.toLowerCase());
+    }
+  },[lang]);
 
   return (
     <>
