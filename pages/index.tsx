@@ -14,16 +14,23 @@ import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
 import BacktoTop from '../components/BacktoTop';
-import { useTranslation} from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router'
+import th from '../locales/th/Home.json';
+import en from '../locales/en/Home.json';
+// import { useTranslation} from 'next-i18next';
+// import useTranslation from "next-translate/useTranslation";
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Homepage = () => {
-  const {t}:any  = useTranslation('Home')
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'th' ? th : en;
+
   return(
     <React.Fragment>
       <Layout>
         <Head>
-          <meta name="keywords" content={t('keywords')} />
+          {/* <meta name="keywords" content={t('keywords')} /> */}
           <meta name="author" content="" />
           <meta
             name="viewport"
@@ -32,8 +39,8 @@ const Homepage = () => {
         </Head>
         <NextSeo
                 openGraph={seo.openGraph}
-                title={t('meta::title')}
-                description={t('meta::description')}
+                title={t.meta.title}
+                description={t.meta.description}
             />
         <div className="page_wrapper">
           <HeroSection/>
@@ -41,11 +48,11 @@ const Homepage = () => {
           <FeatureSection/>
           <ServiceSection/>
           <SimpleSliderSection/>
-          <GlobeSection/>
-          <SmsSection/>
-          <TestimonialSection/>
-          <EduSection/>
-          <CtaSection/>
+          {/* <GlobeSection/> */}
+          {/* <SmsSection/> */}
+          {/* <TestimonialSection/> */}
+          {/* <EduSection/> */}
+          {/* <CtaSection/> */}
         </div>
         <BacktoTop/>
       </Layout>
@@ -54,10 +61,17 @@ const Homepage = () => {
 }
 
 // export default withTranslation('Home')(Homepage);
-export const getStaticProps = async ({locale}:any) => ({
-  props: {
-    ...await serverSideTranslations(locale,['Home' , 'Header' , 'Footer']),
-  },
+export const getStaticProps = async () => {
+  return {
+      props: {
+          namespacesRequired: ['Home'],
+      },
+  };
+};
+// export const getStaticProps = async ({locale}:any) => ({
+//   props: {
+//     ...await serverSideTranslations(locale,['Home' , 'Header' , 'Footer']),
+//   },
     
-})
+// })
 export default Homepage;

@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 const HeroSectionV2 = () => {
-    const {t}:any  = useTranslation('Home')
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
     return(
         <div className="hero_section v2">
         <div className="container">
@@ -11,28 +15,26 @@ const HeroSectionV2 = () => {
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="hero_text_one">
                         <h1 dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::Meeting every one of your SMS sending needs.'
-                                ),
+                                __html:
+                                t.HeroSection['Meeting every one of your SMS sending needs.']
                             }}>
                         </h1>
                         <p>
-                            {t(
-                                'HeroSection::SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.'
-                            )}
+                            {t.HeroSection['SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.']}
                         </p>
                         <ul className="cta-btn">
                             <li>
                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}> 
                                 <a className="btn v3">
-                                    {t('HeroSection::Try SMS sending for free')}
+                                    {t.HeroSection['Try SMS sending for free']}
                                 </a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/pricing">
                                     <a className="btn v5">
-                                        {t('HeroSection::View package prices')}
+                                        {t.HeroSection['View package prices']}
+
                                     </a>
                                 </Link>
                             </li>

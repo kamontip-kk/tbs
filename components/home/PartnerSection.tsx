@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic';
 import React from "react";
-import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
@@ -13,7 +14,9 @@ const myLoader = ({src}:any) => {
 }
 
 const PartnerSection = () =>{
-    const {t}:any  = useTranslation('Home')
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
     return(
         <div className="partner_section">
         <div className="container">
@@ -23,9 +26,7 @@ const PartnerSection = () =>{
                         className="partner_title"
                         style={{ textTransform: 'none' }}
                     >
-                        {t(
-                            'PartnerSection::Leading brands that trust ThaiBulkSMS'
-                        )}
+                        {t.PartnerSection['Leading brands that trust ThaiBulkSMS']}
                     </h6>
                 </div>
                 <div className="col-md-12">

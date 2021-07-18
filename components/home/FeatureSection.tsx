@@ -1,13 +1,17 @@
 import React from "react";
 import Image from "next/dist/client/image";
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
 const FeatureSection = () =>{
-    const {t}:any  = useTranslation('Home')
+    const router = useRouter();
+    const {locale} = router;
+    const t = locale === 'th' ? th : en;
     return(
         <div className="feature_section">
         <div className="container">
@@ -15,7 +19,7 @@ const FeatureSection = () =>{
                 <div className="col-md-12">
                     <h2 className="section_title"
                     dangerouslySetInnerHTML={{
-                        __html: t('FeatureSection::Why ThaiBulk SMS'),
+                        __html: t.FeatureSection["Why ThaiBulk SMS"],
                     }}>
                     </h2>
                 </div>
@@ -34,11 +38,11 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::No.1 SMS Platform')}</h3>
+                            <h3>
+                                {t.FeatureSection["No.1 SMS Platform"]}
+                            </h3>
                             <p dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::Thailand’s no. 1 SMS service provider'
-                                    ),
+                                    __html: t.FeatureSection["Thailand’s no. 1 SMS service provider"],
                                 }}>
                             </p>
                         </div>
@@ -57,11 +61,11 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Fast & Reliable')}</h3>
+                            <h3>
+                                {t.FeatureSection["Fast & Reliable"]}
+                            </h3>
                             <p dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability.'
-                                    ),
+                                    __html: t.FeatureSection["The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability."],
                                 }}>
                             </p>
                         </div>
@@ -80,11 +84,9 @@ const FeatureSection = () =>{
                             height="100"
                         /> */}
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Smart Console')}</h3>
+                            <h3>{t.FeatureSection["Smart Console"]}</h3>
                             <p dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::The results of sending can be measured easily with smart reports.'
-                                    ),
+                                    __html: t.FeatureSection["The results of sending can be measured easily with smart reports."],
                                 }}>
                             </p>
                         </div>
@@ -104,12 +106,10 @@ const FeatureSection = () =>{
                         /> */}
                         <div className="single_feature_text">
                             <h3>
-                                {t('FeatureSection::Easily Integrated API')}
+                                {t.FeatureSection["Easily Integrated API"]}
                             </h3>
                             <p dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::Easy to connect and support multiple languages.'
-                                    ),
+                                    __html: t.FeatureSection["Easy to connect and support multiple languages."],
                                 }}>       
                             </p>
                         </div>

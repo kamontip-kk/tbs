@@ -1,27 +1,29 @@
 import React,{useEffect} from 'react';
 import App from 'next/app';
-import { appWithTranslation , useTranslation} from 'next-i18next';
+// import { appWithTranslation, useTranslation } from 'next-i18next';
 import Cookie from 'js-cookie';
 import { DefaultSeo } from 'next-seo';
 import { seo } from '../components/seo/defaultseo';
+import {useRouter} from 'next/router'
 
 function MyApp({ Component, pageProps }: any) {
   let lang = Cookie.get('LANG');
-  const {i18n} = useTranslation();
+  // const i18n = useTranslation();
+  const router = useRouter();
 
   useEffect(() => {
     
     if (lang === undefined) {
-        i18n.changeLanguage('th');
+        router.locale = 'th'
     } else {
-        i18n.changeLanguage(lang.toLowerCase());
+        router.locale = `${lang.toLowerCase()}`;
     }
   },[lang]);
 
   return (
     <>
-      <DefaultSeo {...seo}/>
-      <Component {...pageProps} />
+        <DefaultSeo {...seo}/>
+        <Component {...pageProps} />
     </>
   )
 }
@@ -31,4 +33,5 @@ MyApp.getInitialProps = async (appContext: any) => {
   return { ...appProps };
 }
 
-export default appWithTranslation(MyApp);
+// export default appWithTranslation(MyApp);
+export default MyApp;
