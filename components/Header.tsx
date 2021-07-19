@@ -5,6 +5,7 @@ import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
 import th from '../locales/th/Header.json';
 import en from '../locales/en/Header.json';
+import appConfig from '../appConfig';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -50,10 +51,6 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 <li>
                     <Link href="/pricing">
                         <a className="btn v3 btn-sum-menu-mobile closemenu">
-                            {/* {t(
-                                `header::` +
-                                (isLogin === true ? 'Buy' : 'Free trial')
-                            )} */}
                             {isLogin === true ? t.header['Buy'] : t.header['Free trial']}
                         </a>
                     </Link>
@@ -78,6 +75,8 @@ const Header = () => {
     const {locale} = router;
     const t = locale === 'th' ? th : en;
 
+    const [lang, setLang] = useState('TH');
+
     const headerBar: any = useRef(null);
 
     const [isLogin, setIsLogin] = useState(
@@ -96,13 +95,13 @@ const Header = () => {
     }
 
     useEffect(() => {
-        // async function loadCookies() {
-        //     if (Cookie.get('LANG')) {
-        //         const textLang: any = Cookie.get('LANG');
-        //         setLang(textLang);
-        //     }
-        // }
-        // loadCookies();
+        async function loadCookies() {
+            if (Cookie.get('LANG')) {
+                const textLang: any = Cookie.get('LANG');
+                setLang(textLang);
+            }
+        }
+        loadCookies();
 
         // check Cookie Login
         if (Cookie.get('PASSCODE')) {
@@ -116,19 +115,18 @@ const Header = () => {
     }, []);
 
     const onSwitchLanguage = (value: string) => {
-        // setLang(value);
-        // let domain = 'localhost';
-        // if (appConfig.APP_ENV === appConfig.production)
-        //     domain = '.thaibulksms.com';
-        // else if (appConfig.APP_ENV === appConfig.internalTest)
-        //     domain = '.1mobyline.com';
-        // Cookie.set('LANG', value, {
-        //     domain,
-        //     expires: 7,
-        // });
+        setLang(value);
+        let domain = 'localhost';
+        if (appConfig.APP_ENV === appConfig.production)
+            domain = '.thaibulksms.com';
+        else if (appConfig.APP_ENV === appConfig.internalTest)
+            domain = '.1mobyline.com';
+        Cookie.set('LANG', value, {
+            domain,
+            expires: 7,
+        });
         const locale = value.toLowerCase();
         router.push(router.pathname, router.asPath, { locale });
-        // i18n.changeLanguage(value.toLowerCase());
     };
 
     return(
@@ -143,7 +141,7 @@ const Header = () => {
                                 </Link>
                             </div>
                             <div className="header_select">
-                                {/* <select
+                                <select
                                     className="user_select"
                                     onChange={(e) =>
                                         onSwitchLanguage(e.currentTarget.value)
@@ -151,7 +149,7 @@ const Header = () => {
                                     value={lang}
                                 >
                                     {MySelect}
-                                </select> */}
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -626,7 +624,7 @@ const Header = () => {
                                 </ul>
                             </nav>
                             <div className="d-lg-none sm-right">
-                                {/* <select
+                                <select
                                     className="user_select"
                                     onChange={(e) =>
                                         onSwitchLanguage(e.currentTarget.value)
@@ -634,7 +632,7 @@ const Header = () => {
                                     value={lang}
                                 >
                                     {MySelect}
-                                </select> */}
+                                </select>
                                 <span className="mobile-bar js-menu-toggle">
                                     <span></span>
                                     <span></span>
@@ -1240,7 +1238,6 @@ const Header = () => {
                                 <li>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                                     <a className="loginLink">
-                                        {/* {t.header + (isLogin === true ? ['Enter the system'] : ['Login'])} */}
                                         {isLogin === true ? t.header["Enter the system"] : t.header['Login']}
                                     </a>
                                     </Link>
@@ -1250,7 +1247,6 @@ const Header = () => {
                                     {isLogin === true ? (
                                         <Link href="/pricing">
                                             <a className="btn v1">
-                                                {/* {t(`header::` + 'Buy')} */}
                                                 {t.header.Buy}
 
                                             </a>
@@ -1258,7 +1254,6 @@ const Header = () => {
                                     ) : (
                                             <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                                 <a className="btn v1">
-                                                    {/* {t(`header::` + 'Free trial')} */}
                                                     {t.header["Free trial"]}
                                                 </a>
                                             </Link>
