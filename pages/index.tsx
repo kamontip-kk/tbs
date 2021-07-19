@@ -30,7 +30,7 @@ const Homepage = () => {
     <React.Fragment>
       <Layout>
         <Head>
-          {/* <meta name="keywords" content={t('keywords')} /> */}
+          <meta name="keywords" content={t.meta.keywords} />
           <meta name="author" content="" />
           <meta
             name="viewport"
@@ -60,7 +60,6 @@ const Homepage = () => {
   )
 }
 
-// export default withTranslation('Home')(Homepage);
 export const getStaticProps = async () => {
   return {
       props: {
@@ -68,10 +67,4 @@ export const getStaticProps = async () => {
       },
   };
 };
-// export const getStaticProps = async ({locale}:any) => ({
-//   props: {
-//     ...await serverSideTranslations(locale,['Home' , 'Header' , 'Footer']),
-//   },
-    
-// })
 export default Homepage;
