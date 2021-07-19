@@ -1,15 +1,20 @@
 import React, { useEffect } from "react";
 import Link from "next/dist/client/link";
 import Image from "next/dist/client/image";
-import { useTranslation } from 'next-i18next';
-// import appConfig from "../appConfig";
+import BacktoTop from '../components/BacktoTop';
+import { useRouter } from 'next/router'
+import th from '../locales/th/Footer.json';
+import en from '../locales/en/Footer.json';
 
 const myLoader = ({ src }: any) => {
   return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`;
 };
 
 const Footer = () => {
-  const {t}:any  = useTranslation('Footer')
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'th' ? th : en;
+
   const makeHomePageLink = (path: string): string => {
     const url = "";
     return url + "/" + path + (path ? "/" : "");
@@ -25,7 +30,7 @@ const Footer = () => {
             <div className="footer_widget">
               <Link href={makeHomePageLink("product")}>
                 <a>
-                  <h4>{t("footer::Services")}</h4>
+                  <h4>{t.footer.Services}</h4>
                 </a>
               </Link>
               <ul>
@@ -64,21 +69,21 @@ const Footer = () => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t("footer::Support")}</h4>
+              <h4>{t.footer.Support}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("support/how-to-order")}>
-                    <a>{t("footer::Ordering Methods")}</a>
+                    <a>{t.footer["Ordering Methods"]}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("support/faq")}>
-                    <a>{t("footer::Frequently Asked Questions")}</a>
+                    <a>{t.footer["Frequently Asked Questions"]}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("developer")}>
-                    <a>{t("footer::For Developers")}</a>
+                    <a>{t.footer["For Developers"]}</a>
                   </Link>
                 </li>
                 <li>
@@ -94,16 +99,16 @@ const Footer = () => {
 
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t("footer::Use Cases")}</h4>
+              <h4>{t.footer["Use Cases"]}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("sms-marketing")}>
-                    <a>{t("footer::SMS Marketing")}</a>
+                    <a>{t.footer["SMS Marketing"]}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={makeHomePageLink("sms-alert")}>
-                    <a>{t("footer::SMS Alert")}</a>
+                    <a>{t.footer["SMS Alert"]}</a>
                   </Link>
                 </li>
               </ul>
@@ -112,11 +117,11 @@ const Footer = () => {
 
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t("footer::About Us")}</h4>
+              <h4>{t.footer["About Us"]}</h4>
               <ul>
                 <li>
                   <Link href={makeHomePageLink("why-thaibulksms")}>
-                    <a>{t("footer::Why use ThaiBulkSMS?")}</a>
+                    <a>{t.footer["Why use ThaiBulkSMS?"]}</a>
                   </Link>
                 </li>
                 <li>
@@ -126,7 +131,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href={makeHomePageLink("contact")}>
-                    <a>{t("footer::Contact us")}</a>
+                    <a>{t.footer["Contact us"]}</a>
                   </Link>
                 </li>
               </ul>
@@ -139,15 +144,7 @@ const Footer = () => {
                 <a>
                   <div className="lazyload">
                     <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
-                  </div>     
-                  {/* <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                  alt="Image"
-                  width="30"
-                  height="30"
-                  /> */}
+                  </div>
                   02-798-6000
                 </a>
               </Link>
@@ -156,13 +153,6 @@ const Footer = () => {
                   <div className="lazyload">
                     <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
                   </div>
-                  {/* <img
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                  alt="Image"
-                  width="30"
-                  height="30"
-                />{" "} */}
                   <span
                     dangerouslySetInnerHTML={{
                       __html:
@@ -176,14 +166,6 @@ const Footer = () => {
                   <div className="lazyload">
                     <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
                   </div>
-                  {/* <img
-                  className="lazyload"
-                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                  alt=""
-                  width="30"
-                  height="30"
-                /> */}
                   Follow Us
                 </a>
               </Link>
@@ -199,13 +181,6 @@ const Footer = () => {
                     <div className="lazyload">
                       <Image loader={myLoader} src="logo_2.png" alt="logo2" width={253} height={34}/>
                     </div>
-                    {/* <img
-                      className="lazyload"
-                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_2.png`}
-                      alt="Image"
-                      width="253"
-                      height="34"
-                    /> */}
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
@@ -215,14 +190,6 @@ const Footer = () => {
                         <div className="lazyload">
                           <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
                         </div>
-                        {/* <img
-                        className="lazyload"
-                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                        alt="Image"
-                        width="30"
-                        height="30"
-                      /> */}
                         02-798-6000
                       </a>
                     </Link>
@@ -231,14 +198,6 @@ const Footer = () => {
                         <div className="lazyload">
                           <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
                         </div>
-                        {/* <img
-                        className="lazyload"
-                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                        alt=""
-                        width="30"
-                        height="30"
-                      /> */}
                         <span
                           dangerouslySetInnerHTML={{
                             __html:
@@ -252,14 +211,6 @@ const Footer = () => {
                         <div className="lazyload">
                           <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
                         </div>
-                        {/* <img
-                        className="lazyload"
-                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                        alt=""
-                        width="30"
-                        height="30"
-                      /> */}
                         Follow Us
                       </a>
                     </Link>
