@@ -1,11 +1,15 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import Link from "next/link";
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 
 const CtaSection = () =>{
-    const { t }: any = useTranslation('Home')
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     return(
         <div className="cta_section">
         <div className="container">
@@ -16,9 +20,7 @@ const CtaSection = () =>{
                 <div className="col-xl-6 col-lg-12">
                     <div className="cta-text">
                         <h3 dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'CtaSection::Improve the effectiveness of<br/>your business With SMS from ThaiBulkSMS'
-                                ),
+                                __html: t.CtaSection["Improve the effectiveness of<br/>your business With SMS from ThaiBulkSMS"],
                             }}>
                         </h3>
                     </div>
@@ -28,14 +30,14 @@ const CtaSection = () =>{
                         <li>
                             <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                 <a className="btn v3">
-                                    {t('CtaSection::Try SMS sending for free')}
+                                    {t.CtaSection["Try SMS sending for free"]}
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/pricing">
                                 <a className="btn v5">
-                                    {t('CtaSection::View package prices')}
+                                    {t.CtaSection["View package prices"]}
                                 </a>
                             </Link>
                         </li>

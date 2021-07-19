@@ -52,7 +52,7 @@ const Homepage = () => {
           <SmsSection/>
           <TestimonialSection/>
           <EduSection/>
-          {/* <CtaSection/> */}
+          <CtaSection/>
         </div>
         <BacktoTop/>
       </Layout>
