@@ -50,7 +50,7 @@ const Homepage = () => {
           <SimpleSliderSection/>
           <GlobeSection/>
           <SmsSection/>
-          {/* <TestimonialSection/> */}
+          <TestimonialSection/>
           {/* <EduSection/> */}
           {/* <CtaSection/> */}
         </div>
