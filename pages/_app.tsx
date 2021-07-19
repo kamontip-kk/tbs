@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: any) {
         router.locale = 'th'
     } else {
         router.locale = `${lang.toLowerCase()}`;
+        Cookie.set('LANG',router.locale.toLocaleUpperCase());
     }
   },[lang]);
 
