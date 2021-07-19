@@ -45,7 +45,7 @@ const Homepage = () => {
         <div className="page_wrapper">
           <HeroSection/>
           <PartnerSection/>
-          {/* <FeatureSection/> */}
+          <FeatureSection/>
           {/* <ServiceSection/> */}
           {/* <SimpleSliderSection/> */}
           {/* <GlobeSection/> */}
