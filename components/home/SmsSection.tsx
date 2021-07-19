@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
 import CountUp from 'react-countup';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 const SmsSectionV2 = () => {
-    const {t}:any  = useTranslation('Home')
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [numStart, setnumStart] = useState(4662190879);
     const [numEnd, setnumEnd] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -36,9 +41,7 @@ const SmsSectionV2 = () => {
                     <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
                         <div className="sms_text">
                             <h2>
-                                {t(
-                                    'SmsSection::Be confident in every instance of SMS sending'
-                                )}
+                                {t.SmsSection['Be confident in every instance of SMS sending']}
                             </h2>
                         </div>
                     </div>
@@ -48,9 +51,7 @@ const SmsSectionV2 = () => {
                                 <div className="col-md-12">
                                     <div className="sms_feature_item">
                                         <p>
-                                            {t(
-                                                'SmsSection::The number of SMS sent by us up to now'
-                                            )}
+                                            {t.SmsSection['The number of SMS sent by us up to now']}
                                         </p>
                                         {duration !== 0 && (
                                             <div>
@@ -76,9 +77,7 @@ const SmsSectionV2 = () => {
                                 <div className="col-md-6">
                                     <div className="sms_feature_item">
                                         <p>
-                                            {t(
-                                                'SmsSection::The number of SMS sending on average / day'
-                                            )}
+                                            {t.SmsSection['The number of SMS sending on average / day']}
                                         </p>
                                         <div>300,000+</div>
                                     </div>
@@ -86,14 +85,12 @@ const SmsSectionV2 = () => {
                                 <div className="col-md-6">
                                     <div className="sms_feature_item">
                                         <p>
-                                            {t(
-                                                'SmsSection::The average amount of time taken to send SMS Seconds'
-                                            )}
+                                            {t.SmsSection['The average amount of time taken to send SMS Seconds']}
                                         </p>
                                         <div>
                                             1.9{' '}
                                             <span>
-                                                {t('SmsSection::Seconds')}
+                                                {t.SmsSection.Seconds}
                                             </span>
                                         </div>
                                     </div>

@@ -173,7 +173,6 @@ const Header = () => {
                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                                     <li className="has-children">
                                         <span className="active new_title_hover">
-                                            {/* {t('header::Products')} */}
                                             {t.header["Products"]}
                                         </span>
                                         <ul className="dropdown">
@@ -181,22 +180,15 @@ const Header = () => {
                                                 <Link href="/product">
                                                     <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Our Strength'
-                                                            )} */}
                                                             {t.header["Our Strength"]}
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::The best tools for marketer & developer'
-                                                            )} */}
                                                             {t.header["The best tools for marketer & developer"]}
                                                         </p>
                                                     </a>
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {/* {t('header::For Marketer')} */}
                                                 {t.header["For Marketer"]}
                                             </h6>
                                             <li className="listsub li_width_700">
@@ -206,9 +198,6 @@ const Header = () => {
                                                             Smart SMS Console
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Send SMS messages on your own through a website. Easy to send and can be quickly analyzed.'
-                                                            )} */}
                                                             {t.header["Send SMS messages on your own through a website. Easy to send and can be quickly analyzed."]}
                                                         </p>
                                                     </a>
@@ -219,9 +208,6 @@ const Header = () => {
                                                             Location Based SMS
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Enter your target group within specific areas. Send messages immediately without requiring phone numbers.'
-                                                            )} */}
                                                             {t.header["Enter your target group within specific areas. Send messages immediately without requiring phone numbers."]}
                                                         </p>
                                                     </a>
@@ -234,9 +220,6 @@ const Header = () => {
                                                             SMS Tracking
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Accurate SMS Campaign results that do not waste your marketing budget.'
-                                                            )} */}
                                                             {t.header["Accurate SMS Campaign results that do not waste your marketing budget."]}
 
                                                         </p>
@@ -248,9 +231,6 @@ const Header = () => {
                                                             Global SMS
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Send SMS and OTP messages globally at valuable prices.'
-                                                            )} */}
                                                             {t.header["Send SMS and OTP messages globally at valuable prices."]}
 
                                                         </p>
@@ -258,7 +238,6 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {/* {t('header::For Developer')} */}
                                                 {t.header["For Developer"]}
 
                                             </h6>
@@ -269,9 +248,6 @@ const Header = () => {
                                                             SMS API
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Simply by using SMS API, you can send messages through your platform.'
-                                                            )} */}
                                                             {t.header["Simply by using SMS API, you can send messages through your platform."]}
 
                                                         </p>
@@ -283,9 +259,6 @@ const Header = () => {
                                                             OTP Service
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::A secure, ready-to-use OTP Service that does not require additional programming.'
-                                                            )} */}
                                                             {t.header["A secure, ready-to-use OTP Service that does not require additional programming."]}
 
                                                         </p>
@@ -297,7 +270,6 @@ const Header = () => {
                                     <li>
                                         <Link href="/pricing">
                                             <a className="active new_title_hover">
-                                                {/* {t('header::Pricing')} */}
                                                 {t.header["Pricing"]}
 
                                             </a>
@@ -305,7 +277,6 @@ const Header = () => {
                                     </li>
                                     <li className="has-children">
                                         <span className="active new_title_hover">
-                                            {/* {t('header::Database')} */}
                                             {t.header["Database"]}
 
                                         </span>
@@ -315,24 +286,15 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`}>
                                                     <a className="new_icon_title_menu_resource01 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Resources'
-                                                            )} */}
                                                             {t.header["Resources"]}
-
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::List of Resources'
-                                                            )} */}
                                                             {t.header["List of Resources"]}
-
                                                         </p>
                                                     </a>
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {/* {t("header::Tips and Knowledge")} */}
                                                 {t.header["Tips and Knowledge"]}
 
                                             </h6>
@@ -340,14 +302,10 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`}>
                                                     <a className="new_icon_title_menu_resource02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t("header::Marketing")} */}
                                                             {t.header["Marketing"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                "header::Marketing and SMS marketing knowledge"
-                                                            )} */}
                                                             {t.header["Marketing and SMS marketing knowledge"]}
 
                                                         </p>
@@ -357,14 +315,10 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tech/`}>
                                                     <a className="new_icon_title_menu_resource06 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t("header::Tech")} */}
                                                             {t.header["Tech"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                "header::Technical knowledge about SMS and related technology"
-                                                            )} */}
                                                             {t.header["Technical knowledge about SMS and related technology"]}
 
                                                         </p>
@@ -375,14 +329,10 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`}>
                                                     <a className="new_icon_title_menu_resource07 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t("header::ThaiBulkSMS Features")} */}
                                                             {t.header["ThaiBulkSMS Features"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                "header::Features introduction, update, and tutorial"
-                                                            )} */}
                                                             {t.header["Features introduction, update, and tutorial"]}
 
                                                         </p>
@@ -391,16 +341,10 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`}>
                                                     <a className="new_icon_title_menu_resource03 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Example Operations'
-                                                            )} */}
                                                             {t.header["Example Operations"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Example of using SMS in business'
-                                                            )} */}
                                                             {t.header["Example of using SMS in business"]}
 
                                                         </p>
@@ -408,7 +352,6 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {/* {t("header::Case Studies")} */}
                                                 {t.header["Case Studies"]}
 
                                             </h6>
@@ -416,16 +359,10 @@ const Header = () => {
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/success-stories/`}>
                                                     <a className="new_icon_title_menu_resource04 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Success Stories'
-                                                            )} */}
                                                             {t.header["Success Stories"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Case studies of many top customers who have used ThaiBulkSMS'
-                                                            )} */}
                                                             {t.header["Case studies of many top customers who have used ThaiBulkSMS"]}
 
                                                         </p>
@@ -438,7 +375,6 @@ const Header = () => {
 
                                     <li className="has-children">
                                         <span className="active new_title_hover">
-                                            {/* {t('header::Support')} */}
                                             {t.header["Support"]}
 
                                         </span>
@@ -450,16 +386,10 @@ const Header = () => {
                                                             <Link href="/support/how-to-order" passHref>
                                                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Ordering Methods'
-                                                                        )} */}
                                                                         {t.header["Ordering Methods"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::Ordering process for each payment channel'
-                                                                        )} */}
                                                                         {t.header["Ordering process for each payment channel"]}
 
                                                                     </p>
@@ -470,16 +400,10 @@ const Header = () => {
                                                             <Link href="/support/faq" passHref>
                                                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Frequently Asked Questions'
-                                                                        )} */}
                                                                         {t.header["Frequently Asked Questions"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::About ordering, general & technical problem'
-                                                                        )} */}
                                                                         {t.header["About ordering, general & technical problem"]}
 
                                                                     </p>
@@ -490,16 +414,10 @@ const Header = () => {
                                                             <Link href="/contact" passHref>
                                                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Contact us'
-                                                                        )} */}
                                                                         {t.header["Contact us"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::Contact to ThaiBulkSMS'
-                                                                        )} */}
                                                                         {t.header["Contact to ThaiBulkSMS"]}
 
                                                                     </p>
@@ -511,9 +429,6 @@ const Header = () => {
                                                 <div className="col-5 bg_menu">
                                                     <ul>
                                                         <h6 className="title_sub_menu_resource2">
-                                                            {/* {t(
-                                                                'header::Contact'
-                                                            )} */}
                                                             {t.header["Contact"]}
 
                                                         </h6>
@@ -552,7 +467,6 @@ const Header = () => {
                                     <li className="has-children">
                                         <Link href="" passHref>
                                             <span className="active new_title_hover">
-                                                {/* {t('header::For Developers')} */}
                                                 {t.header["For Developers"]}
 
                                             </span>
@@ -562,16 +476,10 @@ const Header = () => {
                                                 <Link href="/developer" passHref>
                                                     <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Download Guide'
-                                                            )} */}
                                                             {t.header["Download Guide"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Manual for SMS API & OTP Service with example'
-                                                            )} */}
                                                             {t.header["Manual for SMS API & OTP Service with example"]}
 
                                                         </p>
@@ -582,16 +490,10 @@ const Header = () => {
                                                 <Link href="/developer/#ex_sdk" passHref>
                                                     <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
-                                                            {/* {t(
-                                                                'header::Download Example SDK'
-                                                            )} */}
                                                             {t.header["Download Example SDK"]}
 
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Choose the programing language as you want'
-                                                            )} */}
                                                             {t.header["Choose the programing language as you want"]}
 
                                                         </p>
@@ -607,9 +509,6 @@ const Header = () => {
                                                             API References
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
-                                                            {/* {t(
-                                                                'header::Include SMS API and OTP API'
-                                                            )} */}
                                                             {t.header["Include SMS API and OTP API"]}
 
                                                         </p>
@@ -620,7 +519,6 @@ const Header = () => {
                                     </li>
                                     <li className="has-children">
                                         <span className="active new_title_hover">
-                                            {/* {t('header::About the Company')} */}
                                             {t.header["About the Company"]}
 
                                         </span>
@@ -632,16 +530,10 @@ const Header = () => {
                                                             <Link href="/why-thaibulksms" passHref>
                                                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Why use ThaiBulkSMS?'
-                                                                        )} */}
                                                                         {t.header["Why use ThaiBulkSMS?"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::How is sending SMS with ThaiBulkSMS better than others?'
-                                                                        )} */}
                                                                         {t.header["How is sending SMS with ThaiBulkSMS better than others?"]}
 
                                                                     </p>
@@ -652,16 +544,10 @@ const Header = () => {
                                                             <Link href="/contact" passHref>
                                                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Contact us'
-                                                                        )} */}
                                                                         {t.header["Contact us"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::Contact to ThaiBulkSMS'
-                                                                        )} */}
                                                                         {t.header["Contact to ThaiBulkSMS"]}
 
                                                                     </p>
@@ -676,9 +562,6 @@ const Header = () => {
                                                                         Program
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::Special reseller program from ThaiBulkSMS'
-                                                                        )} */}
                                                                         {t.header["Special reseller program from ThaiBulkSMS"]}
 
                                                                     </p>
@@ -692,16 +575,10 @@ const Header = () => {
                                                             >
                                                                 <span className="new_icon_title_menu_about04 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                        {/* {t(
-                                                                            'header::Member'
-                                                                        )} */}
                                                                         {t.header["Member"]}
 
                                                                     </h6>
                                                                     <p className="txtSub text_sub_left">
-                                                                        {/* {t(
-                                                                            'header::Member Register Or Login'
-                                                                        )} */}
                                                                         {t.header["Member Register Or Login"]}
 
                                                                     </p>
@@ -713,12 +590,8 @@ const Header = () => {
                                                 <div className="col-5 bg_menu">
                                                     <ul>
                                                         <h6 className="title_sub_menu_resource2">
-                                                            {/* {t(
-                                                                'header::Contact'
-                                                            )} */}
                                                             {t.header["Contact"]}
-
-                                                        </h6>
+                                                       </h6>
                                                         <li>
                                                             <Link href="tel:027986000" passHref>
                                                                 <h6 className="new_text_contact_phone">
@@ -800,7 +673,6 @@ const Header = () => {
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="product"
                                             >
-                                                {/* {t('header::Products')} */}
                                                 {t.header["Products"]}
 
                                             </span>
@@ -810,7 +682,6 @@ const Header = () => {
                                         <li className="">
                                             <Link href="/pricing">
                                                 <a className="closemenu">
-                                                    {/* {t('header::Pricing')} */}
                                                     {t.header["Pricing"]}
 
                                                 </a>
@@ -823,7 +694,6 @@ const Header = () => {
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="resource"
                                             >
-                                                {/* {t('header::Database')} */}
                                                 {t.header["Database"]}
 
                                             </span>
@@ -835,7 +705,6 @@ const Header = () => {
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="support"
                                             >
-                                                {/* {t('header::Support')} */}
                                                 {t.header["Support"]}
 
                                             </span>
@@ -847,7 +716,6 @@ const Header = () => {
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="documentation"
                                             >
-                                                {/* {t('header::For Developers')} */}
                                                 {t.header["For Developers"]}
 
                                             </span>
@@ -859,7 +727,6 @@ const Header = () => {
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="aboutme"
                                             >
-                                                {/* {t('header::About the Company')} */}
                                                 {t.header["About the Company"]}
 
                                             </span>
@@ -887,7 +754,6 @@ const Header = () => {
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
-                                                        {/* {t('header::Products')} */}
                                                         {t.header["Products"]}
 
                                                     </h5>
@@ -900,9 +766,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon01.svg" alt="menuicon_Product1" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Our Strength'
-                                                            )} */}
                                                             {t.header["Our Strength"]}
 
                                                         </a>
@@ -910,7 +773,6 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                             <h5 className="head-site-sub-menu">
-                                                {/* {t('header::For Marketing')} */}
                                                 {t.header["For Marketing"]}
 
                                             </h5>
@@ -957,7 +819,6 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                             <h5 className="head-site-sub-menu">
-                                                {/* {t('header::For Developers')} */}
                                                 {t.header["For Developers"]}
 
                                             </h5>
@@ -1006,7 +867,6 @@ const Header = () => {
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
-                                                        {/* {t('header::Database')} */}
                                                         {t.header["Database"]}
 
                                                     </h5>
@@ -1019,9 +879,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon01.svg" alt="menuicon_resource1" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Database'
-                                                            )} */}
                                                             {t.header["Database"]}
 
                                                         </a>
@@ -1029,7 +886,6 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                             <h5 className="head-site-sub-menu">
-                                            {/* {t("header::Tips and Knowledge")} */}
                                             {t.header["Tips and Knowledge"]}
 
                                             </h5>
@@ -1042,8 +898,7 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon05.svg" alt="menuicon_resource5" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t("header::Marketing")} */}
-                                                            {t.header["Database"]}
+                                                            {t.header["Marketing"]}
 
                                                         </a>
                                                     </Link>
@@ -1056,7 +911,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon06.svg" alt="menuicon_resource6" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t("header::Tech")} */}
                                                             {t.header["Tech"]}
 
                                                         </a>
@@ -1070,7 +924,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon07.svg" alt="menuicon_resource7" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t("header::ThaiBulkSMS Features")} */}
                                                             {t.header["ThaiBulkSMS Features"]}
 
                                                         </a>
@@ -1086,7 +939,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon03.svg" alt="menuicon_resource3" width={50} height={50}/>
                                                             </div>
-                                                           {/* {t("header::Example Operations")} */}
                                                            {t.header["Example Operations"]}
 
                                                         </a>
@@ -1094,7 +946,6 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                             <h5 className="head-site-sub-menu">
-                                                {/* {t('header::Case Studies')} */}
                                                 {t.header["Case Studies"]}
 
                                             </h5>
@@ -1108,9 +959,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon04.svg" alt="menuicon_resource4" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Success Stories'
-                                                            )} */}
                                                            {t.header["Success Stories"]}
 
                                                         </a>
@@ -1138,7 +986,6 @@ const Header = () => {
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
-                                                        {/* {t('header::Support')} */}
                                                         {t.header["Support"]}
 
                                                     </h5>
@@ -1151,9 +998,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon01.svg" alt="menuicon_support1" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Ordering Methods'
-                                                            )} */}
                                                             {t.header["Ordering Methods"]}
 
                                                         </a>
@@ -1165,9 +1009,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon02.svg" alt="menuicon_support2" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Frequently Asked Questions'
-                                                            )} */}
                                                             {t.header["Frequently Asked Questions"]}
 
                                                         </a>
@@ -1179,9 +1020,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon03.svg" alt="menuicon_support3" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Contact us'
-                                                            )} */}
                                                             {t.header["Contact us"]}
 
                                                         </a>
@@ -1191,7 +1029,6 @@ const Header = () => {
                                         </div>
                                         <div className="margin-top-sub-menu">
                                             <h5 className="head-site-sub-menu">
-                                                {/* {t('header::Contact')} */}
                                                 {t.header["Contact"]}
 
                                             </h5>
@@ -1250,9 +1087,6 @@ const Header = () => {
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
-                                                        {/* {t(
-                                                            'header::For Developers'
-                                                        )} */}
                                                         {t.header["For Developers"]}
 
                                                     </h5>
@@ -1265,9 +1099,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Dev-icon01.svg" alt="menuicon_Dev1" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Download Guide'
-                                                            )} */}
                                                             {t.header["Download Guide"]}
 
                                                         </a>
@@ -1279,9 +1110,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Dev-icon02.svg" alt="menuicon_Dev2" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Download Example SDK'
-                                                            )} */}
                                                             {t.header["Download Example SDK"]}
 
                                                         </a>
@@ -1319,11 +1147,7 @@ const Header = () => {
                                                 </li>
                                                 <li className="title-menu-mobile">
                                                     <h5 className="head-site-sub-menu">
-                                                        {/* {t(
-                                                            'header::About the Company'
-                                                        )} */}
                                                         {t.header["About the Company"]}
-
                                                     </h5>
                                                 </li>
                                             </ul>
@@ -1334,11 +1158,7 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_about-icon01.svg" alt="menuicon_about1" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Why use ThaiBulkSMS?'
-                                                            )} */}
                                                             {t.header["Why use ThaiBulkSMS?"]}
-
                                                         </a>
                                                     </Link>
                                                 </li>
@@ -1348,9 +1168,6 @@ const Header = () => {
                                                             <div className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_about-icon02.svg" alt="menuicon_about2" width={50} height={50}/>
                                                             </div>
-                                                            {/* {t(
-                                                                'header::Contact us'
-                                                            )} */}
                                                             {t.header["Contact us"]}
 
                                                         </a>
@@ -1369,10 +1186,9 @@ const Header = () => {
                                             </ul>
                                         </div>
                                         <div className="margin-top-sub-menu">
-                                            {/* <h5 className="head-site-sub-menu">
-                                                {t('header::Contact')}
-                                            </h5> */}
-                                            {t.header["Contact"]}
+                                            <h5 className="head-site-sub-menu">
+                                                {t.header["Contact"]}
+                                            </h5>
 
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
@@ -1436,7 +1252,7 @@ const Header = () => {
                                         <Link href="/pricing">
                                             <a className="btn v1">
                                                 {/* {t(`header::` + 'Buy')} */}
-                                                {t.header + (t.header.Buy)}
+                                                {t.header.Buy}
 
                                             </a>
                                         </Link>
@@ -1444,7 +1260,7 @@ const Header = () => {
                                             <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                                 <a className="btn v1">
                                                     {/* {t(`header::` + 'Free trial')} */}
-                                                    {t.header + (t.header["Free trial"])}
+                                                    {t.header["Free trial"]}
 
                                                 </a>
                                             </Link>

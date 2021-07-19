@@ -5,9 +5,9 @@ import BannerCookie from '../tbs_submodule/BannerCookie';
 const Layout = (props:any) => {
     return(
         <div>
-            <Header/>
+            {/* <Header/> */}
             {props.children}
-            <Footer/>
+            {/* <Footer/> */}
             <BannerCookie/>
         </div>
     )

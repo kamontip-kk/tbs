@@ -43,11 +43,11 @@ const Homepage = () => {
                 description={t.meta.description}
             />
         <div className="page_wrapper">
-          <HeroSection/>
-          <PartnerSection/>
-          <FeatureSection/>
-          <ServiceSection/>
-          <SimpleSliderSection/>
+          {/* <HeroSection/> */}
+          {/* <PartnerSection/> */}
+          {/* <FeatureSection/> */}
+          {/* <ServiceSection/> */}
+          {/* <SimpleSliderSection/> */}
           {/* <GlobeSection/> */}
           {/* <SmsSection/> */}
           {/* <TestimonialSection/> */}
