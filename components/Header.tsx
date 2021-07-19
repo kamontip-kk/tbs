@@ -43,7 +43,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 <li>
                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                         <a className="btn v5 btn-sum-menu-mobile loginLink closemenu">
-                            {t.header + (isLogin === true ? ['Enter the system'] : ['Login'])}
+                            {isLogin === true ? t.header['Enter the system'] : t.header['Login']}
                         </a>
                     </Link>
                 </li>
@@ -54,8 +54,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                                 `header::` +
                                 (isLogin === true ? 'Buy' : 'Free trial')
                             )} */}
-                            {t.header + (isLogin === true ? ['Buy'] : ['Free trial'])}
-
+                            {isLogin === true ? t.header['Buy'] : t.header['Free trial']}
                         </a>
                     </Link>
                 </li>
@@ -1242,7 +1241,7 @@ const Header = () => {
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                                     <a className="loginLink">
                                         {/* {t.header + (isLogin === true ? ['Enter the system'] : ['Login'])} */}
-                                        {isLogin === true ? t.header["Enter the system"] : ['Login']}
+                                        {isLogin === true ? t.header["Enter the system"] : t.header['Login']}
                                     </a>
                                     </Link>
 
@@ -1261,7 +1260,6 @@ const Header = () => {
                                                 <a className="btn v1">
                                                     {/* {t(`header::` + 'Free trial')} */}
                                                     {t.header["Free trial"]}
-
                                                 </a>
                                             </Link>
                                         )

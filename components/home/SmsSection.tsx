@@ -33,7 +33,6 @@ const SmsSectionV2 = () => {
     return(
         <div
             className="sms_section lazyload"
-            // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mobile/promo_bg.jpg [(max-width:767px)] | ${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
         >
             <div className="container">
@@ -71,7 +70,6 @@ const SmsSectionV2 = () => {
                                                 />
                                             </div>
                                         )}
-                                        {/* <h2>4,662,190,879</h2> */}
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -99,7 +97,6 @@ const SmsSectionV2 = () => {
                         </div>
                     </div>
                 </div>
-                {/* {!isLogin && <TestQuickregister />} */}
             </div>
         </div>
     )
