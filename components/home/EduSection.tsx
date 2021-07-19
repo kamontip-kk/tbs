@@ -1,14 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/dist/client/image";
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
+import th from '../../locales/th/Home.json';
+import en from '../../locales/en/Home.json';
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 
 const EduSection = () => {
-    const { t }:any = useTranslation('Home');
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     return(
         <div className="edu_section">
         <div className="container">
@@ -16,13 +21,11 @@ const EduSection = () => {
                 <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
                     <div className="edu_text">
                         <h2>
-                            {t(
-                                'EduSection::Interesting tips and knowledge regarding SMS and marketing'
-                            )}
+                            {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
                         </h2>
                         {/* <a href="http://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
                         <Link href="/resource">
-                            {t('EduSection::View all contents')}
+                            {t.EduSection["View all contents"]}
                         </Link>
                     </div>
                 </div>
@@ -35,18 +38,9 @@ const EduSection = () => {
                                     <div className="lazyload">
                                         <Image loader={myLoader} src="img_7.png" alt="edu1" width={280} height={245}/>
                                     </div>             
-                                    {/* <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_7.png`}
-                                        alt="Image"
-                                        width="255"
-                                        height="229"
-                                    /> */}
                                     <div className="edu_box_text">
                                         <p>
-                                            {t(
-                                                'EduSection::Don’t miss!! Marketing trends in 2020.'
-                                            )}
+                                            {t.EduSection["Don’t miss!! Marketing trends in 2020."]}
                                         </p>
                                     </div>
                                 </a>
@@ -62,18 +56,9 @@ const EduSection = () => {
                                             <div className="lazyload">
                                                 <Image loader={myLoader} src="img_8.png" alt="edu8" width={280} height={245}/>
                                             </div>  
-                                            {/* <img
-                                                className="lazyload"
-                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_8.png`}
-                                                alt="Image"
-                                                width="255"
-                                                height="229"
-                                            /> */}
                                             <div className="edu_box_text">
                                                 <p>
-                                                    {t(
-                                                        'EduSection::4 ways to communicate with customers most effectively Conclude your sale with testimonials.'
-                                                    )}
+                                                    {t.EduSection["4 ways to communicate with customers most effectively Conclude your sale with testimonials."]}
                                                 </p>
                                             </div>
                                         </a>                              
@@ -86,19 +71,10 @@ const EduSection = () => {
                                         <a target="_blank" rel="noopener">
                                             <div className="lazyload">
                                                 <Image loader={myLoader} src="img_9.png" alt="edu9" width={280} height={245}/>
-                                            </div>  
-                                            {/* <img
-                                                className="lazyload"
-                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_9.png`}
-                                                alt="Image"
-                                                width="255"
-                                                height="229"
-                                            /> */}
+                                            </div>
                                             <div className="edu_box_text">
                                                 <p>
-                                                    {t(
-                                                        'EduSection::Simple to do but the results will exceed expectations.'
-                                                    )}
+                                                    {t.EduSection["Simple to do but the results will exceed expectations."]}
                                                 </p>
                                             </div>
                                         </a>                            

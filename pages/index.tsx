@@ -51,7 +51,7 @@ const Homepage = () => {
           <GlobeSection/>
           <SmsSection/>
           <TestimonialSection/>
-          {/* <EduSection/> */}
+          <EduSection/>
           {/* <CtaSection/> */}
         </div>
         <BacktoTop/>

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/dist/client/image";
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router'
 import th from '../../locales/th/Home.json';
