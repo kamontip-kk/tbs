@@ -43,7 +43,7 @@ const Homepage = () => {
                 description={t.meta.description}
             />
         <div className="page_wrapper">
-          {/* <HeroSection/> */}
+          <HeroSection/>
           {/* <PartnerSection/> */}
           {/* <FeatureSection/> */}
           {/* <ServiceSection/> */}
