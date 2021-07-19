@@ -46,7 +46,7 @@ const Homepage = () => {
           <HeroSection/>
           <PartnerSection/>
           <FeatureSection/>
-          {/* <ServiceSection/> */}
+          <ServiceSection/>
           {/* <SimpleSliderSection/> */}
           {/* <GlobeSection/> */}
           {/* <SmsSection/> */}
