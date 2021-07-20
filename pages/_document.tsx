@@ -10,25 +10,25 @@ class MyDocument extends Document {
         return (
             <Html lang="th">
                 <Head>
-                    {/* <link
+                    <link
                         rel="preconnect"
                         href="https://fonts.gstatic.com/"
                         crossOrigin="true"
-                    /> */}
-                    {/* <link
+                    />
+                    <link
                         rel="preconnect"
                         href="https://cdnjs.cloudflare.com/"
                         crossOrigin="true"
-                    /> */}
-                    {/* <link
+                    />
+                    <link
                         rel="preconnect"
                         href="https://fonts.googleapis.com/"
                         crossOrigin="true"
-                    /> */}
-                    {/* <link
+                    />
+                    <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700;800&display=swap"
-                    /> */}
+                    />
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap"
@@ -38,10 +38,10 @@ class MyDocument extends Document {
                         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                         rel="stylesheet"
                     />
-                    {/* <link
+                    <link
                         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css"
                         rel="stylesheet"
-                    /> */}
+                    />
                     <link
                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
                         rel="stylesheet"
@@ -54,10 +54,10 @@ class MyDocument extends Document {
                         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
                         rel="stylesheet"
                     />
-                    {/* <link
+                    <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/nice-select.css`}
                         rel="stylesheet"
-                    /> */}
+                    />
                     <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/style.css`}
                         rel="stylesheet"
@@ -66,10 +66,10 @@ class MyDocument extends Document {
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/responsive.css`}
                         rel="stylesheet"
                     />
-                    {/* <link
+                    <link
                         rel="stylesheet"
                         href="https://unpkg.com/swiper/swiper-bundle.min.css"
-                    /> */}
+                    />
                     <link
                         rel="apple-touch-icon"
                         sizes="57x57"
@@ -139,10 +139,10 @@ class MyDocument extends Document {
                         sizes="16x16"
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img-fav/favicon-16x16.png`}
                     />
-                    {/* <link
+                    <link
                         rel="manifest"
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img-fav/manifest.json`}
-                    /> */}
+                    />
                     <meta name="msapplication-TileColor" content="#ffffff" />
                     <meta
                         name="msapplication-TileImage"
@@ -161,14 +161,14 @@ class MyDocument extends Document {
                         defer
                         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                     ></script>
-                    {/* <script
+                    <script
                         defer
                         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                    ></script> */}
-                    {/* <script
+                    ></script>
+                    <script
                         defer
                         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
-                    ></script> */}
+                    ></script>
                     <script
                         defer
                         src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/plugins/bgset/ls.bgset.min.js"
