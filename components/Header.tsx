@@ -73,9 +73,8 @@ const Header = () => {
 
     const router = useRouter();
     const {locale} = router;
-    const t = locale === 'th' ? th : en;
-
     const [lang, setLang] = useState('TH');
+    const t = locale === 'th' ? th : en;
 
     const headerBar: any = useRef(null);
 
