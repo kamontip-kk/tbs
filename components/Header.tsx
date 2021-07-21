@@ -3,8 +3,10 @@ import Link from 'next/link'
 import Image from "next/image";
 import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
-import th from '../locales/th/Header.json';
-import en from '../locales/en/Header.json';
+// import th from '../locales/th/Header.json';
+// import en from '../locales/en/Header.json';
+import th from '../public/locales/th/Header.json';
+import en from '../public/locales/en/Header.json';
 import appConfig from '../appConfig';
 
 const myLoader = ({src}:any) => {
@@ -660,7 +662,7 @@ const Header = () => {
 
                                 <div
                                     className="site-mobile-menu-body lazyload"
-                                    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-menu-mobile.jpg [(max-width:767px)]`}
+                                    // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-menu-mobile.jpg [(max-width:767px)]`}
                                 >
                                     {/* <div className="site-mobile-menu-body"> */}
                                     <ul className="title-sub-menu-mobile">
