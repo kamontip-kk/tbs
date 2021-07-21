@@ -31,9 +31,9 @@ function BannerCookie() {
     });
   }, [isLoading]);
 
-  // if (isLoading) {
-  //   return null;
-  // }
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div className="banner_cookie_container">

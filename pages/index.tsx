@@ -17,6 +17,7 @@ import BacktoTop from '../components/BacktoTop';
 import { useRouter } from 'next/router'
 import th from '../locales/th/Home.json';
 import en from '../locales/en/Home.json';
+//dynamicload
 // import { useTranslation} from 'next-i18next';
 // import useTranslation from "next-translate/useTranslation";
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -43,6 +44,15 @@ const Homepage = () => {
                 description={t.meta.description}
             />
         <div className="page_wrapper">
+          <HeroSection/>
+          <PartnerSection/>
+          <FeatureSection/>
+          <ServiceSection/>
+          <SimpleSliderSection/>
+          <GlobeSection/>
+          <SmsSection/>
+          <TestimonialSection/>
+          <EduSection/>
           <CtaSection/>
         </div>
         <BacktoTop/>
