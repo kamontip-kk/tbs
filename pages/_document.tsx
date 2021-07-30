@@ -58,10 +58,10 @@ class MyDocument extends Document {
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/nice-select.css`}
                         rel="stylesheet"
                     /> */}
-                    <link
+                    {/* <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/style.css`}
                         rel="stylesheet"
-                    />
+                    /> */}
                     <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/responsive.css`}
                         rel="stylesheet"
