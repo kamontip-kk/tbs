@@ -5,6 +5,8 @@ import { DefaultSeo } from 'next-seo';
 import { seo } from '../components/seo/defaultseo';
 import {useRouter} from 'next/router'
 import Proloader from '../components/Proloader';
+//import '../public/assets/css/globals.css'
+// import '../public/assets/css/style.css'
 
 function MyApp({ Component, pageProps }: any) {
   let lang = Cookie.get('LANG');
