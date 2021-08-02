@@ -189,7 +189,7 @@ pre {
 figure {
  margin:0 0 1rem
 }
-img {
+Image {
  vertical-align:middle;
  border-style:none
 }
@@ -8194,7 +8194,7 @@ a.text-dark:hover {
  thead {
   display:table-header-group
  }
- img,
+ Image,
  tr {
   page-break-inside:avoid
  }

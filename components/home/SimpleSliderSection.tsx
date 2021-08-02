@@ -151,7 +151,7 @@ const SimpleSliderSection = () => {
                                         }}>
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User01.png" alt="user01" width={88} height={88}/>
+                                        <Image loader={myLoader} src="User01.png" alt="user01" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code."]}
@@ -181,7 +181,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["Notification of expiry date"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User02.png" alt="user02" width={88} height={88}/>
+                                    <Image loader={myLoader} src="User02.png" alt="user02" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Your car insurance is expiring in July 2020. Click here to extend your insurance."]}
@@ -211,7 +211,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["OTP for identity verification"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User03.png" alt="user03" width={88} height={88}/>
+                                    <Image loader={myLoader} src="User03.png" alt="user03" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes"]}
@@ -237,7 +237,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["Notification of delivery status"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User04.png" alt="user04" width={88} height={88}/>
+                                    <Image loader={myLoader} src="User04.png" alt="user04" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code."]}
@@ -267,7 +267,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["Notification of special privilege for members"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User05.png" alt="user05" width={88} height={88}/>
+                                        <Image loader={myLoader} src="User05.png" alt="user05" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code."]}

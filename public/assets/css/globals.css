@@ -1,6 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-
 /* Document
    ========================================================================== */
 
@@ -175,7 +174,7 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img {
+Image {
     border-style: none;
 }
 
@@ -452,7 +451,7 @@ a:focus {
     outline: 0 solid;
 }
 
-img {
+Image {
     max-width: 100%;
     height: auto;
 }
@@ -508,4 +507,100 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+.section_title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.section_title span.col_one {
+    color: #5b6e80;
+}
+
+.section_title span.col_two {
+    color: #31b1e7;
+    margin-left: -12px;
+}
+
+.section_title span.col_two_lang_en {
+    color: #31b1e7;
+}
+
+/* ------------------------------------------ */
+/* ------------------ Slider -----------------*/
+/* ------------------------------------------ */
+.owl-carousel.slider_wrap:before {
+    position: absolute;
+    background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8302902050232619) 35%, rgba(255, 255, 255, 0.5606272836749473) 100%);
+    content: '';
+    width: 100px;
+    height: 80px;
+    top: 30px;
+    left: -20px;
+    z-index: 999;
+}
+
+.owl-carousel.slider_wrap:after {
+    position: absolute;
+    background: linear-gradient( 275deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8302902050232619) 35%, rgba(255, 255, 255, 0.5606272836749473) 100%);
+    content: '';
+    width: 100px;
+    height: 80px;
+    top: 30px;
+    right: -20px;
+    z-index: 999;
+}
+
+.owl-carousel.slider_wrap .owl-nav.disabled,
+.owl-carousel.simple_slider_wrapper .owl-nav.disabled {
+    display: block;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 24px;
+    left: -60px;
+    background: #fff !important;
+    border: 1px solid #e6ebf0 !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 99999;
+    text-align: center;
+}
+
+.owl-next {
+    position: absolute;
+    top: 24px;
+    right: -60px;
+    background: #fff !important;
+    border: 1px solid #e6ebf0 !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 99999;
+    text-align: center;
+}
+
+.owl-prev i {
+    font-size: 46px;
+    color: #31b1e7;
+    position: relative;
+    right: 3px;
+    top: -7px;
+}
+
+.owl-next i {
+    font-size: 46px;
+    color: #31b1e7;
+    position: relative;
+    left: 3px;
+    top: -7px;
 }
