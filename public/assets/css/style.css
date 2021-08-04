@@ -269,15 +269,15 @@
     position: relative;
 }
 
-.owl-carousel .owl-item img {
+/* .owl-carousel .owl-item img {
     width: 100%;
-}
+} */
 
-.partner_section .owl-carousel .owl-item img {
+/* .partner_section .owl-carousel .owl-item img {
     width: 80%;
     text-align: center;
     margin: 10px auto;
-}
+} */
 
 /* .partner_item img.size-img {
     width: 80%;
@@ -3288,13 +3288,13 @@ h1.faqHead.textHeadFaq {
     padding: 0 0 140px;
 }
 
-.whyTBS {
+/* .whyTBS {
     padding: 0 30px;
 }
 
 .whyTBS img {
     width: 120px;
-}
+} */
 
 @media only screen and (min-width: 768px) {
     .single__pricing[aria-expanded='true'] .parent {
@@ -3912,17 +3912,17 @@ ul.api-des li div {
     display: none;
 }
 
-.footer_section>.container>div.row>div.col-md-3:nth-child(4) a img {
+/* .footer_section>.container>div.row>div.col-md-3:nth-child(4) a img {
     position: absolute;
     top: 6px;
-}
+} */
 
 .alertDetail {
     width: 80%;
     margin: 0 auto;
 }
 
-@keyframes bannerCookieAnimation {
+/* @keyframes bannerCookieAnimation {
     0% {
         opacity: 0;
         transform: translateY(50px);
@@ -3931,4 +3931,4 @@ ul.api-des li div {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */

@@ -1234,3 +1234,89 @@ ul.title-sub-menu-mobile {
     border-left: 1px solid #31b1e7;
     z-index: -1;
 }
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+    .header-bar-area .container {
+      max-width: 96% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .header-bar-area .container {
+        max-width: 96% !important;
+    }
+    .header_top {
+        margin-bottom: 5px;
+    }
+    .nice-select.user_select .current {
+    font-size: 20px;
+  }
+  .site-navbar .site-navigation .site-menu li > a,
+  .site-navbar .site-navigation .site-menu li > span,
+  .header_contact_no a,
+  .menu_btn ul li {
+    font-size: 15px;
+  }
+  .site-navbar .site-navigation .site-menu > li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  .header-bar-area {
+    padding-top: 10px;
+  }
+  .nice-select.user_select {
+    line-height: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .mobile-bar.js-menu-toggle {
+        float: right;
+      }
+    
+      .mobile-bar span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #31b1e7;
+        margin: 4px 0;
+        border-radius: 5px;
+        position: relative;
+        top: 2px;
+      }
+    
+      .menu_btn,
+      .site-menu {
+        display: block !important;
+      }
+      .header_top {
+        display: none;
+      }
+      .site-mobile-menu .site-nav-wrap > li > ul > li > a h6 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-bar-area {
+        padding: 25px 0;
+      }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .navbar-brand div Image {
+        max-width: 55%;
+      }
+      .header-bar-area {
+        padding: 20px 0;
+      }
+      .btn.v5.btn-sum-menu-mobile {
+        padding: 15px 20px;
+        min-width: 200px;
+        margin: 0 5px;
+        font-size: 16px;
+      }
+}

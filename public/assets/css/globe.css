@@ -41,3 +41,73 @@
 .globe_img {
     text-align: center;
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .globe_text h3, .globe_text h2 {
+        font-size: 36px;
+        line-height: 1.2;
+      }
+      .globe_text p {
+        color: #5b6e80;
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 20px 0 40px;
+      }
+      .globe_section {
+        padding: 60px 0;
+        position: relative;
+      }
+      .globe_img div Image {
+        width: 70%;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .globe_text {
+        text-align: center;
+        margin-top: 30px;
+      }
+    
+      .globe_text h3, .globe_text h2 {
+        font-size: 32px;
+      }
+    
+      .globe_text p {
+        font-size: 24px;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .globe_text {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .globe_text h3, .globe_text h2 {
+    font-size: 32px;
+  }
+
+  .globe_text p {
+    font-size: 24px;
+    margin: 10px 0 40px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .globe_text {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .globe_text h3, .globe_text h2 {
+    font-size: 22px;
+  }
+
+  .globe_text p {
+    font-size: 16px;
+  }
+
+  .globe_section {
+    display: none;
+  }
+}

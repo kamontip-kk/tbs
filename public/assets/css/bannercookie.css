@@ -7,6 +7,17 @@
     z-index: 9999;
 }
 
+@keyframes bannerCookieAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .banner_cookie_box {
     animation: bannerCookieAnimation 2s ease 0s 1 normal forwards;
     border-radius: 20px;
@@ -57,4 +68,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .banner_cookie_box {
+        width: 90%;
+        flex-direction: column;
+        margin: 20px auto;
+      }
+      .banner_cookie_accept {
+        margin-top: 20px;
+      }
 }

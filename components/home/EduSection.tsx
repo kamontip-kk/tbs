@@ -23,12 +23,12 @@ const EduSection = () => {
                         <h2>
                             {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
                         </h2>
-                        {/* <a href="http://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
                         <Link href="/resource">
                             {t.EduSection["View all contents"]}
                         </Link>
                     </div>
                 </div>
+
                 <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
