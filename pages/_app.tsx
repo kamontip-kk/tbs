@@ -5,8 +5,8 @@ import { DefaultSeo } from 'next-seo';
 import { seo } from '../components/seo/defaultseo';
 import {useRouter} from 'next/router'
 import Proloader from '../components/Proloader';
-import '../public/assets/css/style.css'
-import '../public/assets/css/responsive.css'
+// import '../public/assets/css/style.css'
+// import '../public/assets/css/responsive.css'
 import '../public/assets/css/globals.css'
 import '../public/assets/css/backtotop.css'
 import '../public/assets/css/proloader.css'
