@@ -1300,6 +1300,69 @@ ul.title-sub-menu-mobile {
       }
 }
 
+@media only screen and (max-width: 991px) {
+    .mobile-bar.js-menu-toggle {
+        float: right;
+        margin-left: 15px;
+      }
+      .mobile-bar span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #31b1e7;
+        margin: 4px 0;
+        border-radius: 5px;
+        position: relative;
+        top: 2px;
+      }
+      .menu_btn {
+        display: block;
+        margin-top: 20px;
+        width: 100vw;
+        text-align: center;
+      }
+      .menu_btn ul li {
+        margin: 30px 20px 0 0;
+      }
+      .loginLink {
+        font-size: 2.5vw;
+      }
+      .site-menu {
+        display: none !important;
+      }
+      .site-mobile-menu .site-nav-wrap > li > ul > li > a h6 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+      .lg-none {
+        display: none;
+      }
+    
+      .site-navbar .arrow-collapse.collapsed {
+        display: none;
+      }
+      .site-navbar #collapseItem0,
+      .site-navbar #collapseItem1,
+      .site-navbar #collapseItem2,
+      .site-navbar #collapseItem3,
+      .site-navbar #collapseItem4,
+      .site-navbar #collapseItem5 {
+        display: block !important;
+      }
+      .btn.v8 {
+        font-size: 16px;
+        padding: 20px 30px;
+        min-width: 150px;
+      }
+      .btn.otp {
+        font-size: 16px;
+        padding: 20px 30px;
+        min-width: 150px;
+      }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-bar-area {
         padding: 25px 0;

@@ -99,6 +99,18 @@
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .client_info {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .testimonial_item p.client_quote {
+    font-size: 22px;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .testimonial_item p.client_quote {
     font-size: 20px;
@@ -175,6 +187,6 @@
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {
   .testimonial_section {
-    padding: 150px 0 100px;
+    padding: 200px 0 100px;
   }
 }

@@ -61,6 +61,12 @@
       }
 }
 
+@media only screen and (max-width: 991px) {
+  .whyTBS div Image {
+    width: 100px;
+  }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .col-md-3.whyTBS {
         width: 46%;

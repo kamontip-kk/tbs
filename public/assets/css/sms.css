@@ -355,3 +355,14 @@
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .sms_text {
+    margin-bottom: 70px;
+  }
+  .sms_section.v3 {
+    background: #eff3f7;
+    padding: 100px 0 80px;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
