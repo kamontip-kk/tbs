@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: any) {
   return (
     <>
         <DefaultSeo {...seo}/>
-        <Proloader/>
+        {/* <Proloader/> */}
         <Component {...pageProps} />
     </>
   )
