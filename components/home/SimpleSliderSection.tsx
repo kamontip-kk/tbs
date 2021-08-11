@@ -155,11 +155,6 @@ const SimpleSliderSection = () => {
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code."]}
-                                        {/* <Link href="/">
-                      <a >
-                        <span>{t('SimpleSliderSection.item.1.link')}</span>
-                      </a>
-                    </Link> */}
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>                                   
                                     <a className="btn v9">
@@ -181,7 +176,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["Notification of expiry date"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User02.png" alt="user02" width={120} height={120}/>
+                                        <Image loader={myLoader} src="User02.png" alt="user02" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Your car insurance is expiring in July 2020. Click here to extend your insurance."]}
@@ -211,7 +206,7 @@ const SimpleSliderSection = () => {
                                         {t.SimpleSliderSection["OTP for identity verification"]}
                                     </h4>
                                     <div className="lazyload">
-                                    <Image loader={myLoader} src="User03.png" alt="user03" width={120} height={120}/>
+                                        <Image loader={myLoader} src="User03.png" alt="user03" width={120} height={120}/>
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes"]}
@@ -271,11 +266,6 @@ const SimpleSliderSection = () => {
                                     </div>
                                     <p>
                                         {t.SimpleSliderSection["Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code."]}
-                                        {/* <Link href="/">
-                      <a >
-                        <span>{t('SimpleSliderSection.item.5.link')}</span>
-                      </a>
-                    </Link> */}
                                     </p>
                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>  
                                     <a className="btn v9">

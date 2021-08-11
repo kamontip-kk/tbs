@@ -42,12 +42,12 @@ function BannerCookie() {
           <span className="banner_cookie_text_emphasize">ThaiBulkSMS</span>
           ใช้คุกกี้เพื่อให้ท่านได้รับประสบการณ์การใช้งานที่ดียิ่งขึ้น
           <br />
-          <Link href={makeBannerLink("policy")}>
+          {/* <Link href={makeBannerLink("policy")}>
             <a>
                 อ่านนโยบายคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)
             </a>
           </Link>
-          &nbsp;และ&nbsp;
+          &nbsp;และ&nbsp; */}
           <Link href={makeBannerLink("cookie-policy")}>
             <a>
                 นโยบายคุกกี้ (Cookie Policy)

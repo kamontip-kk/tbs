@@ -142,17 +142,17 @@ const Footer = () => {
             <div className="footer_contact">
               <Link href="tel:027986000">
                 <a>
-                  <div className="lazyload">
+                  <span className="lazyload">
                     <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
-                  </div>
+                  </span>
                   02-798-6000
                 </a>
               </Link>
               <Link href="mailto:contact@thaibulksms.com">
                 <a>
-                  <div className="lazyload">
+                  <span className="lazyload">
                     <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
-                  </div>
+                  </span>
                   <span
                     dangerouslySetInnerHTML={{
                       __html:
@@ -163,9 +163,9 @@ const Footer = () => {
               </Link>
               <Link href="https://www.facebook.com/ThaiBulkSMS">
                 <a target="_blank" rel="noopener">
-                  <div className="lazyload">
+                  <span className="lazyload">
                     <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
-                  </div>
+                  </span>
                   Follow Us
                 </a>
               </Link>
@@ -178,26 +178,26 @@ const Footer = () => {
               <div className="row align-items-end">
                 <div className="col-xl-6 col-lg-5 col-md-5">
                   <div className="footer_logo">
-                    <div className="lazyload">
+                    <span className="lazyload">
                       <Image loader={myLoader} src="logo_2.png" alt="logo2" width={253} height={34}/>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
                   <div className="footer_contact">
                     <Link href="tel:027986000">
                       <a>
-                        <div className="lazyload">
+                        <span className="lazyload">
                           <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
-                        </div>
+                        </span>
                         02-798-6000
                       </a>
                     </Link>
                     <Link href="mailto:contact@thaibulksms.com">
                       <a>
-                        <div className="lazyload">
+                        <span className="lazyload">
                           <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
-                        </div>
+                        </span>
                         <span
                           dangerouslySetInnerHTML={{
                             __html:
@@ -208,9 +208,9 @@ const Footer = () => {
                     </Link>
                     <Link href="https://www.facebook.com/ThaiBulkSMS">
                       <a target="_blank" rel="noopener">
-                        <div className="lazyload">
+                        <span className="lazyload">
                           <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
-                        </div>
+                        </span>
                         Follow Us
                       </a>
                     </Link>

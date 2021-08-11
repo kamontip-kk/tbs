@@ -43,13 +43,16 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-    .globe_text h3, .globe_text h2 {
-        font-size: 36px;
+      .globe_section{
+        height: 458px;
+      }
+      .globe_text h2 {
+        font-size: 30px;
         line-height: 1.2;
       }
       .globe_text p {
         color: #5b6e80;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.2;
         margin: 20px 0 40px;
       }
@@ -57,43 +60,33 @@
         padding: 60px 0;
         position: relative;
       }
-      .globe_img div Image {
-        width: 70%;
+      .globe_img span img {
+        width: 350px;
+        height: 350px;
       }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .globe_text {
+      .globe_text {
         text-align: center;
         margin-top: 30px;
       }
     
-      .globe_text h3, .globe_text h2 {
+      .globe_text h2 {
         font-size: 32px;
       }
     
       .globe_text p {
         font-size: 24px;
+        margin: 10px 0 40px;
       }
+      
+      /* .globe_section .container .row.align-items-center{
+        width: 768px;
+      } */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .globe_text {
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .globe_text h3, .globe_text h2 {
-    font-size: 32px;
-  }
-
-  .globe_text p {
-    font-size: 24px;
-    margin: 10px 0 40px;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 375px) and (max-width: 767px) {
   .globe_text {
     text-align: center;
     margin-top: 30px;

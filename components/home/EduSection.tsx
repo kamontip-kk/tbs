@@ -35,9 +35,9 @@ const EduSection = () => {
                             <div className="edu_box">
                                 <Link href="https://bit.ly/3hEL9ac">
                                 <a target="_blank" rel="noopener">
-                                    <div className="lazyload">
+                                    <span className="lazyload">
                                         <Image loader={myLoader} src="img_7.png" alt="edu1" width={280} height={245}/>
-                                    </div>             
+                                    </span>             
                                     <div className="edu_box_text">
                                         <p>
                                             {t.EduSection["Don’t miss!! Marketing trends in 2020."]}
@@ -53,9 +53,9 @@ const EduSection = () => {
                                     <div className="edu_box">
                                         <Link href="https://bit.ly/2RDqTuQ">
                                         <a target="_blank" rel="noopener">
-                                            <div className="lazyload">
+                                            <span className="lazyload">
                                                 <Image loader={myLoader} src="img_8.png" alt="edu8" width={280} height={245}/>
-                                            </div>  
+                                            </span>  
                                             <div className="edu_box_text">
                                                 <p>
                                                     {t.EduSection["4 ways to communicate with customers most effectively Conclude your sale with testimonials."]}
@@ -69,9 +69,9 @@ const EduSection = () => {
                                     <div className="edu_box">
                                         <Link href="https://bit.ly/32L9VRT">
                                         <a target="_blank" rel="noopener">
-                                            <div className="lazyload">
+                                            <span className="lazyload">
                                                 <Image loader={myLoader} src="img_9.png" alt="edu9" width={280} height={245}/>
-                                            </div>
+                                            </span>
                                             <div className="edu_box_text">
                                                 <p>
                                                     {t.EduSection["Simple to do but the results will exceed expectations."]}

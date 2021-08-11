@@ -36,9 +36,9 @@ const GlobeSection = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
             <div className="globe_img">
-              <div className="lazyload">
+              <span className="lazyload">
                 <Image loader={myLoader} src="img_10.png" alt="globeimg" width={500} height={500}/>
-              </div>
+              </span>
             </div>
           </div>
         </div>

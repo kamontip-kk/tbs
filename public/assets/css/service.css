@@ -79,11 +79,20 @@
     color: #31b1e7;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    div.row.align-items-center{
+        width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .service_img {
         text-align: center;
         margin: 20px auto;
         width: 50%;
+      }
+      .serviceTBS, .service_text{
+          width: 690px;
       }
       .serviceTBS .serviceDetail div Image {
         width: 50%;
@@ -91,7 +100,7 @@
       }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 375px) and (max-width: 767px) {
     .service_section {
         padding: 40px 0;
         position: relative;

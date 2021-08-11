@@ -761,11 +761,10 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon01.svg" alt="menuicon_Product1" width={50} height={50}/>
-                                                            </div>
-                                                            {t.header["Our Strength"]}
-
+                                                            </span>
+                                                            {t.header["Our Strength"]}  
                                                         </a>
                                                     </Link>
                                                 </li>
@@ -778,9 +777,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/smart-sms-console">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon02.svg" alt="menuicon_Product2" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             Smart SMS Console
                                                         </a>
                                                     </Link>
@@ -788,9 +787,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-tracking">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon03.svg" alt="menuicon_Produc3" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             SMS Tracking
                                                         </a>
                                                     </Link>
@@ -798,9 +797,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/location-based-sms">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon04.svg" alt="menuicon_Product4" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             Location Based SMS
                                                         </a>
                                                     </Link>
@@ -808,9 +807,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/global-sms">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon05.svg" alt="menuicon_Product5" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             Global SMS
                                                         </a>
                                                     </Link>
@@ -824,9 +823,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/sms-api">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon06.svg" alt="menuicon_Product6" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             SMS API
                                                         </a>
                                                     </Link>
@@ -834,9 +833,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/product/otp">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Product-icon07.svg" alt="menuicon_Product7" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             OTP Service
                                                         </a>
                                                     </Link>
@@ -874,9 +873,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/`}>
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon01.svg" alt="menuicon_resource1" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Database"]}
 
                                                         </a>
@@ -893,9 +892,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`}
                                                     >
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon05.svg" alt="menuicon_resource5" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Marketing"]}
 
                                                         </a>
@@ -906,9 +905,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tecth/`}
                                                     >
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon06.svg" alt="menuicon_resource6" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Tech"]}
 
                                                         </a>
@@ -919,9 +918,9 @@ const Header = () => {
                                                         href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`}
                                                     >
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon07.svg" alt="menuicon_resource7" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["ThaiBulkSMS Features"]}
 
                                                         </a>
@@ -934,9 +933,9 @@ const Header = () => {
                                                         
                                                     >
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon03.svg" alt="menuicon_resource3" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                            {t.header["Example Operations"]}
 
                                                         </a>
@@ -954,9 +953,9 @@ const Header = () => {
                                                         
                                                     >
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_resource-icon04.svg" alt="menuicon_resource4" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                            {t.header["Success Stories"]}
 
                                                         </a>
@@ -993,9 +992,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/how-to-order">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon01.svg" alt="menuicon_support1" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Ordering Methods"]}
 
                                                         </a>
@@ -1004,9 +1003,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/support/faq">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon02.svg" alt="menuicon_support2" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Frequently Asked Questions"]}
 
                                                         </a>
@@ -1015,9 +1014,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_support-icon03.svg" alt="menuicon_support3" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Contact us"]}
 
                                                         </a>
@@ -1034,9 +1033,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="tel:027986000">
                                                     <a>
-                                                        <div className="icon-title-menu-mobile">
+                                                        <span className="icon-title-menu-mobile contact">
                                                             <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
-                                                        </div>
+                                                        </span>
                                                         02-798-6000
                                                     </a>
                                                     </Link>
@@ -1044,9 +1043,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="mailto:contact@thaibulksms.com">
                                                     <a>
-                                                        <div className="icon-title-menu-mobile">
+                                                        <span className="icon-title-menu-mobile contact">
                                                             <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
-                                                        </div>
+                                                        </span>
                                                         contact@thaibulksms.com
                                                     </a>
                                                     </Link>
@@ -1055,9 +1054,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://www.facebook.com/ThaiBulkSMS">
                                                     <a>
-                                                        <div className="icon-title-menu-mobile">
+                                                        <span className="icon-title-menu-mobile contact">
                                                             <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
-                                                        </div>
+                                                        </span>
                                                         ThaiBulkSMS
                                                     </a>
                                                     </Link>
@@ -1094,9 +1093,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Dev-icon01.svg" alt="menuicon_Dev1" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Download Guide"]}
 
                                                         </a>
@@ -1105,9 +1104,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/developer#ex_sdk">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Dev-icon02.svg" alt="menuicon_Dev2" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Download Example SDK"]}
 
                                                         </a>
@@ -1116,9 +1115,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://developer.thaibulksms.com">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_Dev-icon03.svg" alt="menuicon_Dev3" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             API References
                                                         </a>
                                                     </Link>
@@ -1153,9 +1152,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/why-thaibulksms">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_about-icon01.svg" alt="menuicon_about1" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Why use ThaiBulkSMS?"]}
                                                         </a>
                                                     </Link>
@@ -1163,9 +1162,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/contact">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_about-icon02.svg" alt="menuicon_about2" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             {t.header["Contact us"]}
 
                                                         </a>
@@ -1174,9 +1173,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="/reseller/">
                                                         <a className="closemenu">
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile">
                                                                 <Image loader={myLoader} src="menu-icon_about-icon03.svg" alt="menuicon_about3" width={50} height={50}/>
-                                                            </div>
+                                                            </span>
                                                             Reseller Program
                                                         </a>
                                                     </Link>
@@ -1192,9 +1191,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="tel:027986000">
                                                         <a>
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile contact">
                                                                 <Image loader={myLoader} src="phone.png" alt="phone" width={30} height={30}/>
-                                                            </div>
+                                                            </span>
                                                             02-798-6000
                                                         </a>
                                                     </Link>
@@ -1202,9 +1201,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="mailto:contact@thaibulksms.com">
                                                         <a>
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile contact">
                                                                 <Image loader={myLoader} src="mail.png" alt="mail" width={30} height={30}/>
-                                                            </div>
+                                                            </span>
                                                             contact@thaibulksms.com
                                                         </a>
                                                     </Link>
@@ -1213,9 +1212,9 @@ const Header = () => {
                                                 <li className="sub-head-menu">
                                                     <Link href="https://www.facebook.com/ThaiBulkSMS">
                                                         <a>
-                                                            <div className="icon-title-menu-mobile">
+                                                            <span className="icon-title-menu-mobile contact">
                                                                 <Image loader={myLoader} src="fb.png" alt="fb" width={30} height={30}/>
-                                                            </div>
+                                                            </span>
                                                             ThaiBulkSMS
                                                         </a>
                                                     </Link>
@@ -1249,7 +1248,6 @@ const Header = () => {
                                         <Link href="/pricing">
                                             <a className="btn v1">
                                                 {t.header.Buy}
-
                                             </a>
                                         </Link>
                                     ) : (

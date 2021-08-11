@@ -27,9 +27,9 @@ const FeatureSection = () =>{
             <div className="row mt-5">
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        <div className="lazyload size-img">
+                        <span className="lazyload size-img">
                             <Image loader={myLoader} src="icon_1.png" alt="icon1" width={100} height={100}/>
-                        </div>
+                        </span>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
@@ -50,9 +50,9 @@ const FeatureSection = () =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        <div className="lazyload size-img">
+                        <span className="lazyload size-img">
                             <Image loader={myLoader} src="icon_2.png" alt="icon2" width={100} height={100}/>
-                        </div>
+                        </span>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
@@ -73,9 +73,9 @@ const FeatureSection = () =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        <div className="lazyload size-img">
+                        <span className="lazyload size-img">
                             <Image loader={myLoader} src="icon_3.png" alt="icon3" width={100} height={100}/>
-                        </div>
+                        </span>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
@@ -94,9 +94,9 @@ const FeatureSection = () =>{
                 </div>
                 <div className="col-md-3 whyTBS">
                     <div className="single_feature_item">
-                        <div className="lazyload size-img">
+                        <span className="lazyload size-img">
                             <Image loader={myLoader} src="icon_4.png" alt="icon4" width={100} height={100}/>
-                        </div>
+                        </span>
                         {/* <img
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`}
