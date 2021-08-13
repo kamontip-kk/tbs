@@ -45,6 +45,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 17px;
     margin: 0 10px 40px 0;
+    width: 280px;
+    height: 250px;
 }
 
 .edu_box_text p {
@@ -99,12 +101,13 @@
         margin-bottom: 20px;
       }
       .edu_box {
-        width: 100%;
+        width: 226px;
+        height: 202.6px;
       }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .edu_text {
+      .edu_text {
         text-align: center;
       }
       .edu_section::before {
@@ -114,6 +117,12 @@
     
       .edu_box {
         margin-right: 0;
+        width: 330px;
+        height: 296px;
+      }
+      .edu_box img{
+        width: 330px;
+        height: 296px;
       }
     
       .edu_box_text {
@@ -157,6 +166,8 @@
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   .edu_box {
     margin: 0 70px 20px;
+    width: 205px;
+    height: 183px;
   }
 
   .edu_section::before {
