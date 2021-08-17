@@ -19,18 +19,18 @@ import th from '../locales/th/Home.json';
 import en from '../locales/en/Home.json';
 //dynamicload
 import dynamic from 'next/dynamic'
-const Layout = dynamic(() => import('../components/Layout'))
+// const Layout = dynamic(() => import('../components/Layout'))
 const HeroSection = dynamic(() => import('../components/home/HeroSection'))
-// const PartnerSection = dynamic(() => import('../components/home/PartnerSection'))
-// const FeatureSection = dynamic(() => import('../components/home/FeatureSection'))
+const PartnerSection = dynamic(() => import('../components/home/PartnerSection'))
+const FeatureSection = dynamic(() => import('../components/home/FeatureSection'))
 const ServiceSection = dynamic(()=> import('../components/home/ServiceSection'))
-// const SimpleSliderSection = dynamic(() => import('../components/home/SimpleSliderSection'))
-// const GlobeSection = dynamic(() => import('../components/home/GlobeSection'))
-// const SmsSection = dynamic(() => import('../components/home/SmsSection'))
-// const TestimonialSection = dynamic(() => import('../components/home/TestimonialSection'))
+const SimpleSliderSection = dynamic(() => import('../components/home/SimpleSliderSection'))
+const GlobeSection = dynamic(() => import('../components/home/GlobeSection'))
+const SmsSection = dynamic(() => import('../components/home/SmsSection'))
+const TestimonialSection = dynamic(() => import('../components/home/TestimonialSection'))
 const EduSection = dynamic(() => import('../components/home/EduSection'))
-// const CtaSection = dynamic(() => import('../components/home/CtaSection'))
-const BacktoTop = dynamic(() => import('../components/BacktoTop'))
+const CtaSection = dynamic(() => import('../components/home/CtaSection'))
+// const BacktoTop = dynamic(() => import('../components/BacktoTop'))
 
 
 const Homepage = () => {
@@ -41,7 +41,7 @@ const Homepage = () => {
   
   return(
     <React.Fragment>
-      <Layout>
+      {/* <Layout> */}
         <Head>
           <meta name="keywords" content={t.meta.keywords} />
           <meta name="author" content="" />
@@ -57,18 +57,18 @@ const Homepage = () => {
             />
         <div className="page_wrapper">
           <HeroSection/>
-          {/* <PartnerSection/>
-          <FeatureSection/> */}
+          <PartnerSection/>
+          <FeatureSection/>
           <ServiceSection/>
-          {/* <SimpleSliderSection/>
+          <SimpleSliderSection/>
           <GlobeSection/>
           <SmsSection/>
-          <TestimonialSection/> */}
+          <TestimonialSection/>
           <EduSection/>
-          {/* <CtaSection/> */}
+          <CtaSection/>
         </div>
-        <BacktoTop/>
-      </Layout>
+        {/* <BacktoTop/> */}
+      {/* </Layout> */}
     </React.Fragment>
   )
   
