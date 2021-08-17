@@ -99,9 +99,9 @@ p.copyright {
     position: absolute;
     top: 6px;
 }
-.md-none {
+/* .md-none {
   display: none;
-}
+} */
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .footer_widget h4 {
@@ -164,12 +164,12 @@ p.copyright {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
-    .xs-none {
+      /* .xs-none {
         display: none;
       }
       .md-none {
         display:inline;
-      }
+      } */
       .footer_section {
         padding: 80px 30px 20px;
       }

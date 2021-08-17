@@ -8,11 +8,16 @@ import { useRouter } from 'next/router';
 import th from '../public/locales/th/Header.json';
 import en from '../public/locales/en/Header.json';
 import appConfig from '../appConfig';
+import {
+    BrowserView,
+    MobileView,
+} from "react-device-detect";
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 const HeaderTopMenuMobile = () => (
+    <MobileView>
     <div className="site-mobile-menu-header">
         <div className="row">
             <div
@@ -38,9 +43,11 @@ const HeaderTopMenuMobile = () => (
             </div>
         </div>
     </div>
+    </MobileView>
 );
 const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     return (
+        <MobileView>
         <div className="menu_btn">
             <ul>
                 <li>
@@ -59,6 +66,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 </li>
             </ul>
         </div>
+        </MobileView>
     );
 };
 
@@ -133,8 +141,9 @@ const Header = () => {
     return(
         <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
             <div className="container">
+                <BrowserView>
                 <div className="row">
-                    <div className="col-md-12 lg-none">
+                    <div className="col-md-12">
                         <div className="header_top">
                             <div className="header_contact_no">
                                 <Link href="tel:027986000">
@@ -155,6 +164,8 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+                </BrowserView>
+                
                 <div className="row align-items-center">
                     <div className="col-lg-3 col-md-6 col-9">
                         <Link href="/">
@@ -166,8 +177,10 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className="col-lg-6 col-md-6 col-3 text-right">
+
                         <div className="site-navbar">
                             <nav className="site-navigation text-center">
+                                <BrowserView>
                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                                     <li className="has-children">
                                         <span className="active new_title_hover">
@@ -623,8 +636,11 @@ const Header = () => {
                                         </div>
                                     </li>
                                 </ul>
+                                </BrowserView>
                             </nav>
-                            <div className="d-lg-none sm-right">
+
+                            <MobileView>
+                            <div className="sm-right">
                                 <select
                                     className="user_select"
                                     onChange={(e) =>
@@ -853,7 +869,7 @@ const Header = () => {
                             </div>
                             <div id="resource">
                                 <div className="site-sub-menu">
-                                    <HeaderTopMenuMobile />
+                                    <HeaderTopMenuMobile/>
                                     <div className="block_detail_menu_mobile">
                                         <div className="padding_left_right_new_sub_menu_25">
                                             <ul className="show-site-sub-menu title-menu-mobile">
@@ -1229,10 +1245,12 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
+                            </MobileView>
                         </div>
                     </div>
                     {/* end new sub menu mobile */}
-                    <div className="col-lg-3 lg-none">
+                    <BrowserView>
+                    <div className="col-lg-3">
                         <div className="menu_btn">
                             <ul>
                                 <li>
@@ -1241,7 +1259,6 @@ const Header = () => {
                                         {isLogin === true ? t.header["Enter the system"] : t.header['Login']}
                                     </a>
                                     </Link>
-
                                 </li>
                                 <li>
                                     {isLogin === true ? (
@@ -1262,6 +1279,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
+                    </BrowserView>
                 </div>
             </div>
         </div>

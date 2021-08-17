@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import Link from "next/dist/client/link";
 import Image from "next/dist/client/image";
-import BacktoTop from '../components/BacktoTop';
 import { useRouter } from 'next/router'
 import th from '../locales/th/Footer.json';
 import en from '../locales/en/Footer.json';
+import {
+  BrowserView,
+  MobileView,
+} from "react-device-detect";
 
 const myLoader = ({ src }: any) => {
   return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`;
@@ -138,8 +141,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-12 md-none">
-            <div className="footer_contact">
+{/* --------------------------------------------------- */}
+{/* --------------------------------------------------- */}
+        <MobileView>
+          <div className="col-12">
+            <span className="footer_contact">
               <Link href="tel:027986000">
                 <a>
                   <span className="lazyload">
@@ -169,8 +175,9 @@ const Footer = () => {
                   Follow Us
                 </a>
               </Link>
-            </div>
+            </span>
           </div>
+        </MobileView>
         </div>
         <div className="row">
           <div className="col-md-12">
@@ -183,8 +190,10 @@ const Footer = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
-                  <div className="footer_contact">
+
+              <BrowserView>
+                <div className="col-xl-6 col-lg-7 col-md-7">
+                  <span className="footer_contact">
                     <Link href="tel:027986000">
                       <a>
                         <span className="lazyload">
@@ -214,8 +223,9 @@ const Footer = () => {
                         Follow Us
                       </a>
                     </Link>
-                  </div>
+                  </span>
                 </div>
+              </BrowserView>
               </div>
             </div>
           </div>

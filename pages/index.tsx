@@ -32,11 +32,13 @@ const EduSection = dynamic(() => import('../components/home/EduSection'))
 const CtaSection = dynamic(() => import('../components/home/CtaSection'))
 const BacktoTop = dynamic(() => import('../components/BacktoTop'))
 
+
 const Homepage = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'th' ? th : en;
 
+  
   return(
     <React.Fragment>
       <Layout>
@@ -69,6 +71,7 @@ const Homepage = () => {
       </Layout>
     </React.Fragment>
   )
+  
 }
 
 export const getStaticProps = async () => {
