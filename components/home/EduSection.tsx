@@ -4,10 +4,10 @@ import Image from "next/dist/client/image";
 import { useRouter } from 'next/router'
 import th from '../../locales/th/Home.json';
 import en from '../../locales/en/Home.json';
-import {
-    BrowserView,
-    MobileView,
-} from "react-device-detect";
+// import {
+//     BrowserView,
+//     MobileView,
+// } from "react-device-detect";
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
@@ -22,8 +22,8 @@ const EduSection = () => {
         <div className="edu_section">
         <div className="container">
             <div className="row align-items-center">
-                <MobileView>
-                {/* <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
+                {/* <MobileView> */}
+                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6 mobileview">
                     <div className="edu_text">
                         <h2>
                             {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
@@ -32,8 +32,8 @@ const EduSection = () => {
                             {t.EduSection["View all contents"]}
                         </Link>
                     </div>
-                </div> */}
-                </MobileView>
+                </div>
+                {/* </MobileView> */}
 
                 <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6">
                     <div className="row align-items-center">
@@ -92,8 +92,8 @@ const EduSection = () => {
                     </div>
                 </div>
 
-                <BrowserView>
-                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
+                {/* <BrowserView> */}
+                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6 desktopview">
                     <div className="edu_text">
                         <h2>
                             {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
@@ -103,7 +103,7 @@ const EduSection = () => {
                         </Link>
                     </div>
                 </div>
-                </BrowserView>
+                {/* </BrowserView> */}
 
             </div>
         </div>

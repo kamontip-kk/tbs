@@ -4,10 +4,10 @@ import Image from "next/dist/client/image";
 import { useRouter } from 'next/router'
 import th from '../locales/th/Footer.json';
 import en from '../locales/en/Footer.json';
-import {
-  BrowserView,
-  MobileView,
-} from "react-device-detect";
+// import {
+//   BrowserView,
+//   MobileView,
+// } from "react-device-detect";
 
 const myLoader = ({ src }: any) => {
   return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`;
@@ -143,8 +143,8 @@ const Footer = () => {
 
 {/* --------------------------------------------------- */}
 {/* --------------------------------------------------- */}
-        <MobileView>
-          <div className="col-12">
+        {/* <MobileView> */}
+          <div className="col-12 md-none">
             <span className="footer_contact">
               <Link href="tel:027986000">
                 <a>
@@ -177,7 +177,7 @@ const Footer = () => {
               </Link>
             </span>
           </div>
-        </MobileView>
+        {/* </MobileView> */}
         </div>
         <div className="row">
           <div className="col-md-12">
@@ -191,8 +191,8 @@ const Footer = () => {
                   </div>
                 </div>
 
-              <BrowserView>
-                <div className="col-xl-6 col-lg-7 col-md-7">
+              {/* <BrowserView> */}
+                <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
                   <span className="footer_contact">
                     <Link href="tel:027986000">
                       <a>
@@ -225,7 +225,7 @@ const Footer = () => {
                     </Link>
                   </span>
                 </div>
-              </BrowserView>
+              {/* </BrowserView> */}
               </div>
             </div>
           </div>

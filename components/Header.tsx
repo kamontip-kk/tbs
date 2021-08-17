@@ -8,17 +8,17 @@ import { useRouter } from 'next/router';
 import th from '../public/locales/th/Header.json';
 import en from '../public/locales/en/Header.json';
 import appConfig from '../appConfig';
-import {
-    BrowserView,
-    MobileView,
-} from "react-device-detect";
+// import {
+//     BrowserView,
+//     MobileView,
+// } from "react-device-detect";
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
 }
 const HeaderTopMenuMobile = () => (
-    <MobileView>
-    {/* <div className="site-mobile-menu-header">
+    // <MobileView>
+    <div className="site-mobile-menu-header">
         <div className="row">
             <div
                 className="col-8"
@@ -42,13 +42,13 @@ const HeaderTopMenuMobile = () => (
                 </div>
             </div>
         </div>
-    </div> */}
-    </MobileView>
+    </div>
+    // </MobileView>
 );
 const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     return (
-        <MobileView>
-        {/* <div className="menu_btn">
+        // <MobileView>
+        <div className="menu_btn">
             <ul>
                 <li>
                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
@@ -65,8 +65,8 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                     </Link>
                 </li>
             </ul>
-        </div> */}
-        </MobileView>
+        </div>
+        // </MobileView>
     );
 };
 
@@ -141,9 +141,9 @@ const Header = () => {
     return(
         <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
             <div className="container">
-                <BrowserView>
+                {/* <BrowserView> */}
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 lg-none">
                         <div className="header_top">
                             <div className="header_contact_no">
                                 <Link href="tel:027986000">
@@ -164,7 +164,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                </BrowserView>
+                {/* </BrowserView> */}
                 
                 <div className="row align-items-center">
                     <div className="col-lg-3 col-md-6 col-9">
@@ -180,7 +180,7 @@ const Header = () => {
 
                         <div className="site-navbar">
                             <nav className="site-navigation text-center">
-                                <BrowserView>
+                                {/* <BrowserView> */}
                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                                     <li className="has-children">
                                         <span className="active new_title_hover">
@@ -636,11 +636,11 @@ const Header = () => {
                                         </div>
                                     </li>
                                 </ul>
-                                </BrowserView>
+                                {/* </BrowserView> */}
                             </nav>
 
-                            <MobileView>
-                            {/* <div className="sm-right">
+                            {/* <MobileView> */}
+                            <div className="d-lg-none sm-right">
                                 <select
                                     className="user_select"
                                     onChange={(e) =>
@@ -678,8 +678,9 @@ const Header = () => {
 
                                 <div
                                     className="site-mobile-menu-body lazyload"
-                                
+                                    // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-menu-mobile.jpg [(max-width:767px)]`}
                                 >
+                                    {/* <div className="site-mobile-menu-body"> */}
                                     <ul className="title-sub-menu-mobile">
                                         <li>
                                             <span
@@ -751,7 +752,7 @@ const Header = () => {
                                     />
                                 </div>
                             </div>
-                            
+                            {/* new sub menu mobile */}
                             <div id="product">
                                 <div className="site-sub-menu">
                                     <div>
@@ -1243,13 +1244,13 @@ const Header = () => {
                                         />
                                     </div>
                                 </div>
-                            </div> */}
-                            </MobileView>
+                            </div>
+                            {/* </MobileView> */}
                         </div>
                     </div>
                     {/* end new sub menu mobile */}
-                    <BrowserView>
-                    <div className="col-lg-3">
+                    {/* <BrowserView> */}
+                    <div className="col-lg-3 lg-none">
                         <div className="menu_btn">
                             <ul>
                                 <li>
@@ -1278,7 +1279,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
-                    </BrowserView>
+                    {/* </BrowserView> */}
                 </div>
             </div>
         </div>

@@ -79,6 +79,10 @@
     display: block;
 }
 
+.mobileview{
+  display: none;
+}
+
 /* .col-md-push-6 {
   right: 0%;
 }
@@ -107,6 +111,12 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+      .desktopview{
+      display: none;
+      }
+      .mobileview{
+        display: inline;
+        }
       .edu_text {
         text-align: center;
       }
@@ -164,6 +174,12 @@
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
+  .desktopview{
+    display: none;
+    }
+    .mobileview{
+      display: inline;
+      }
   .edu_box {
     margin: 0 70px 20px;
     width: 205px;
