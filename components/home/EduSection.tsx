@@ -23,7 +23,7 @@ const EduSection = () => {
         <div className="container">
             <div className="row align-items-center">
                 <MobileView>
-                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
+                {/* <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
                     <div className="edu_text">
                         <h2>
                             {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
@@ -32,7 +32,7 @@ const EduSection = () => {
                             {t.EduSection["View all contents"]}
                         </Link>
                     </div>
-                </div>
+                </div> */}
                 </MobileView>
 
                 <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6">

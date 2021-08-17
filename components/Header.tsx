@@ -18,7 +18,7 @@ const myLoader = ({src}:any) => {
 }
 const HeaderTopMenuMobile = () => (
     <MobileView>
-    <div className="site-mobile-menu-header">
+    {/* <div className="site-mobile-menu-header">
         <div className="row">
             <div
                 className="col-8"
@@ -42,13 +42,13 @@ const HeaderTopMenuMobile = () => (
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
     </MobileView>
 );
 const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     return (
         <MobileView>
-        <div className="menu_btn">
+        {/* <div className="menu_btn">
             <ul>
                 <li>
                     <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
@@ -65,7 +65,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                     </Link>
                 </li>
             </ul>
-        </div>
+        </div> */}
         </MobileView>
     );
 };
@@ -640,7 +640,7 @@ const Header = () => {
                             </nav>
 
                             <MobileView>
-                            <div className="sm-right">
+                            {/* <div className="sm-right">
                                 <select
                                     className="user_select"
                                     onChange={(e) =>
@@ -678,9 +678,8 @@ const Header = () => {
 
                                 <div
                                     className="site-mobile-menu-body lazyload"
-                                    // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-menu-mobile.jpg [(max-width:767px)]`}
+                                
                                 >
-                                    {/* <div className="site-mobile-menu-body"> */}
                                     <ul className="title-sub-menu-mobile">
                                         <li>
                                             <span
@@ -752,7 +751,7 @@ const Header = () => {
                                     />
                                 </div>
                             </div>
-                            {/* new sub menu mobile */}
+                            
                             <div id="product">
                                 <div className="site-sub-menu">
                                     <div>
@@ -1244,7 +1243,7 @@ const Header = () => {
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             </MobileView>
                         </div>
                     </div>
