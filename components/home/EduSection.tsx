@@ -23,8 +23,8 @@ const EduSection = () => {
         <div className="container">
             <div className="row align-items-center">
                 {/* <MobileView> */}
-                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6 mobileview">
-                    <div className="edu_text">
+                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6 order-1 order-lg-2">
+                    <div className="edu_text mb-3">
                         <h2>
                             {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
                         </h2>
@@ -35,7 +35,7 @@ const EduSection = () => {
                 </div>
                 {/* </MobileView> */}
 
-                <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6">
+                <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6 order-2 order-lg-1">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                             <div className="edu_box">
@@ -91,19 +91,6 @@ const EduSection = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* <BrowserView> */}
-                <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6 desktopview">
-                    <div className="edu_text">
-                        <h2>
-                            {t.EduSection["Interesting tips and knowledge regarding SMS and marketing"]}
-                        </h2>
-                        <Link href="/resource">
-                            {t.EduSection["View all contents"]}
-                        </Link>
-                    </div>
-                </div>
-                {/* </BrowserView> */}
 
             </div>
         </div>

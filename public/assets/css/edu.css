@@ -79,18 +79,6 @@
     display: block;
 }
 
-.mobileview{
-  display: none;
-}
-
-/* .col-md-push-6 {
-  right: 0%;
-} */
-
-.col-md-pull-6 {
-  left: 0%;
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .edu_box_text p {
         font-size: 16px;
@@ -108,18 +96,9 @@
         width: 226px;
         height: 202.6px;
       }
-      .mobileview{
-        display: none;
-      }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-      .desktopview{
-      display: none;
-      }
-      .mobileview{
-        display: inline;
-      }
       .edu_text {
         text-align: center;
       }
@@ -154,13 +133,7 @@
       .edu_text h3, .edu_text h2 {
         font-size: 25px;
       }
-      .col-md-push-6 {
-        left: 0%;
-      }
-      .col-md-pull-6 {
-        right: 0%;
-        margin-top: 50px;
-      }
+
       .edu_text a {
         font-size: 18px;
       }
@@ -177,12 +150,7 @@
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
-  .desktopview{
-    display: none;
-    }
-    .mobileview{
-      display: inline;
-      }
+
   .edu_box {
     margin: 0 70px 20px;
     width: 205px;
