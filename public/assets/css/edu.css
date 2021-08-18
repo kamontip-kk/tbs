@@ -19,6 +19,15 @@
     background-size: cover;
 }
 
+.edu_box {
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 17px;
+  margin: 0 10px 40px 0;
+  width: 280px;
+  height: 245px;
+}
+
 .edu_box img {
     width: 100%;
     position: relative;
@@ -38,15 +47,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.edu_box {
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 17px;
-    margin: 0 10px 40px 0;
-    width: 280px;
-    height: 250px;
 }
 
 .edu_box_text p {
@@ -96,7 +96,9 @@
         width: 226px;
         height: 202.6px;
       }
+      
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
       .edu_text {
